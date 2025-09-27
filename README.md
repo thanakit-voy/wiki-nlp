@@ -40,6 +40,20 @@ docker run --rm wiki-nlp-cli --name "คุณ" --upper
 
 หมายเหตุ: เมื่อใช้รูปแบบ ENTRYPOINT (แบบใน Dockerfile นี้) ไม่ต้องใส่ `--` หลังชื่ออิมเมจ อาร์กิวเมนต์จะถูกส่งต่อให้โปรแกรมโดยตรง
 
+### คำสั่งดึงบทความวิกิพีเดียภาษาไทย
+
+โปรแกรมรองรับ subcommand `fetch` สำหรับดึงบทความจากไฟล์หัวข้อ (`title.txt`) และบันทึกเป็น .txt พร้อมเก็บ state ว่าหัวข้อไหนดึงแล้ว/ไม่พบ
+
+```powershell
+# รันด้วยค่าดีฟอลต์: ใช้ไฟล์ title.txt, บันทึกไว้ที่ data/articles และ state ที่ data/state.json
+docker run --rm -v "$PWD/data":"/app/data" -v "$PWD/title.txt":"/app/title.txt" wiki-nlp-cli fetch
+
+# ปรับ path หรือ parameter ได้ตามต้องการ
+docker run --rm -v "$PWD:/app" wiki-nlp-cli fetch --titles title.txt --out-dir data/articles --state data/state.json --delay 0.2 --timeout 15
+```
+
+หมายเหตุ: ใช้ `-v` เพื่อแมปโฟลเดอร์/ไฟล์จากเครื่องโฮสต์เข้าคอนเทนเนอร์ เพื่อให้ไฟล์ผลลัพธ์และ state ถูกเก็บไว้ที่เครื่องคุณ
+
 ## เพิ่มไลบรารี
 
 เพิ่มชื่อแพ็กเกจใน `requirements.txt` แล้ว build image ใหม่:
@@ -54,6 +68,12 @@ docker build -t wiki-nlp-cli .
 
 ```powershell
 $env:PYTHONPATH = ".\src"; python -m app --name test
+```
+
+ดึงบทความแบบไม่ใช้ Docker:
+
+```powershell
+$env:PYTHONPATH = ".\src"; python -m app fetch --titles .\title.txt --out-dir .\data\articles --state .\data\state.json
 ```
 
 ## ไลเซนส์
