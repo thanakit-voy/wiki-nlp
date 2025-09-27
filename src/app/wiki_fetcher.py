@@ -9,6 +9,8 @@ from pathlib import Path
 from typing import Iterable, List, Optional, Set, Tuple
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 
 WIKI_API = "https://th.wikipedia.org/w/api.php"
@@ -72,7 +74,34 @@ def sanitize_filename(name: str) -> str:
     return name or "untitled"
 
 
-def fetch_wiki_extract(title: str, timeout: float) -> Tuple[Optional[str], Optional[str]]:
+def build_user_agent() -> str:
+    contact = os.getenv("WIKI_CONTACT", "contact:N/A")
+    app_url = os.getenv("WIKI_APP_URL", "https://example.com/wiki-nlp")
+    return f"wiki-nlp/0.1 (+{app_url}; {contact}) requests/{requests.__version__}"
+
+
+def build_session() -> requests.Session:
+    session = requests.Session()
+    # Set Wikipedia-friendly headers
+    session.headers.update({
+        "User-Agent": build_user_agent(),
+        "Accept": "application/json",
+    })
+    # Configure retries for transient errors
+    retry = Retry(
+        total=4,
+        backoff_factor=0.5,
+        status_forcelist=(429, 500, 502, 503, 504),
+        allowed_methods=("GET",),
+        raise_on_status=False,
+    )
+    adapter = HTTPAdapter(max_retries=retry)
+    session.mount("http://", adapter)
+    session.mount("https://", adapter)
+    return session
+
+
+def fetch_wiki_extract(session: requests.Session, title: str, timeout: float) -> Tuple[Optional[str], Optional[str]]:
     """
     Returns (normalized_title, extract_text) or (None, None) if not found.
     """
@@ -84,7 +113,7 @@ def fetch_wiki_extract(title: str, timeout: float) -> Tuple[Optional[str], Optio
         "format": "json",
         "titles": title,
     }
-    r = requests.get(WIKI_API, params=params, timeout=timeout)
+    r = session.get(WIKI_API, params=params, timeout=timeout)
     r.raise_for_status()
     data = r.json()
     pages = data.get("query", {}).get("pages", {})
@@ -121,16 +150,14 @@ def fetch_all(cfg: FetchConfig) -> None:
 
     done, not_found = load_state(cfg.state_file)
 
-    session = requests.Session()
+    session = build_session()
     processed = 0
     for i, title in enumerate(titles, start=1):
         if title in done or title in not_found:
             print(f"[{i}/{len(titles)}] ข้าม (มีใน state แล้ว): {title}")
             continue
         try:
-            # Use the session to benefit connection pooling
-            requests.get = session.get  # type: ignore
-            norm_title, extract = fetch_wiki_extract(title, cfg.timeout_sec)
+            norm_title, extract = fetch_wiki_extract(session, title, cfg.timeout_sec)
             if norm_title and extract:
                 out_path = write_article(cfg.out_dir, norm_title, extract)
                 done.add(title)
