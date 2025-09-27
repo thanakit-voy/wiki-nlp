@@ -1,15 +1,16 @@
 param(
     [string]$Image = "wiki-nlp-cli",
-    [string]$ArticlesDir = "data/output/articles",
+    [string]$ArticlesDir = "data/articles",
     [string]$Collection = "corpus",
     [int]$Batch = 100,
     [int]$Max = 0,
-    [string]$MongoUri = "mongodb://localhost:27017",
+    [string]$MongoUri = "mongodb://host.docker.internal:27017",
     [string]$MongoDb = "tiktok_live",
     [string]$MongoUser = "appuser",
     [string]$MongoPassword = "apppass",
     [string]$MongoAuthDb = "admin",
-    [string]$Network = ""
+    [string]$Network = "",
+    [string]$State = "data/state.json"
 )
 
 $envs = @(
@@ -31,10 +32,11 @@ $cmd = @(
     $netArgs,
     "-v", "${PWD}:/app",
     $Image,
-    "segment-db",
+    "segment",
     "--articles-dir", $ArticlesDir,
     "--collection", $Collection,
-    "--batch", $Batch
+    "--batch", $Batch,
+    "--state", $State
 )
 if ($Max -gt 0) { $cmd += @("--max", $Max) }
 

@@ -4,6 +4,7 @@ from pathlib import Path
 from .wiki_fetcher import FetchConfig, fetch_all
 from .segmenter import SegmentDbConfig, generate_records_grouped_by_file
 from .db import get_collection
+from .sentence_split import update_corpus_sentences
 from .state_store import load_segment_state, save_segment_state
 
 
@@ -52,18 +53,26 @@ def build_parser() -> argparse.ArgumentParser:
     p_fetch.set_defaults(func=cmd_fetch)
 
     # segment-db (แยกหัวข้อและบันทึกลง MongoDB)
-    p_sdb = sub.add_parser("segment-db", help="แยกข้อความจากไฟล์ .txt แล้วบันทึกลง MongoDB collection: corpus")
+    p_sdb = sub.add_parser("segment", help="แยกข้อความจากไฟล์ .txt แล้วบันทึกลง MongoDB collection: corpus")
     p_sdb.add_argument("--articles-dir", default="data/output/articles", help="โฟลเดอร์ไฟล์ .txt")
     p_sdb.add_argument("--collection", default="corpus", help="ชื่อ collection ปลายทาง")
     p_sdb.add_argument("--max", type=int, default=None, help="จำนวนไฟล์สูงสุด")
     p_sdb.add_argument("--batch", type=int, default=100, help="ขนาด batch ต่อการ insert_many")
     p_sdb.add_argument("--state", default="data/state.json", help="ไฟล์ state (อัปโหลดแล้ว)")
-    p_sdb.set_defaults(func=cmd_segment_db)
+    p_sdb.set_defaults(func=cmd_segment)
+
+    # sentences (ตัดประโยคด้วยเว้นวรรคแล้วอัปเดตลง corpus)
+    p_sent = sub.add_parser("sentences", help="ตัดประโยคด้วยเว้นวรรคแล้วอัปเดตฟิลด์ sentences ใน collection corpus")
+    p_sent.add_argument("--collection", default="corpus", help="collection เป้าหมาย (ดีฟอลต์: corpus)")
+    p_sent.add_argument("--limit", type=int, default=None, help="จำนวนเอกสารสูงสุดที่จะอัปเดต")
+    p_sent.add_argument("--batch", type=int, default=500, help="ขนาด batch ต่อ bulk_write")
+    p_sent.add_argument("--all", action="store_true", help="อัปเดตทุกเอกสาร (ค่าเริ่มต้นคือเฉพาะที่ยังไม่มี sentences)")
+    p_sent.set_defaults(func=cmd_sentences)
 
     return parser
 
 
-def cmd_segment_db(args) -> int:
+def cmd_segment(args) -> int:
     cfg = SegmentDbConfig(
         articles_dir=Path(args.articles_dir),
         max_files=args.max,
@@ -87,6 +96,14 @@ def cmd_segment_db(args) -> int:
         uploaded.add(title)
         save_segment_state(state_path, uploaded, base_state)
         print(f"inserted file: {title} (total docs: {total})")
+    return 0
+
+
+def cmd_sentences(args) -> int:
+    col = get_collection(args.collection)
+    missing_only = not bool(args.all)
+    updated = update_corpus_sentences(col, limit=args.limit, batch=args.batch, missing_only=missing_only)
+    print(f"updated documents: {updated}")
     return 0
 
 

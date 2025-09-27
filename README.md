@@ -77,6 +77,25 @@ $env:PYTHONPATH = ".\src"; python -m app --name test
 ```
 
 ดึงบทความแบบไม่ใช้ Docker:
+$
+### แยกหัวข้อและบันทึกลงฐานข้อมูล (MongoDB)
+
+ใช้คำสั่ง `segment`:
+
+```powershell
+docker run --rm -e MONGO_URI="mongodb://host.docker.internal:27017" -e MONGO_DB="tiktok_live" -e MONGO_USER="appuser" -e MONGO_PASSWORD="apppass" -e MONGO_AUTH_DB="admin" -v "${PWD}:/app" wiki-nlp-cli segment --articles-dir data/output/articles --collection corpus --batch 100 --state data/state.json
+```
+
+หรือใช้สคริปต์ช่วย:
+
+```powershell
+.\scriptsetch.ps1    # สำหรับดึงบทความ
+.\scriptsuild.ps1    # สำหรับ build image
+.\scripts
+un.ps1      # ตัวอย่าง greet เดิม
+.\scripts	enant.ps1   # (ถ้ามีในอนาคต)
+.\scripts\segment.ps1  # สำหรับแยกและอัปโหลดลง DB
+```
 
 ```powershell
 $env:PYTHONPATH = ".\src"; python -m app fetch --titles .\data\input\titles.txt --out-dir .\data\output\articles --state .\data\state.json
