@@ -5,6 +5,8 @@ from .wiki_fetcher import FetchConfig, fetch_all
 from .segmenter import SegmentDbConfig, generate_records_grouped_by_file
 from .db import get_collection
 from .sentence_split import update_corpus_sentences
+from .num_tag import tag_corpus_numbers
+from .sentence_token import update_corpus_sentence_tokenization
 from .state_store import load_segment_state, save_segment_state
 
 
@@ -62,12 +64,31 @@ def build_parser() -> argparse.ArgumentParser:
     p_sdb.set_defaults(func=cmd_segment)
 
     # sentences (ตัดประโยคด้วยเว้นวรรคแล้วอัปเดตลง corpus)
-    p_sent = sub.add_parser("sentences", help="ตัดประโยคด้วยเว้นวรรคแล้วอัปเดตฟิลด์ sentences ใน collection corpus")
+    p_sent = sub.add_parser("sentences", help="ตัดประโยคด้วยเว้นวรรคแล้วอัปเดต sentences และตั้งค่า process.sentence_split=true")
     p_sent.add_argument("--collection", default="corpus", help="collection เป้าหมาย (ดีฟอลต์: corpus)")
     p_sent.add_argument("--limit", type=int, default=None, help="จำนวนเอกสารสูงสุดที่จะอัปเดต")
     p_sent.add_argument("--batch", type=int, default=500, help="ขนาด batch ต่อ bulk_write")
     p_sent.add_argument("--all", action="store_true", help="อัปเดตทุกเอกสาร (ค่าเริ่มต้นคือเฉพาะที่ยังไม่มี sentences)")
     p_sent.set_defaults(func=cmd_sentences)
+
+    # tag-num (ใส่ type=NUM, pos=NUM ให้ข้อความที่เป็นรูปแบบตัวเลข)
+    p_tn = sub.add_parser("tag-num", help="วิเคราะห์ sentences ที่เป็นตัวเลข ใส่ type/pos=NUM และตั้งค่า process.num_tag=true")
+    p_tn.add_argument("--collection", default="corpus", help="collection เป้าหมาย (ดีฟอลต์: corpus)")
+    p_tn.add_argument("--limit", type=int, default=None, help="จำนวนเอกสารสูงสุดที่จะอัปเดต")
+    p_tn.add_argument("--batch", type=int, default=200, help="ขนาด batch ต่อ bulk_write")
+    p_tn.add_argument("--all", action="store_true", help="อัปเดตทุกเอกสาร (ไม่จำกัดเฉพาะที่ยังไม่มี type/pos)")
+    p_tn.set_defaults(func=cmd_tag_num)
+
+    # sentence-token (re-tokenize existing sentences with PyThaiNLP)
+    p_st = sub.add_parser(
+        "sentence-token",
+        help="นำ sentences ที่มีอยู่มาแบ่งเป็นประโยคด้วย PyThaiNLP แล้วตั้งค่า process.sentence_token=true",
+    )
+    p_st.add_argument("--collection", default="corpus", help="collection เป้าหมาย (ดีฟอลต์: corpus)")
+    p_st.add_argument("--limit", type=int, default=None, help="จำนวนเอกสารสูงสุดที่จะอัปเดต")
+    p_st.add_argument("--batch", type=int, default=200, help="ขนาด batch ต่อ bulk_write")
+    p_st.add_argument("--all", action="store_true", help="อัปเดตทุกเอกสาร (ไม่จำกัดเฉพาะที่ยังไม่ถูก sentence_token)")
+    p_st.set_defaults(func=cmd_sentence_token)
 
     return parser
 
@@ -104,6 +125,22 @@ def cmd_sentences(args) -> int:
     missing_only = not bool(args.all)
     updated = update_corpus_sentences(col, limit=args.limit, batch=args.batch, missing_only=missing_only)
     print(f"updated documents: {updated}")
+    return 0
+
+
+def cmd_tag_num(args) -> int:
+    col = get_collection(args.collection)
+    modified = tag_corpus_numbers(col, limit=args.limit, batch=args.batch, missing_only=not args.all)
+    print(f"modified documents: {modified}")
+    return 0
+
+
+def cmd_sentence_token(args) -> int:
+    col = get_collection(args.collection)
+    modified = update_corpus_sentence_tokenization(
+        col, limit=args.limit, batch=args.batch, missing_only=not args.all
+    )
+    print(f"modified documents: {modified}")
     return 0
 
 

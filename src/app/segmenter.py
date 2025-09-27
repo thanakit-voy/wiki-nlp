@@ -1,15 +1,14 @@
 from __future__ import annotations
 
 import datetime as dt
-import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Iterable, Iterator, List, Optional, Tuple
 
 from .text_normalize import normalize_text
+from .constants import HEADING_RE
 
 
-HEADING_RE = re.compile(r"^\s*(=+)\s*(.*?)\s*(=+)\s*$")
 
 
 def split_sections(text: str) -> Dict[str, str]:

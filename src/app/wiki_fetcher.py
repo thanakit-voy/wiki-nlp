@@ -11,9 +11,7 @@ from typing import Iterable, List, Optional, Set, Tuple
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
-
-
-WIKI_API = "https://th.wikipedia.org/w/api.php"
+from .constants import WIKI_API
 
 
 @dataclass

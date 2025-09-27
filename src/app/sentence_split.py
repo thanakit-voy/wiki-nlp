@@ -1,14 +1,11 @@
 from __future__ import annotations
 
 import datetime as dt
-import re
 from typing import Iterable, List
 
 from pymongo.collection import Collection
 from pymongo import UpdateOne
-
-
-WS_RE = re.compile(r"\s+")
+from .constants import WS_RE
 
 
 def split_by_space(text: str) -> List[str]:
@@ -38,7 +35,13 @@ def update_corpus_sentences(
     created_at = dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
     filt = {}
     if missing_only:
-        filt = {"sentences": {"$exists": False}}
+        # Select docs that have not been processed by sentence_split yet
+        filt = {
+            "$or": [
+                {"process.sentence_split": {"$exists": False}},
+                {"process.sentence_split": False},
+            ]
+        }
 
     proj = {"raw.content": 1}
     cursor = col.find(filt, projection=proj, no_cursor_timeout=True)
@@ -52,7 +55,12 @@ def update_corpus_sentences(
             doc_id = doc.get("_id")
             content = (((doc or {}).get("raw") or {}).get("content")) or ""
             sentences = build_sentences_array(content, created_at)
-            ops.append(UpdateOne({"_id": doc_id}, {"$set": {"sentences": sentences}}))
+            ops.append(
+                UpdateOne(
+                    {"_id": doc_id},
+                    {"$set": {"sentences": sentences, "process.sentence_split": True}},
+                )
+            )
             if len(ops) >= batch:
                 res = col.bulk_write(ops, ordered=False)
                 updated += res.modified_count + res.upserted_count
