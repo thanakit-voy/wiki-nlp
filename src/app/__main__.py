@@ -2,6 +2,8 @@ import argparse
 from pathlib import Path
 
 from .wiki_fetcher import FetchConfig, fetch_all
+from .segmenter import SegmentDbConfig, generate_records_from_dir
+from .db import get_collection
 
 
 def cmd_greet(args) -> int:
@@ -48,7 +50,38 @@ def build_parser() -> argparse.ArgumentParser:
     p_fetch.add_argument("--max", type=int, default=None, help="จำนวนสูงสุดของหัวข้อที่จะดึง (เว้นว่าง=ทั้งหมด)")
     p_fetch.set_defaults(func=cmd_fetch)
 
+    # segment-db (แยกหัวข้อและบันทึกลง MongoDB)
+    p_sdb = sub.add_parser("segment-db", help="แยกข้อความจากไฟล์ .txt แล้วบันทึกลง MongoDB collection: corpus")
+    p_sdb.add_argument("--articles-dir", default="data/output/articles", help="โฟลเดอร์ไฟล์ .txt")
+    p_sdb.add_argument("--collection", default="corpus", help="ชื่อ collection ปลายทาง")
+    p_sdb.add_argument("--max", type=int, default=None, help="จำนวนไฟล์สูงสุด")
+    p_sdb.add_argument("--batch", type=int, default=100, help="ขนาด batch ต่อการ insert_many")
+    p_sdb.set_defaults(func=cmd_segment_db)
+
     return parser
+
+
+def cmd_segment_db(args) -> int:
+    cfg = SegmentDbConfig(
+        articles_dir=Path(args.articles_dir),
+        max_files=args.max,
+        collection_name=args.collection,
+    )
+    col = get_collection(cfg.collection_name)
+    batch = []
+    count = 0
+    for rec in generate_records_from_dir(cfg):
+        batch.append(rec)
+        if len(batch) >= args.batch:
+            col.insert_many(batch, ordered=False)
+            count += len(batch)
+            print(f"inserted: {count}")
+            batch = []
+    if batch:
+        col.insert_many(batch, ordered=False)
+        count += len(batch)
+        print(f"inserted: {count}")
+    return 0
 
 
 def main(argv=None) -> int:

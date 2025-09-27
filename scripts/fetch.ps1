@@ -1,6 +1,6 @@
 param(
     [string]$Titles = "data/input/titles.txt",
-    [string]$OutDir = "data/output/articles",
+    [string]$OutDir = "data/articles",
     [string]$State = "data/state.json",
     [string]$Image = "wiki-nlp-cli",
     [string]$Contact = "you@example.com",
