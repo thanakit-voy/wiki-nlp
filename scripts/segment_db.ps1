@@ -1,6 +1,6 @@
 param(
     [string]$Image = "wiki-nlp-cli",
-    [string]$ArticlesDir = "data/output/articles",
+    [string]$ArticlesDir = "data/articles",
     [string]$Collection = "corpus",
     [int]$Batch = 100,
     [int]$Max = 0,

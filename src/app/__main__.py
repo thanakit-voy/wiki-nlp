@@ -4,6 +4,7 @@ from pathlib import Path
 from .wiki_fetcher import FetchConfig, fetch_all
 from .segmenter import SegmentDbConfig, generate_records_from_dir
 from .db import get_collection
+from .state_store import load_segment_state, save_segment_state
 
 
 def cmd_greet(args) -> int:
@@ -68,19 +69,36 @@ def cmd_segment_db(args) -> int:
         collection_name=args.collection,
     )
     col = get_collection(cfg.collection_name)
+    state_path = Path("data/state.json")
+    uploaded, base_state = load_segment_state(state_path)
     batch = []
     count = 0
     for rec in generate_records_from_dir(cfg):
+        title = str(rec.get("title", ""))
+        if title in uploaded:
+            # Skip records for files already uploaded
+            continue
         batch.append(rec)
         if len(batch) >= args.batch:
             col.insert_many(batch, ordered=False)
             count += len(batch)
             print(f"inserted: {count}")
+            # Mark uploaded titles in state
+            for r in batch:
+                t = str(r.get("title", ""))
+                if t:
+                    uploaded.add(t)
+            save_segment_state(state_path, uploaded, base_state)
             batch = []
     if batch:
         col.insert_many(batch, ordered=False)
         count += len(batch)
         print(f"inserted: {count}")
+        for r in batch:
+            t = str(r.get("title", ""))
+            if t:
+                uploaded.add(t)
+        save_segment_state(state_path, uploaded, base_state)
     return 0
 
 
