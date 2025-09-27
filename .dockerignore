@@ -1,0 +1,29 @@
+# Python
+__pycache__
+*.py[cod]
+*.pyo
+.pytest_cache
+.mypy_cache
+
+# VCS & editor
+.git
+.gitignore
+.gitattributes
+.vscode
+*.code-workspace
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Env
+.env
+.env.*
+venv
+.venv
+env/
+
+# Build artifacts
+dist
+build
+*.egg-info
