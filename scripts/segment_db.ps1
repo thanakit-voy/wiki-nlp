@@ -1,6 +1,6 @@
 param(
     [string]$Image = "wiki-nlp-cli",
-    [string]$ArticlesDir = "data/articles",
+    [string]$ArticlesDir = "data/output/articles",
     [string]$Collection = "corpus",
     [int]$Batch = 100,
     [int]$Max = 0,
@@ -8,7 +8,8 @@ param(
     [string]$MongoDb = "tiktok_live",
     [string]$MongoUser = "appuser",
     [string]$MongoPassword = "apppass",
-    [string]$MongoAuthDb = "admin"
+    [string]$MongoAuthDb = "admin",
+    [string]$Network = ""
 )
 
 $envs = @(
@@ -19,9 +20,15 @@ $envs = @(
     "-e", "MONGO_AUTH_DB=$MongoAuthDb"
 )
 
+$netArgs = @()
+if ($Network -and $Network.Trim() -ne "") {
+    $netArgs = @("--network", $Network)
+}
+
 $cmd = @(
     "run", "--rm",
     $envs,
+    $netArgs,
     "-v", "${PWD}:/app",
     $Image,
     "segment-db",

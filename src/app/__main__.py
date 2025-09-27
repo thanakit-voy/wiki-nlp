@@ -2,7 +2,7 @@ import argparse
 from pathlib import Path
 
 from .wiki_fetcher import FetchConfig, fetch_all
-from .segmenter import SegmentDbConfig, generate_records_from_dir
+from .segmenter import SegmentDbConfig, generate_records_grouped_by_file
 from .db import get_collection
 from .state_store import load_segment_state, save_segment_state
 
@@ -57,6 +57,7 @@ def build_parser() -> argparse.ArgumentParser:
     p_sdb.add_argument("--collection", default="corpus", help="ชื่อ collection ปลายทาง")
     p_sdb.add_argument("--max", type=int, default=None, help="จำนวนไฟล์สูงสุด")
     p_sdb.add_argument("--batch", type=int, default=100, help="ขนาด batch ต่อการ insert_many")
+    p_sdb.add_argument("--state", default="data/state.json", help="ไฟล์ state (อัปโหลดแล้ว)")
     p_sdb.set_defaults(func=cmd_segment_db)
 
     return parser
@@ -69,36 +70,23 @@ def cmd_segment_db(args) -> int:
         collection_name=args.collection,
     )
     col = get_collection(cfg.collection_name)
-    state_path = Path("data/state.json")
+    state_path = Path(args.state)
     uploaded, base_state = load_segment_state(state_path)
-    batch = []
-    count = 0
-    for rec in generate_records_from_dir(cfg):
-        title = str(rec.get("title", ""))
+    total = 0
+    for title, records in generate_records_grouped_by_file(cfg):
         if title in uploaded:
-            # Skip records for files already uploaded
+            print(f"skip (uploaded): {title}")
             continue
-        batch.append(rec)
-        if len(batch) >= args.batch:
-            col.insert_many(batch, ordered=False)
-            count += len(batch)
-            print(f"inserted: {count}")
-            # Mark uploaded titles in state
-            for r in batch:
-                t = str(r.get("title", ""))
-                if t:
-                    uploaded.add(t)
-            save_segment_state(state_path, uploaded, base_state)
-            batch = []
-    if batch:
-        col.insert_many(batch, ordered=False)
-        count += len(batch)
-        print(f"inserted: {count}")
-        for r in batch:
-            t = str(r.get("title", ""))
-            if t:
-                uploaded.add(t)
+        # insert in batches to avoid large payloads
+        start = 0
+        while start < len(records):
+            chunk = records[start:start + args.batch]
+            col.insert_many(chunk, ordered=False)
+            total += len(chunk)
+            start += args.batch
+        uploaded.add(title)
         save_segment_state(state_path, uploaded, base_state)
+        print(f"inserted file: {title} (total docs: {total})")
     return 0
 
 

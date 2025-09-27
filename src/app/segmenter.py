@@ -4,7 +4,7 @@ import datetime as dt
 import re
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, Iterable, Iterator, List, Optional
+from typing import Dict, Iterable, Iterator, List, Optional, Tuple
 
 from .text_normalize import normalize_text
 
@@ -69,3 +69,20 @@ def generate_records_from_dir(cfg: SegmentDbConfig) -> Iterator[Dict[str, object
         sections = split_sections(text)
         for rec in to_corpus_records(title, sections):
             yield rec
+
+
+def generate_records_grouped_by_file(cfg: SegmentDbConfig) -> Iterator[Tuple[str, List[Dict[str, object]]]]:
+    """Yield (title, records_for_that_title) per file.
+
+    Helpful to ensure we insert all sections of one article together,
+    so we can safely mark the title as uploaded once inserted.
+    """
+    paths = sorted([p for p in cfg.articles_dir.glob("*.txt") if p.is_file()])
+    if cfg.max_files is not None:
+        paths = paths[: cfg.max_files]
+    for p in paths:
+        title = p.stem
+        text = p.read_text(encoding="utf-8")
+        sections = split_sections(text)
+        records = to_corpus_records(title, sections)
+        yield title, records
