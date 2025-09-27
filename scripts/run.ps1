@@ -4,7 +4,7 @@ param(
     [switch]$Upper
 )
 
-$dockerArgs = @("run", "--rm", $Tag, "--", "--name", $Name)
+$dockerArgs = @("run", "--rm", $Tag, "--name", $Name)
 if ($Upper) {
     $dockerArgs += "--upper"
 }

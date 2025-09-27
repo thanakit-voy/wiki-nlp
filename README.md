@@ -32,13 +32,13 @@ docker build -t wiki-nlp-cli .
 docker run --rm wiki-nlp-cli
 ```
 
-- ส่งอาร์กิวเมนต์เข้าไป (หลัง `--` คือ args ของโปรแกรม):
+- ส่งอาร์กิวเมนต์เข้าไปให้โปรแกรม:
 
 ```powershell
-docker run --rm wiki-nlp-cli -- --name "คุณ" --upper
+docker run --rm wiki-nlp-cli --name "คุณ" --upper
 ```
 
-หมายเหตุ: `--` ใช้คั่นระหว่างอาร์กิวเมนต์ของ Docker และของโปรแกรม Python
+หมายเหตุ: เมื่อใช้รูปแบบ ENTRYPOINT (แบบใน Dockerfile นี้) ไม่ต้องใส่ `--` หลังชื่ออิมเมจ อาร์กิวเมนต์จะถูกส่งต่อให้โปรแกรมโดยตรง
 
 ## เพิ่มไลบรารี
 
@@ -50,13 +50,11 @@ docker build -t wiki-nlp-cli .
 
 ## รันแบบไม่ใช้ Docker (ตัวเลือก)
 
-ถ้าติดตั้ง Python 3.12.10 บนเครื่องแล้ว สามารถรันได้โดยตรง:
+ถ้าติดตั้ง Python 3.12.10 บนเครื่องแล้ว สามารถรันได้โดยตรง (ตั้งค่า PYTHONPATH ให้เห็นโฟลเดอร์ `src`):
 
 ```powershell
-python -m src.app --name test
+$env:PYTHONPATH = ".\src"; python -m app --name test
 ```
-
-หรือเพิ่ม `src` ใน `PYTHONPATH` ก่อน (ขึ้นกับสภาพแวดล้อมของคุณ)
 
 ## ไลเซนส์
 
