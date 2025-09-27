@@ -9,6 +9,12 @@
 ├─ Dockerfile
 ├─ .dockerignore
 ├─ requirements.txt
+├─ data/
+│  ├─ input/
+│  │  └─ titles.txt
+│  ├─ output/
+│  │  └─ articles/ (ผลลัพธ์ไฟล์ .txt)
+│  └─ state.json (ไฟล์สถานะ)
 └─ src/
    └─ app/
       ├─ __init__.py
@@ -42,14 +48,14 @@ docker run --rm wiki-nlp-cli --name "คุณ" --upper
 
 ### คำสั่งดึงบทความวิกิพีเดียภาษาไทย
 
-โปรแกรมรองรับ subcommand `fetch` สำหรับดึงบทความจากไฟล์หัวข้อ (`title.txt`) และบันทึกเป็น .txt พร้อมเก็บ state ว่าหัวข้อไหนดึงแล้ว/ไม่พบ
+โปรแกรมรองรับ subcommand `fetch` สำหรับดึงบทความจากไฟล์หัวข้อ (`data/input/titles.txt`) และบันทึกเป็น .txt พร้อมเก็บ state ว่าหัวข้อไหนดึงแล้ว/ไม่พบ
 
 ```powershell
-# รันด้วยค่าดีฟอลต์: ใช้ไฟล์ title.txt, บันทึกไว้ที่ data/articles และ state ที่ data/state.json
-docker run --rm -v "$PWD/data":"/app/data" -v "$PWD/title.txt":"/app/title.txt" wiki-nlp-cli fetch
+# รันด้วยค่าดีฟอลต์: titles ที่ data/input/titles.txt, เก็บผลลัพธ์ที่ data/output/articles และ state ที่ data/state.json
+docker run --rm -v "${PWD}:/app" wiki-nlp-cli fetch
 
 # ปรับ path หรือ parameter ได้ตามต้องการ
-docker run --rm -v "$PWD:/app" wiki-nlp-cli fetch --titles title.txt --out-dir data/articles --state data/state.json --delay 0.2 --timeout 15
+docker run --rm -v "${PWD}:/app" wiki-nlp-cli fetch --titles data/input/titles.txt --out-dir data/output/articles --state data/state.json --delay 0.2 --timeout 15
 ```
 
 หมายเหตุ: ใช้ `-v` เพื่อแมปโฟลเดอร์/ไฟล์จากเครื่องโฮสต์เข้าคอนเทนเนอร์ เพื่อให้ไฟล์ผลลัพธ์และ state ถูกเก็บไว้ที่เครื่องคุณ
@@ -73,7 +79,7 @@ $env:PYTHONPATH = ".\src"; python -m app --name test
 ดึงบทความแบบไม่ใช้ Docker:
 
 ```powershell
-$env:PYTHONPATH = ".\src"; python -m app fetch --titles .\title.txt --out-dir .\data\articles --state .\data\state.json
+$env:PYTHONPATH = ".\src"; python -m app fetch --titles .\data\input\titles.txt --out-dir .\data\output\articles --state .\data\state.json
 ```
 
 ## ไลเซนส์

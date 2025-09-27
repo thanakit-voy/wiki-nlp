@@ -40,8 +40,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     # fetch (ดึงบทความวิกิ)
     p_fetch = sub.add_parser("fetch", help="ดึงบทความภาษาไทยจากวิกิพีเดียตามรายการหัวข้อ")
-    p_fetch.add_argument("--titles", default="title.txt", help="ไฟล์รายชื่อหัวข้อ (UTF-8)")
-    p_fetch.add_argument("--out-dir", default="data/articles", help="โฟลเดอร์สำหรับบันทึกไฟล์ .txt")
+    p_fetch.add_argument("--titles", default="data/input/titles.txt", help="ไฟล์รายชื่อหัวข้อ (UTF-8)")
+    p_fetch.add_argument("--out-dir", default="data/output/articles", help="โฟลเดอร์สำหรับบันทึกไฟล์ .txt")
     p_fetch.add_argument("--state", default="data/state.json", help="ไฟล์เก็บ state (done/not_found)")
     p_fetch.add_argument("--delay", type=float, default=0.2, help="ดีเลย์ระหว่างคำขอ (วินาที)")
     p_fetch.add_argument("--timeout", type=float, default=15.0, help="timeout ต่อคำขอ (วินาที)")
