@@ -9,6 +9,7 @@ from .num_tag import tag_corpus_numbers
 from .sentence_token import update_corpus_sentence_tokenization
 from .state_store import load_segment_state, save_segment_state
 from .thai_clock import update_corpus_thai_clock
+from .connectors import update_corpus_connectors
 
 
 def cmd_greet(args) -> int:
@@ -106,6 +107,19 @@ def build_parser() -> argparse.ArgumentParser:
     p_tc.add_argument("--verbose", action="store_true", help="แสดงจำนวน candidates และสรุปผลหลังรัน")
     p_tc.set_defaults(func=cmd_thai_clock)
 
+    # connectors (merge sentences based on connector rules)
+    p_conn = sub.add_parser(
+        "connectors",
+        help="รวมประโยคกับประโยคก่อนหน้าตามกฎ connectors และตั้งค่า process.connector=true",
+    )
+    p_conn.add_argument("--collection", default="corpus", help="collection เป้าหมาย (ดีฟอลต์: corpus)")
+    p_conn.add_argument("--limit", type=int, default=None, help="จำนวนเอกสารสูงสุดที่จะอัปเดต")
+    p_conn.add_argument("--batch", type=int, default=200, help="ขนาด batch ต่อ bulk_write")
+    p_conn.add_argument("--all", action="store_true", help="อัปเดตทุกเอกสาร (ไม่จำกัดเฉพาะที่ยังไม่ถูก connectors)")
+    p_conn.add_argument("--min-len", dest="min_len", type=int, default=25, help="ความยาวขั้นต่ำของประโยคที่ถือว่า 'สั้น'")
+    p_conn.add_argument("--verbose", action="store_true", help="แสดงจำนวน candidates และสรุปผลหลังรัน")
+    p_conn.set_defaults(func=cmd_connectors)
+
     return parser
 
 
@@ -168,6 +182,20 @@ def cmd_thai_clock(args) -> int:
     col = get_collection(args.collection)
     modified = update_corpus_thai_clock(
         col, limit=args.limit, batch=args.batch, missing_only=not args.all, verbose=args.verbose
+    )
+    print(f"modified documents: {modified}")
+    return 0
+
+
+def cmd_connectors(args) -> int:
+    col = get_collection(args.collection)
+    modified = update_corpus_connectors(
+        col,
+        limit=args.limit,
+        batch=args.batch,
+        missing_only=not args.all,
+        min_len=args.min_len,
+        verbose=args.verbose,
     )
     print(f"modified documents: {modified}")
     return 0
