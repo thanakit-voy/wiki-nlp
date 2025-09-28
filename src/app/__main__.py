@@ -8,6 +8,7 @@ from .sentence_split import update_corpus_sentences
 from .num_tag import tag_corpus_numbers
 from .sentence_token import update_corpus_sentence_tokenization
 from .state_store import load_segment_state, save_segment_state
+from .thai_clock import update_corpus_thai_clock
 
 
 def cmd_greet(args) -> int:
@@ -61,6 +62,8 @@ def build_parser() -> argparse.ArgumentParser:
     p_sdb.add_argument("--max", type=int, default=None, help="จำนวนไฟล์สูงสุด")
     p_sdb.add_argument("--batch", type=int, default=100, help="ขนาด batch ต่อการ insert_many")
     p_sdb.add_argument("--state", default="data/state.json", help="ไฟล์ state (อัปโหลดแล้ว)")
+    p_sdb.add_argument("--replace", action="store_true", help="ลบเอกสารเดิมของหัวข้อนั้นๆ ออกจาก collection ก่อนแทรกใหม่")
+    p_sdb.add_argument("--force", action="store_true", help="เพิกเฉย state uploaded (ประมวลผลซ้ำแม้เคยอัปโหลดแล้ว)")
     p_sdb.set_defaults(func=cmd_segment)
 
     # sentences (ตัดประโยคด้วยเว้นวรรคแล้วอัปเดตลง corpus)
@@ -88,7 +91,20 @@ def build_parser() -> argparse.ArgumentParser:
     p_st.add_argument("--limit", type=int, default=None, help="จำนวนเอกสารสูงสุดที่จะอัปเดต")
     p_st.add_argument("--batch", type=int, default=200, help="ขนาด batch ต่อ bulk_write")
     p_st.add_argument("--all", action="store_true", help="อัปเดตทุกเอกสาร (ไม่จำกัดเฉพาะที่ยังไม่ถูก sentence_token)")
+    p_st.add_argument("--verbose", action="store_true", help="แสดงจำนวน candidates และสรุปผลหลังรัน")
     p_st.set_defaults(func=cmd_sentence_token)
+
+    # thai-clock (normalize Thai time patterns in raw.content)
+    p_tc = sub.add_parser(
+        "thai-clock",
+        help="แปลงเวลาภาษาไทยใน raw.content (01:30 น. -> 01.30 นาฬิกา ฯลฯ) และตั้งค่า process.thai_clock=true",
+    )
+    p_tc.add_argument("--collection", default="corpus", help="collection เป้าหมาย (ดีฟอลต์: corpus)")
+    p_tc.add_argument("--limit", type=int, default=None, help="จำนวนเอกสารสูงสุดที่จะอัปเดต")
+    p_tc.add_argument("--batch", type=int, default=200, help="ขนาด batch ต่อ bulk_write")
+    p_tc.add_argument("--all", action="store_true", help="อัปเดตทุกเอกสาร (ไม่จำกัดเฉพาะที่ยังไม่ถูก thai_clock)")
+    p_tc.add_argument("--verbose", action="store_true", help="แสดงจำนวน candidates และสรุปผลหลังรัน")
+    p_tc.set_defaults(func=cmd_thai_clock)
 
     return parser
 
@@ -104,9 +120,13 @@ def cmd_segment(args) -> int:
     uploaded, base_state = load_segment_state(state_path)
     total = 0
     for title, records in generate_records_grouped_by_file(cfg):
-        if title in uploaded:
+        if (not args.force) and (title in uploaded):
             print(f"skip (uploaded): {title}")
             continue
+        if args.replace:
+            # Replace existing docs for this title
+            del_res = col.delete_many({"title": title})
+            print(f"deleted existing docs for title '{title}': {del_res.deleted_count}")
         # insert in batches to avoid large payloads
         start = 0
         while start < len(records):
@@ -138,7 +158,16 @@ def cmd_tag_num(args) -> int:
 def cmd_sentence_token(args) -> int:
     col = get_collection(args.collection)
     modified = update_corpus_sentence_tokenization(
-        col, limit=args.limit, batch=args.batch, missing_only=not args.all
+        col, limit=args.limit, batch=args.batch, missing_only=not args.all, verbose=args.verbose
+    )
+    print(f"modified documents: {modified}")
+    return 0
+
+
+def cmd_thai_clock(args) -> int:
+    col = get_collection(args.collection)
+    modified = update_corpus_thai_clock(
+        col, limit=args.limit, batch=args.batch, missing_only=not args.all, verbose=args.verbose
     )
     print(f"modified documents: {modified}")
     return 0

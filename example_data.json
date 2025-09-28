@@ -12,7 +12,8 @@
       "created_at": "2025-09-27T21:39:38Z"
     },
     "process": {
-      "sentence_split": true
+      "sentence_split": true,
+      "sentence_token": true
     },
     "sentences": [
       {

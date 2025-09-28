@@ -44,6 +44,7 @@ def update_corpus_sentence_tokenization(
     limit: int | None = None,
     batch: int = 200,
     missing_only: bool = True,
+    verbose: bool = False,
 ) -> int:
     """Re-tokenize existing sentences using PyThaiNLP and set process.sentence_token=true.
 
@@ -62,6 +63,14 @@ def update_corpus_sentence_tokenization(
     else:
         filt = base
 
+    # Optional pre-count to help diagnose "nothing happened" cases
+    try:
+        candidates = col.count_documents(filt)
+        if verbose:
+            print(f"sentence-token candidates: {candidates}")
+    except Exception:
+        candidates = None
+
     proj = {"sentences": 1}
     cursor = col.find(filt, projection=proj, no_cursor_timeout=True)
     if limit is not None:
@@ -69,6 +78,8 @@ def update_corpus_sentence_tokenization(
 
     ops: list[UpdateOne] = []
     modified_docs = 0
+    changed_content = 0
+    flagged_only = 0
     try:
         for doc in cursor:
             doc_id = doc.get("_id")
@@ -77,6 +88,7 @@ def update_corpus_sentence_tokenization(
             if new_sentences is None:
                 # No change in content; still mark the process flag
                 ops.append(UpdateOne({"_id": doc_id}, {"$set": {"process.sentence_token": True}}))
+                flagged_only += 1
             else:
                 ops.append(
                     UpdateOne(
@@ -84,6 +96,7 @@ def update_corpus_sentence_tokenization(
                         {"$set": {"sentences": new_sentences, "process.sentence_token": True}},
                     )
                 )
+                changed_content += 1
             if len(ops) >= batch:
                 res = col.bulk_write(ops, ordered=False)
                 modified_docs += res.modified_count
@@ -96,4 +109,9 @@ def update_corpus_sentence_tokenization(
             cursor.close()
         except Exception:
             pass
+    if verbose:
+        # Note: modified_docs may be less than changed_content+flagged_only if some docs already matched set values
+        print(
+            f"sentence-token summary -> changed_content: {changed_content}, flagged_only: {flagged_only}, modified_docs: {modified_docs}"
+        )
     return modified_docs

@@ -33,7 +33,7 @@ $cmd = @(
   $netArgs,
   "-v", "${PWD}:/app",
   $Image,
-  "sentence-token",
+  "thai-clock",
   "--collection", $Collection,
   "--batch", $Batch
 )

@@ -41,17 +41,7 @@ def save_state_all(path: Path, state: Dict) -> None:
     tmp.replace(path)
 
 
-def load_fetch_state(path: Path) -> Tuple[Set[str], Set[str], Dict]:
-    d = load_state_all(path)
-    sets = _ensure_sets(d)
-    return sets["done"], sets["not_found"], d
-
-
-def save_fetch_state(path: Path, done: Set[str], not_found: Set[str], base: Dict) -> None:
-    d = dict(base)
-    d["done"] = sorted(done)
-    d["not_found"] = sorted(not_found)
-    save_state_all(path, d)
+# Removed legacy fetch-state helpers; fetcher now manages its own state format
 
 
 def load_segment_state(path: Path) -> Tuple[Set[str], Dict]:

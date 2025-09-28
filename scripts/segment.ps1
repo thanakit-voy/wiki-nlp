@@ -4,6 +4,8 @@ param(
     [string]$Collection = "corpus",
     [int]$Batch = 100,
     [int]$Max = 0,
+    [switch]$Replace,
+    [switch]$Force,
     [string]$MongoUri = "mongodb://host.docker.internal:27017",
     [string]$MongoDb = "tiktok_live",
     [string]$MongoUser = "appuser",
@@ -39,6 +41,8 @@ $cmd = @(
     "--state", $State
 )
 if ($Max -gt 0) { $cmd += @("--max", $Max) }
+if ($Replace) { $cmd += "--replace" }
+if ($Force) { $cmd += "--force" }
 
 Write-Host "docker $($cmd -join ' ')"
 docker @cmd
