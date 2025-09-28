@@ -12,6 +12,7 @@ from .thai_clock import update_corpus_thai_clock
 from .connectors import update_corpus_connectors
 from .abbreviation import update_corpus_abbreviation
 from .tokenize import update_corpus_tokenize
+from .sentence_heads import update_corpus_sentence_heads
 
 
 def cmd_greet(args) -> int:
@@ -146,6 +147,18 @@ def build_parser() -> argparse.ArgumentParser:
     p_tok.add_argument("--verbose", action="store_true", help="แสดงจำนวน candidates และสรุปผลหลังรัน")
     p_tok.set_defaults(func=cmd_tokenize)
 
+    # sentence-heads (build phrases based on dependency heads)
+    p_heads = sub.add_parser(
+        "sentence-heads",
+        help="สร้างประโยคย่อยตาม head ของ dependency ในแต่ละประโยค และตั้งค่า process.sentence_heads=true",
+    )
+    p_heads.add_argument("--collection", default="corpus", help="collection เป้าหมาย (ดีฟอลต์: corpus)")
+    p_heads.add_argument("--limit", type=int, default=None, help="จำนวนเอกสารสูงสุดที่จะอัปเดต")
+    p_heads.add_argument("--batch", type=int, default=200, help="ขนาด batch ต่อ bulk_write")
+    p_heads.add_argument("--all", action="store_true", help="อัปเดตทุกเอกสาร (ไม่จำกัดเฉพาะที่ยังไม่ถูก sentence_heads)")
+    p_heads.add_argument("--verbose", action="store_true", help="แสดงสรุปหลังรัน")
+    p_heads.set_defaults(func=cmd_sentence_heads)
+
     return parser
 
 
@@ -243,6 +256,19 @@ def cmd_abbreviation(args) -> int:
 def cmd_tokenize(args) -> int:
     col = get_collection(args.collection)
     modified = update_corpus_tokenize(
+        col,
+        limit=args.limit,
+        batch=args.batch,
+        missing_only=not args.all,
+        verbose=args.verbose,
+    )
+    print(f"modified documents: {modified}")
+    return 0
+
+
+def cmd_sentence_heads(args) -> int:
+    col = get_collection(args.collection)
+    modified = update_corpus_sentence_heads(
         col,
         limit=args.limit,
         batch=args.batch,
