@@ -14,6 +14,7 @@ This script orchestrates the following steps and repeats each until the stop con
   8) .\scripts\abbreviation.ps1            -> until log contains "modified documents: 0"
   9) .\scripts\tokenize.ps1                -> until log contains "modified documents: 0"
   10) .\scripts\sentence_heads.ps1         -> until log contains "modified documents: 0"
+  11) .\scripts\word_pattern.ps1           -> until log contains "modified documents: 0"
 
 By default, a short sleep is applied between iterations to avoid tight loops.
 
@@ -122,6 +123,7 @@ ${connectorsScript}   = Join-Path $scriptRoot 'connectors.ps1'
 ${abbreviationScript} = Join-Path $scriptRoot 'abbreviation.ps1'
 ${tokenizeScript}     = Join-Path $scriptRoot 'tokenize.ps1'
 ${sentenceHeadsScript} = Join-Path $scriptRoot 'sentence_heads.ps1'
+${wordPatternScript}   = Join-Path $scriptRoot 'word_pattern.ps1'
 
 if (-not (Test-Path $fetchScript))     { throw "Missing script: $fetchScript" }
 if (-not (Test-Path $segmentScript))   { throw "Missing script: $segmentScript" }
@@ -133,6 +135,7 @@ if (-not (Test-Path $connectorsScript))   { throw "Missing script: $connectorsSc
 if (-not (Test-Path $abbreviationScript)) { throw "Missing script: $abbreviationScript" }
 if (-not (Test-Path $tokenizeScript))     { throw "Missing script: $tokenizeScript" }
 if (-not (Test-Path $sentenceHeadsScript)) { throw "Missing script: $sentenceHeadsScript" }
+if (-not (Test-Path $wordPatternScript))   { throw "Missing script: $wordPatternScript" }
 
 # (optional) fetch.ps1 -Max 100 until quiet
 if ($Fetch) { Invoke-StepUntilQuiet -StepName 'fetch' -Invoker { & $fetchScript -Max 100 } } else { Write-Host "Skipping fetch (no -Fetch)." -ForegroundColor Yellow }
@@ -164,5 +167,8 @@ Invoke-StepUntilMatch -StepName 'tokenize' -Invoker { & $tokenizeScript }
 
 # 10) sentence_heads.ps1 until "modified documents: 0"
 Invoke-StepUntilMatch -StepName 'sentence_heads' -Invoker { & $sentenceHeadsScript }
+
+# 11) word_pattern.ps1 until "modified documents: 0"
+Invoke-StepUntilMatch -StepName 'word_pattern' -Invoker { & $wordPatternScript }
 
 Write-Host "All steps completed." -ForegroundColor Green
