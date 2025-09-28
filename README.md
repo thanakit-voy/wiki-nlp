@@ -1,5 +1,15 @@
 # โปรเจกต์สคริปต์ Python 3.12.10 แบบ Docker (ไม่มี API)
 
+.\scripts\fetch.ps1 -Max 100
+.\scripts\segment.ps1 -Max 100
+.\scripts\thai_clock.ps1 -Limit 500
+.\scripts\sentences.ps1 -Limit 500
+.\scripts\sentence_token.ps1 -Limit 500
+.\scripts\tag_num.ps1 -Limit 500
+.\scripts\connectors.ps1 -Limit 500
+.\scripts\abbreviation.ps1 -Limit 500
+
+
 โปรเจกต์นี้เป็น CLI ที่รันใน Docker สำหรับงานดึงบทความวิกิพีเดียภาษาไทย, แยกหัวข้อ, ตัดประโยค และประมวลผลข้อความลง MongoDB โดยมีการติดตามสถานะการประมวลผลในฟิลด์ `process.*` ของเอกสาร
 
 ## โครงสร้าง

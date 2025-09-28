@@ -152,7 +152,7 @@ def fetch_all(cfg: FetchConfig) -> None:
     processed = 0
     for i, title in enumerate(titles, start=1):
         if title in done or title in not_found:
-            print(f"[{i}/{len(titles)}] ข้าม (มีใน state แล้ว): {title}")
+            # print(f"[{i}/{len(titles)}] ข้าม (มีใน state แล้ว): {title}")
             continue
         try:
             norm_title, extract = fetch_wiki_extract(session, title, cfg.timeout_sec)
