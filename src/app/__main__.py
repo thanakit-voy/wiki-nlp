@@ -11,6 +11,7 @@ from .state_store import load_segment_state, save_segment_state
 from .thai_clock import update_corpus_thai_clock
 from .connectors import update_corpus_connectors
 from .abbreviation import update_corpus_abbreviation
+from .tokenize import update_corpus_tokenize
 
 
 def cmd_greet(args) -> int:
@@ -133,6 +134,18 @@ def build_parser() -> argparse.ArgumentParser:
     p_abbr.add_argument("--verbose", action="store_true", help="แสดงจำนวน candidates และสรุปผลหลังรัน")
     p_abbr.set_defaults(func=cmd_abbreviation)
 
+    # tokenize (word-level tokens with POS/lemma/depparse via Stanza)
+    p_tok = sub.add_parser(
+        "tokenize",
+        help="เพิ่ม tokens ให้แต่ละ sentences ด้วย Stanza (รองรับ custom dict) และตั้งค่า process.tokenize=true",
+    )
+    p_tok.add_argument("--collection", default="corpus", help="collection เป้าหมาย (ดีฟอลต์: corpus)")
+    p_tok.add_argument("--limit", type=int, default=None, help="จำนวนเอกสารสูงสุดที่จะอัปเดต")
+    p_tok.add_argument("--batch", type=int, default=200, help="ขนาด batch ต่อ bulk_write")
+    p_tok.add_argument("--all", action="store_true", help="อัปเดตทุกเอกสาร (ไม่จำกัดเฉพาะที่ยังไม่ถูก tokenize)")
+    p_tok.add_argument("--verbose", action="store_true", help="แสดงจำนวน candidates และสรุปผลหลังรัน")
+    p_tok.set_defaults(func=cmd_tokenize)
+
     return parser
 
 
@@ -217,6 +230,19 @@ def cmd_connectors(args) -> int:
 def cmd_abbreviation(args) -> int:
     col = get_collection(args.collection)
     modified = update_corpus_abbreviation(
+        col,
+        limit=args.limit,
+        batch=args.batch,
+        missing_only=not args.all,
+        verbose=args.verbose,
+    )
+    print(f"modified documents: {modified}")
+    return 0
+
+
+def cmd_tokenize(args) -> int:
+    col = get_collection(args.collection)
+    modified = update_corpus_tokenize(
         col,
         limit=args.limit,
         batch=args.batch,
