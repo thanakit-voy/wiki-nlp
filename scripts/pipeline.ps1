@@ -12,6 +12,7 @@ This script orchestrates the following steps and repeats each until the stop con
   6) .\scripts\tag_num.ps1                 -> until log contains "modified documents: 0"
   7) .\scripts\connectors.ps1              -> until log contains "modified documents: 0"
   8) .\scripts\abbreviation.ps1            -> until log contains "modified documents: 0"
+  9) .\scripts\tokenize.ps1                -> until log contains "modified documents: 0"
 
 By default, a short sleep is applied between iterations to avoid tight loops.
 
@@ -118,6 +119,7 @@ ${sentenceTokenScript} = Join-Path $scriptRoot 'sentence_token.ps1'
 ${tagNumScript}       = Join-Path $scriptRoot 'tag_num.ps1'
 ${connectorsScript}   = Join-Path $scriptRoot 'connectors.ps1'
 ${abbreviationScript} = Join-Path $scriptRoot 'abbreviation.ps1'
+${tokenizeScript}     = Join-Path $scriptRoot 'tokenize.ps1'
 
 if (-not (Test-Path $fetchScript))     { throw "Missing script: $fetchScript" }
 if (-not (Test-Path $segmentScript))   { throw "Missing script: $segmentScript" }
@@ -127,6 +129,7 @@ if (-not (Test-Path $sentenceTokenScript)) { throw "Missing script: $sentenceTok
 if (-not (Test-Path $tagNumScript))       { throw "Missing script: $tagNumScript" }
 if (-not (Test-Path $connectorsScript))   { throw "Missing script: $connectorsScript" }
 if (-not (Test-Path $abbreviationScript)) { throw "Missing script: $abbreviationScript" }
+if (-not (Test-Path $tokenizeScript))     { throw "Missing script: $tokenizeScript" }
 
 # (optional) fetch.ps1 -Max 100 until quiet
 if ($Fetch) { Invoke-StepUntilQuiet -StepName 'fetch' -Invoker { & $fetchScript -Max 100 } } else { Write-Host "Skipping fetch (no -Fetch)." -ForegroundColor Yellow }
@@ -152,5 +155,8 @@ Invoke-StepUntilMatch -StepName 'connectors' -Invoker { & $connectorsScript }
 
 # 8) abbreviation.ps1 until "modified documents: 0"
 Invoke-StepUntilMatch -StepName 'abbreviation' -Invoker { & $abbreviationScript }
+
+# 9) tokenize.ps1 until "modified documents: 0"
+Invoke-StepUntilMatch -StepName 'tokenize' -Invoker { & $tokenizeScript }
 
 Write-Host "All steps completed." -ForegroundColor Green
