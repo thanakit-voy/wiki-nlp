@@ -13,6 +13,7 @@ from .connectors import update_corpus_connectors
 from .abbreviation import update_corpus_abbreviation
 from .tokenize import update_corpus_tokenize
 from .sentence_heads import update_corpus_sentence_heads
+from .word_pattern import update_corpus_word_pattern
 
 
 def cmd_greet(args) -> int:
@@ -159,6 +160,20 @@ def build_parser() -> argparse.ArgumentParser:
     p_heads.add_argument("--verbose", action="store_true", help="แสดงสรุปหลังรัน")
     p_heads.set_defaults(func=cmd_sentence_heads)
 
+    # word-pattern (build masked word patterns from sentence_heads)
+    p_wp = sub.add_parser(
+        "word-pattern",
+        help="สร้าง masked patterns ต่อ token จาก sentence_heads และบันทึกลง collection words; ตั้งค่า process.word_pattern=true",
+    )
+    p_wp.add_argument("--corpus", default="corpus", help="collection ของเอกสารต้นทาง (ดีฟอลต์: corpus)")
+    p_wp.add_argument("--words", default="words", help="collection สำหรับเก็บ word stats (ดีฟอลต์: words)")
+    p_wp.add_argument("--patterns", default="patterns", help="collection สำหรับเก็บรายการ pattern และนับรวม (ดีฟอลต์: patterns)")
+    p_wp.add_argument("--limit", type=int, default=None, help="จำนวนเอกสารสูงสุดที่จะอัปเดตจาก corpus")
+    p_wp.add_argument("--batch", type=int, default=200, help="สำรองไว้ (ไม่ได้ใช้กับ upsert แบบทีละรายการ)")
+    p_wp.add_argument("--all", action="store_true", help="ประมวลผลทุกเอกสาร (ไม่จำกัดเฉพาะที่ยังไม่ถูก word_pattern)")
+    p_wp.add_argument("--verbose", action="store_true", help="แสดงสรุปหลังรัน")
+    p_wp.set_defaults(func=cmd_word_pattern)
+
     return parser
 
 
@@ -270,6 +285,23 @@ def cmd_sentence_heads(args) -> int:
     col = get_collection(args.collection)
     modified = update_corpus_sentence_heads(
         col,
+        limit=args.limit,
+        batch=args.batch,
+        missing_only=not args.all,
+        verbose=args.verbose,
+    )
+    print(f"modified documents: {modified}")
+    return 0
+
+
+def cmd_word_pattern(args) -> int:
+    corpus_col = get_collection(args.corpus)
+    words_col = get_collection(args.words)
+    patterns_col = get_collection(args.patterns)
+    modified = update_corpus_word_pattern(
+        corpus_col,
+        words_col,
+        patterns_col,
         limit=args.limit,
         batch=args.batch,
         missing_only=not args.all,

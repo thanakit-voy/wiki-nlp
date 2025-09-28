@@ -87,3 +87,6 @@ UNIT_TIME: Set[str]     = {"ชั่วโมง", "นาที", "วิน�
 TIME_TOKENS: Set[str] = {"นาฬิกา", "โมง", "ทุ่ม", "AM", "PM", "เอเอ็ม", "พีเอ็ม"}
 ERA_TOKENS: Set[str] = {"พุทธศักราช", "คริสต์ศักราช", "จุลศักราช"}
 PERCENT_TOKENS: Set[str] = {"%", "เปอร์เซ็นต์", "เปอร์เซนต์"}
+
+MASK_POS: Set[str] = {"NOUN", "PROPN", "VERB"}
+NOT_MASK_TYPE: Set[str] = {"MONTH", "CURRENCY", "UNIT_DISTANCE","UNIT_VOLUME", "UNIT_WEIGHT","UNIT_AREA","TIME_UNIT","ERA","PERCENT_SIGN","ORDINAL_MARK"}
