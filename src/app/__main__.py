@@ -148,7 +148,7 @@ def cmd_segment(args) -> int:
     total = 0
     for title, records in generate_records_grouped_by_file(cfg):
         if (not args.force) and (title in uploaded):
-            print(f"skip (uploaded): {title}")
+            # print(f"skip (uploaded): {title}")
             continue
         if args.replace:
             # Replace existing docs for this title
@@ -171,7 +171,7 @@ def cmd_sentences(args) -> int:
     col = get_collection(args.collection)
     missing_only = not bool(args.all)
     updated = update_corpus_sentences(col, limit=args.limit, batch=args.batch, missing_only=missing_only)
-    print(f"updated documents: {updated}")
+    print(f"modified documents: {updated}")
     return 0
 
 
