@@ -1,7 +1,7 @@
 param(
   [string]$Image = "wiki-nlp-cli",
   [string]$Collection = "corpus",
-  [int]$Limit = 0,
+  [int]$Limit = 500,
   [int]$Batch = 200,
   [switch]$All,
   [switch]$Verbose,

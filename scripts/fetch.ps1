@@ -5,7 +5,7 @@ param(
     [string]$Image = "wiki-nlp-cli",
     [string]$Contact = "you@example.com",
     [string]$AppUrl = "https://example.com",
-    [int]$Max = 0,
+    [int]$Max = 100,
     [double]$Delay = 0.2,
     [double]$Timeout = 15
 )

@@ -3,7 +3,7 @@ param(
     [string]$ArticlesDir = "data/articles",
     [string]$Collection = "corpus",
     [int]$Batch = 100,
-    [int]$Max = 0,
+    [int]$Max = 100,
     [switch]$Replace,
     [switch]$Force,
     [string]$MongoUri = "mongodb://host.docker.internal:27017",
