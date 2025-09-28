@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import datetime as dt
 import re
 from typing import Dict, List
 
@@ -33,10 +32,9 @@ def is_numeric_like(text: str) -> bool:
     )
 
 
-def tag_sentences_array(sentences: List[dict], created_at_iso: str | None = None) -> List[dict]:
+def tag_sentences_array(sentences: List[dict]) -> List[dict]:
     changed_any = False
     out: List[dict] = []
-    created_at_iso = created_at_iso or dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
     for s in sentences:
         item = dict(s)
         text = str(item.get("text", ""))
@@ -47,7 +45,6 @@ def tag_sentences_array(sentences: List[dict], created_at_iso: str | None = None
             if item.get("pos") != "NUM":
                 item["pos"] = "NUM"
                 changed_any = True
-            # do not change created_at if present; keep as is
         out.append(item)
     return out if changed_any else sentences
 

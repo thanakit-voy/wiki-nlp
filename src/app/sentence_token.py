@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import datetime as dt
 from typing import Dict, List
 
 from pymongo.collection import Collection
@@ -18,23 +17,22 @@ def retokenize_sentences_array(sentences: List[dict]) -> List[dict] | None:
 
     - Input is the existing sentences array (list of {text, created_at, ...}).
     - For each item, split its text by PyThaiNLP sent_tokenize and expand in place.
-    - Preserve created_at from the original item for all produced sub-sentences.
+    - Output items only contain {text} (no created_at).
     - Returns None if no changes were made (i.e., output equals input).
     """
     out: List[dict] = []
     changed = False
     for item in sentences:
         text = str(item.get("text", ""))
-        created_at = item.get("created_at")
         subs = [s.strip() for s in (sent_tokenize(text) or []) if s and s.strip()]
         if subs and not (len(subs) == 1 and subs[0] == text):
             changed = True
         if not subs:
             # Keep as-is if tokenizer yields nothing
-            out.append({"text": text, "created_at": created_at})
+            out.append({"text": text})
             continue
         for s in subs:
-            out.append({"text": s, "created_at": created_at})
+            out.append({"text": s})
     return out if changed else None
 
 

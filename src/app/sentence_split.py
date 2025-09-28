@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import datetime as dt
 from typing import Iterable, List
 
 from pymongo.collection import Collection
@@ -16,9 +15,9 @@ def split_by_space(text: str) -> List[str]:
     return parts
 
 
-def build_sentences_array(text: str, created_at_iso: str) -> List[dict]:
+def build_sentences_array(text: str) -> List[dict]:
     tokens = split_by_space(text)
-    return [{"text": t, "created_at": created_at_iso} for t in tokens]
+    return [{"text": t} for t in tokens]
 
 
 def update_corpus_sentences(
@@ -32,7 +31,6 @@ def update_corpus_sentences(
 
     Returns number of documents updated.
     """
-    created_at = dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
     filt = {}
     if missing_only:
         # Select docs that have not been processed by sentence_split yet
@@ -54,7 +52,7 @@ def update_corpus_sentences(
         for doc in cursor:
             doc_id = doc.get("_id")
             content = (((doc or {}).get("raw") or {}).get("content")) or ""
-            sentences = build_sentences_array(content, created_at)
+            sentences = build_sentences_array(content)
             ops.append(
                 UpdateOne(
                     {"_id": doc_id},

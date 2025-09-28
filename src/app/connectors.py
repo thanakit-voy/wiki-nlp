@@ -93,8 +93,7 @@ def _should_merge(prev_text: str, curr_item: dict, *, min_len: int) -> bool:
 def merge_sentences_array(sentences: List[dict], *, min_len: int) -> List[dict] | None:
     """Merge sentences based on connector rules.
 
-    - Keeps created_at from the first sentence in each merged group.
-    - Drops type/pos tags in outputs (like sentence-token step when changing content).
+    - Output items only contain {text}. Drops type/pos and created_at.
     - Returns None if no merges were applied.
     """
     if not sentences:
@@ -109,7 +108,7 @@ def merge_sentences_array(sentences: List[dict], *, min_len: int) -> List[dict] 
             # skip empty pieces entirely
             continue
         if not out:
-            out.append({"text": text, "created_at": item.get("created_at")})
+            out.append({"text": text})
             continue
 
         prev = out[-1]
@@ -118,7 +117,7 @@ def merge_sentences_array(sentences: List[dict], *, min_len: int) -> List[dict] 
             prev["text"] = merged
             changed = True
         else:
-            out.append({"text": text, "created_at": item.get("created_at")})
+            out.append({"text": text})
 
     return out if changed else None
 
