@@ -2,13 +2,13 @@
   "collection": "corpus",
   "data": {
     "_id": {
-      "$oid": "68d9143dce4df72b71019524"
+      "$oid": "68d9143dce4df72b710194c4"
     },
     "title": "กรุงเทพมหานคร",
-    "content_index": 97,
+    "content_index": 1,
     "raw": {
-      "header": "ทางรถโดยสารประจำทาง",
-      "content": "รถโดยสารประจำทางมีหลายสายเพื่อเป็นการบริการประชาชน ให้บริการในราคาย่อมเยา โดยรถโดยสารประจำทางเฉพาะพื้นที่กรุงเทพมหานครและปริมณฑล มีทั้งหมด 254 สาย ซึ่งในจำนวนนี้มีที่ขึ้นทางด่วนของการทางพิเศษแห่งประเทศไทย 36 เส้นทาง และเป็นเส้นทางที่ใช้รถปรับอากาศในเส้นทางเดียวกับเส้นทางปกติ 143 เส้นทาง ดังนั้นจึงคงเหลือรถธรรมดาที่ไม่ขึ้นทางด่วนและไม่มีรถปรับอากาศบริการในเส้นทางนั้น ๆ 75 เส้นทาง รถโดยสารร่วมบริการขนาดเล็ก (มินิบัส) ราคา 10 บาทตลอดสาย รถโดยสารธรรมดาของ ขสมก. ราคา 8 บาทตลอดสาย รถโดยสารธรรมดาร่วมบริการราคา 10 บาทตลอดสาย รถโดยสารธรรมดาร่วมบริการรุ่นใหม่ราคา 12 บาทตลอดสาย รถโดยสารปรับอากาศแบบครีม-น้ำเงินราคาเริ่มต้น 12 บาท รถโดยสารปรับอากาศแบบยูโร 2 ราคาเริ่มต้น 13 บาท ส่วนรถปรับอากาศรุ่นใหม่ (ใช้แก๊สธรรมชาติ หรือใช้พลังงานไฟฟ้า) ราคาเริ่มต้น 15 บาท โดยหากใช้บริการในยามค่ำระหว่างช่วง 23.00 นาฬิกา ถึง 05.00 นาฬิการาคาจะเพิ่มขึ้น 1.50 บาท ตลอดสาย (ค่าธรรมเนียมรถบริการตลอดคืน จะจัดเก็บเฉพาะรถโดยสารธรรมดา ส่วนรถโดยสารปรับอากาศ จะไม่มีการจัดเก็บแต่อย่างใด) และหากรถขึ้นทางด่วนจะเพิ่มราคาขึ้นอีก 2 บาท (ค่าธรรมเนียมรถบริการทางด่วนนี้ จะจัดเก็บทั้งรถโดยสารธรรมดา และรถโดยสารปรับอากาศ)",
+      "header": "",
+      "content": "กรุงเทพมหานคร เป็นเมืองหลวงและเมืองที่มีประชากรมากที่สุดของประเทศไทย กรุงเทพมหานครเป็นจุดรวมของความเจริญทั้งในระดับประเทศและระดับภูมิภาคเอเชียตะวันออกเฉียงใต้ เมืองตั้งอยู่บริเวณสามเหลี่ยมปากแม่น้ำเจ้าพระยา โดยมีแม่น้ำเจ้าพระยาไหลผ่านใจกลางเมือง และแบ่งพื้นที่ออกเป็นสองฝั่งหลัก ได้แก่ ฝั่งพระนครและฝั่งธนบุรี กรุงเทพมหานครมีพื้นที่ทั้งสิ้น 1,568.737 ตารางกิโลเมตร และมีประชากรใน พ.ศ. 2567 ประมาณ 10 ล้านคน หรือคิดเป็นร้อยละ 13 ของประชากรทั้งประเทศ หากนับรวมเขตปริมณฑล ประชากรจะเพิ่มขึ้นเป็นประมาณ 17 ล้านคน ส่งผลให้กรุงเทพมหานครมีสถานะเป็นมหานครและเอกนคร ซึ่งหมายถึงเมืองที่มีอิทธิพลโดดเด่นอย่างยิ่งเหนือเมืองอื่น ๆ ในประเทศเดียวกัน",
       "created_at": "2025-09-28T10:55:57Z"
     },
     "process": {
@@ -18,424 +18,22 @@
       "num_tag": true,
       "connector": true,
       "abbreviation": true,
-      "tokenize": true
+      "tokenize": true,
+      "sentence_heads": true
     },
     "sentences": [
       {
-        "text": "รถโดยสารประจำทางมีหลายสายเพื่อเป็นการบริการประชาชน ให้บริการในราคาย่อมเยา",
+        "text": "กรุงเทพมหานคร เป็นเมืองหลวงและเมืองที่มีประชากรมากที่สุดของประเทศไทย",
         "tokens": [
           {
             "id": 1,
-            "text": "รถโดยสารประจำทาง",
-            "pos": "NOUN",
-            "lemma": "รถโดยสารประจำทาง",
-            "depparse": "nsubj",
-            "head": 2,
-            "start": 0,
-            "end": 16,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "มี",
-            "pos": "VERB",
-            "lemma": "มี",
-            "depparse": "root",
-            "head": 0,
-            "start": 16,
-            "end": 18,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "หลาย",
-            "pos": "ADV",
-            "lemma": "หลาย",
-            "depparse": "advmod",
-            "head": 4,
-            "start": 18,
-            "end": 22,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "สาย",
-            "pos": "NOUN",
-            "lemma": "สาย",
-            "depparse": "obj",
-            "head": 2,
-            "start": 22,
-            "end": 25,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "เพื่อ",
-            "pos": "SCONJ",
-            "lemma": "เพื่อ",
-            "depparse": "mark",
-            "head": 6,
-            "start": 25,
-            "end": 30,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "เป็นการ",
-            "pos": "VERB",
-            "lemma": "เป็นการ",
-            "depparse": "advcl",
-            "head": 2,
-            "start": 30,
-            "end": 37,
-            "lang": "th"
-          },
-          {
-            "id": 7,
-            "text": "บริการ",
-            "pos": "VERB",
-            "lemma": "บริการ",
-            "depparse": "xcomp",
-            "head": 6,
-            "start": 37,
-            "end": 43,
-            "lang": "th"
-          },
-          {
-            "id": 8,
-            "text": "ประชาชน",
-            "pos": "NOUN",
-            "lemma": "ประชาชน",
-            "depparse": "obj",
-            "head": 7,
-            "start": 43,
-            "end": 50,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "ให้บริการ",
-            "pos": "VERB",
-            "lemma": "ให้บริการ",
-            "depparse": "acl",
-            "head": 8,
-            "start": 51,
-            "end": 60,
-            "lang": "th"
-          },
-          {
-            "id": 10,
-            "text": "ใน",
-            "pos": "ADP",
-            "lemma": "ใน",
-            "depparse": "case",
-            "head": 11,
-            "start": 60,
-            "end": 62,
-            "lang": "th"
-          },
-          {
-            "id": 11,
-            "text": "ราคา",
-            "pos": "NOUN",
-            "lemma": "ราคา",
-            "depparse": "obl",
-            "head": 9,
-            "start": 62,
-            "end": 66,
-            "lang": "th"
-          },
-          {
-            "id": 12,
-            "text": "ย่อมเยา",
-            "pos": "ADJ",
-            "lemma": "ย่อมเยา",
-            "depparse": "amod",
-            "head": 11,
-            "start": 66,
-            "end": 73,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "text": "โดยรถโดยสารประจำทางเฉพาะพื้นที่กรุงเทพมหานครและปริมณฑล มีทั้งหมด 254 สาย",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "โดย",
-            "pos": "ADP",
-            "lemma": "โดย",
-            "depparse": "case",
-            "head": 2,
-            "start": 0,
-            "end": 3,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "รถโดยสารประจำทาง",
-            "pos": "NOUN",
-            "lemma": "รถโดยสารประจำทาง",
-            "depparse": "obl",
-            "head": 8,
-            "start": 3,
-            "end": 19,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "เฉพาะ",
-            "pos": "ADP",
-            "lemma": "เฉพาะ",
-            "depparse": "case",
-            "head": 4,
-            "start": 19,
-            "end": 24,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "พื้นที่",
-            "pos": "NOUN",
-            "lemma": "พื้นที่",
-            "depparse": "nmod",
-            "head": 2,
-            "start": 24,
-            "end": 31,
-            "lang": "th"
-          },
-          {
-            "id": 5,
             "text": "กรุงเทพมหานคร",
             "pos": "PROPN",
             "lemma": "กรุงเทพมหานคร",
-            "depparse": "nmod",
-            "head": 4,
-            "start": 31,
-            "end": 44,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "และ",
-            "pos": "CCONJ",
-            "lemma": "และ",
-            "depparse": "cc",
-            "head": 7,
-            "start": 44,
-            "end": 47,
-            "lang": "th"
-          },
-          {
-            "id": 7,
-            "text": "ปริมณฑล",
-            "pos": "PROPN",
-            "lemma": "ปริมณฑล",
-            "depparse": "conj",
-            "head": 4,
-            "start": 47,
-            "end": 54,
-            "lang": "th"
-          },
-          {
-            "id": 8,
-            "text": "มี",
-            "pos": "VERB",
-            "lemma": "มี",
-            "depparse": "root",
-            "head": 0,
-            "start": 55,
-            "end": 57,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "ทั้งหมด",
-            "pos": "ADV",
-            "lemma": "ทั้งหมด",
-            "depparse": "advmod",
-            "head": 8,
-            "start": 57,
-            "end": 64,
-            "lang": "th"
-          },
-          {
-            "id": 10,
-            "text": "254",
-            "pos": "NUM",
-            "lemma": "254",
-            "depparse": "nummod",
-            "head": 11,
-            "start": 65,
-            "end": 68,
-            "lang": "th",
-            "type": "NUMBER"
-          },
-          {
-            "id": 11,
-            "text": "สาย",
-            "pos": "NOUN",
-            "lemma": "สาย",
-            "depparse": "obj",
-            "head": 8,
-            "start": 69,
-            "end": 72,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "text": "ซึ่งในจำนวนนี้มีที่ขึ้นทางด่วนของการทางพิเศษแห่งประเทศไทย 36 เส้นทาง",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "ซึ่ง",
-            "pos": "CCONJ",
-            "lemma": "ซึ่ง",
-            "depparse": "cc",
-            "head": 5,
-            "start": 0,
-            "end": 4,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "ใน",
-            "pos": "ADP",
-            "lemma": "ใน",
-            "depparse": "case",
-            "head": 3,
-            "start": 4,
-            "end": 6,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "จำนวน",
-            "pos": "NOUN",
-            "lemma": "จำนวน",
             "depparse": "nsubj",
-            "head": 5,
-            "start": 6,
-            "end": 11,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "นี้",
-            "pos": "DET",
-            "lemma": "นี้",
-            "depparse": "det",
-            "head": 3,
-            "start": 11,
-            "end": 14,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "มี",
-            "pos": "VERB",
-            "lemma": "มี",
-            "depparse": "root",
-            "head": 0,
-            "start": 14,
-            "end": 16,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "ที่",
-            "pos": "NOUN",
-            "lemma": "ที่",
-            "depparse": "obj",
-            "head": 5,
-            "start": 16,
-            "end": 19,
-            "lang": "th",
-            "type": "ORDINAL_MARK"
-          },
-          {
-            "id": 7,
-            "text": "ขึ้น",
-            "pos": "VERB",
-            "lemma": "ขึ้น",
-            "depparse": "acl",
-            "head": 6,
-            "start": 19,
-            "end": 23,
-            "lang": "th"
-          },
-          {
-            "id": 8,
-            "text": "ทางด่วน",
-            "pos": "NOUN",
-            "lemma": "ทางด่วน",
-            "depparse": "obj",
-            "head": 7,
-            "start": 23,
-            "end": 30,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "ของ",
-            "pos": "ADP",
-            "lemma": "ของ",
-            "depparse": "case",
-            "head": 10,
-            "start": 30,
-            "end": 33,
-            "lang": "th"
-          },
-          {
-            "id": 10,
-            "text": "การทางพิเศษแห่งประเทศไทย",
-            "pos": "NOUN",
-            "lemma": "การทางพิเศษแห่งประเทศไทย",
-            "depparse": "nmod",
-            "head": 8,
-            "start": 33,
-            "end": 57,
-            "lang": "th"
-          },
-          {
-            "id": 11,
-            "text": "36",
-            "pos": "NUM",
-            "lemma": "36",
-            "depparse": "nummod",
-            "head": 12,
-            "start": 58,
-            "end": 60,
-            "lang": "th",
-            "type": "NUMBER"
-          },
-          {
-            "id": 12,
-            "text": "เส้นทาง",
-            "pos": "NOUN",
-            "lemma": "เส้นทาง",
-            "depparse": "clf",
-            "head": 10,
-            "start": 61,
-            "end": 68,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "text": "และเป็นเส้นทางที่ใช้รถปรับอากาศในเส้นทางเดียวกับเส้นทางปกติ 143 เส้นทาง",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "และ",
-            "pos": "CCONJ",
-            "lemma": "และ",
-            "depparse": "cc",
             "head": 3,
             "start": 0,
-            "end": 3,
+            "end": 13,
             "lang": "th"
           },
           {
@@ -445,53 +43,201 @@
             "lemma": "เป็น",
             "depparse": "cop",
             "head": 3,
-            "start": 3,
-            "end": 7,
+            "start": 14,
+            "end": 18,
             "lang": "th"
           },
           {
             "id": 3,
-            "text": "เส้นทาง",
+            "text": "เมืองหลวง",
             "pos": "NOUN",
-            "lemma": "เส้นทาง",
+            "lemma": "เมืองหลวง",
             "depparse": "root",
             "head": 0,
-            "start": 7,
-            "end": 14,
+            "start": 18,
+            "end": 27,
             "lang": "th"
           },
           {
             "id": 4,
-            "text": "ที่",
-            "pos": "PRON",
-            "lemma": "ที่",
-            "depparse": "nsubj",
+            "text": "และ",
+            "pos": "CCONJ",
+            "lemma": "และ",
+            "depparse": "cc",
             "head": 5,
-            "start": 14,
-            "end": 17,
-            "lang": "th",
-            "type": "ORDINAL_MARK"
+            "start": 27,
+            "end": 30,
+            "lang": "th"
           },
           {
             "id": 5,
-            "text": "ใช้",
-            "pos": "VERB",
-            "lemma": "ใช้",
-            "depparse": "acl",
+            "text": "เมือง",
+            "pos": "NOUN",
+            "lemma": "เมือง",
+            "depparse": "conj",
             "head": 3,
-            "start": 17,
-            "end": 20,
+            "start": 30,
+            "end": 35,
             "lang": "th"
           },
           {
             "id": 6,
-            "text": "รถปรับอากาศ",
-            "pos": "NOUN",
-            "lemma": "รถปรับอากาศ",
-            "depparse": "obj",
+            "text": "ที่",
+            "pos": "PRON",
+            "lemma": "ที่",
+            "depparse": "nsubj",
+            "head": 7,
+            "start": 35,
+            "end": 38,
+            "lang": "th",
+            "type": "ORDINAL_MARK"
+          },
+          {
+            "id": 7,
+            "text": "มี",
+            "pos": "VERB",
+            "lemma": "มี",
+            "depparse": "acl",
             "head": 5,
-            "start": 20,
-            "end": 31,
+            "start": 38,
+            "end": 40,
+            "lang": "th"
+          },
+          {
+            "id": 8,
+            "text": "ประชากร",
+            "pos": "NOUN",
+            "lemma": "ประชากร",
+            "depparse": "obj",
+            "head": 7,
+            "start": 40,
+            "end": 47,
+            "lang": "th"
+          },
+          {
+            "id": 9,
+            "text": "มาก",
+            "pos": "ADV",
+            "lemma": "มาก",
+            "depparse": "amod",
+            "head": 8,
+            "start": 47,
+            "end": 50,
+            "lang": "th"
+          },
+          {
+            "id": 10,
+            "text": "ที่สุด",
+            "pos": "ADV",
+            "lemma": "ที่สุด",
+            "depparse": "advmod",
+            "head": 9,
+            "start": 50,
+            "end": 56,
+            "lang": "th"
+          },
+          {
+            "id": 11,
+            "text": "ของ",
+            "pos": "ADP",
+            "lemma": "ของ",
+            "depparse": "case",
+            "head": 12,
+            "start": 56,
+            "end": 59,
+            "lang": "th"
+          },
+          {
+            "id": 12,
+            "text": "ประเทศ",
+            "pos": "NOUN",
+            "lemma": "ประเทศ",
+            "depparse": "nmod",
+            "head": 8,
+            "start": 59,
+            "end": 65,
+            "lang": "th"
+          },
+          {
+            "id": 13,
+            "text": "ไทย",
+            "pos": "PROPN",
+            "lemma": "ไทย",
+            "depparse": "nmod",
+            "head": 12,
+            "start": 65,
+            "end": 68,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "text": "กรุงเทพมหานครเป็นจุดรวมของความเจริญทั้งในระดับประเทศและระดับภูมิภาคเอเชียตะวันออกเฉียงใต้",
+        "tokens": [
+          {
+            "id": 1,
+            "text": "กรุงเทพมหานคร",
+            "pos": "PROPN",
+            "lemma": "กรุงเทพมหานคร",
+            "depparse": "nsubj",
+            "head": 3,
+            "start": 0,
+            "end": 13,
+            "lang": "th"
+          },
+          {
+            "id": 2,
+            "text": "เป็น",
+            "pos": "AUX",
+            "lemma": "เป็น",
+            "depparse": "cop",
+            "head": 3,
+            "start": 13,
+            "end": 17,
+            "lang": "th"
+          },
+          {
+            "id": 3,
+            "text": "จุดรวม",
+            "pos": "NOUN",
+            "lemma": "จุดรวม",
+            "depparse": "root",
+            "head": 0,
+            "start": 17,
+            "end": 23,
+            "lang": "th"
+          },
+          {
+            "id": 4,
+            "text": "ของ",
+            "pos": "ADP",
+            "lemma": "ของ",
+            "depparse": "case",
+            "head": 5,
+            "start": 23,
+            "end": 26,
+            "lang": "th"
+          },
+          {
+            "id": 5,
+            "text": "ความเจริญ",
+            "pos": "NOUN",
+            "lemma": "ความเจริญ",
+            "depparse": "nmod",
+            "head": 3,
+            "start": 26,
+            "end": 35,
+            "lang": "th"
+          },
+          {
+            "id": 6,
+            "text": "ทั้ง",
+            "pos": "ADV",
+            "lemma": "ทั้ง",
+            "depparse": "advmod",
+            "head": 8,
+            "start": 35,
+            "end": 39,
             "lang": "th"
           },
           {
@@ -501,191 +247,30 @@
             "lemma": "ใน",
             "depparse": "case",
             "head": 8,
-            "start": 31,
-            "end": 33,
+            "start": 39,
+            "end": 41,
             "lang": "th"
           },
           {
             "id": 8,
-            "text": "เส้น",
+            "text": "ระดับ",
             "pos": "NOUN",
-            "lemma": "เส้น",
-            "depparse": "obl",
-            "head": 5,
-            "start": 33,
-            "end": 37,
+            "lemma": "ระดับ",
+            "depparse": "nmod",
+            "head": 3,
+            "start": 41,
+            "end": 46,
             "lang": "th"
           },
           {
             "id": 9,
-            "text": "ทางเดียว",
+            "text": "ประเทศ",
             "pos": "NOUN",
-            "lemma": "ทางเดียว",
-            "depparse": "compound",
+            "lemma": "ประเทศ",
+            "depparse": "nmod",
             "head": 8,
-            "start": 37,
-            "end": 45,
-            "lang": "th"
-          },
-          {
-            "id": 10,
-            "text": "กับ",
-            "pos": "ADP",
-            "lemma": "กับ",
-            "depparse": "case",
-            "head": 11,
-            "start": 45,
-            "end": 48,
-            "lang": "th"
-          },
-          {
-            "id": 11,
-            "text": "เส้นทาง",
-            "pos": "NOUN",
-            "lemma": "เส้นทาง",
-            "depparse": "obl",
-            "head": 5,
-            "start": 48,
-            "end": 55,
-            "lang": "th"
-          },
-          {
-            "id": 12,
-            "text": "ปกติ",
-            "pos": "ADJ",
-            "lemma": "ปกติ",
-            "depparse": "amod",
-            "head": 11,
-            "start": 55,
-            "end": 59,
-            "lang": "th"
-          },
-          {
-            "id": 13,
-            "text": "143",
-            "pos": "NUM",
-            "lemma": "143",
-            "depparse": "nummod",
-            "head": 14,
-            "start": 60,
-            "end": 63,
-            "lang": "th",
-            "type": "NUMBER"
-          },
-          {
-            "id": 14,
-            "text": "เส้นทาง",
-            "pos": "NOUN",
-            "lemma": "เส้นทาง",
-            "depparse": "clf",
-            "head": 11,
-            "start": 64,
-            "end": 71,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "text": "ดังนั้นจึงคงเหลือรถธรรมดาที่ไม่ขึ้นทางด่วนและไม่มีรถปรับอากาศบริการในเส้นทางนั้น ๆ 75 เส้นทาง",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "ดังนั้น",
-            "pos": "CCONJ",
-            "lemma": "ดังนั้น",
-            "depparse": "cc",
-            "head": 3,
-            "start": 0,
-            "end": 7,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "จึง",
-            "pos": "ADV",
-            "lemma": "จึง",
-            "depparse": "advmod",
-            "head": 3,
-            "start": 7,
-            "end": 10,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "คงเหลือ",
-            "pos": "VERB",
-            "lemma": "คงเหลือ",
-            "depparse": "root",
-            "head": 0,
-            "start": 10,
-            "end": 17,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "รถ",
-            "pos": "NOUN",
-            "lemma": "รถ",
-            "depparse": "obj",
-            "head": 3,
-            "start": 17,
-            "end": 19,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "ธรรมดา",
-            "pos": "ADJ",
-            "lemma": "ธรรมดา",
-            "depparse": "amod",
-            "head": 4,
-            "start": 19,
-            "end": 25,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "ที่",
-            "pos": "PRON",
-            "lemma": "ที่",
-            "depparse": "nsubj",
-            "head": 8,
-            "start": 25,
-            "end": 28,
-            "lang": "th",
-            "type": "ORDINAL_MARK"
-          },
-          {
-            "id": 7,
-            "text": "ไม่",
-            "pos": "PART",
-            "lemma": "ไม่",
-            "depparse": "advmod",
-            "head": 8,
-            "start": 28,
-            "end": 31,
-            "lang": "th"
-          },
-          {
-            "id": 8,
-            "text": "ขึ้น",
-            "pos": "VERB",
-            "lemma": "ขึ้น",
-            "depparse": "acl",
-            "head": 4,
-            "start": 31,
-            "end": 35,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "ทางด่วน",
-            "pos": "NOUN",
-            "lemma": "ทางด่วน",
-            "depparse": "obj",
-            "head": 8,
-            "start": 35,
-            "end": 42,
+            "start": 46,
+            "end": 52,
             "lang": "th"
           },
           {
@@ -694,999 +279,119 @@
             "pos": "CCONJ",
             "lemma": "และ",
             "depparse": "cc",
-            "head": 12,
-            "start": 42,
-            "end": 45,
-            "lang": "th"
-          },
-          {
-            "id": 11,
-            "text": "ไม่",
-            "pos": "PART",
-            "lemma": "ไม่",
-            "depparse": "advmod",
-            "head": 12,
-            "start": 45,
-            "end": 48,
-            "lang": "th"
-          },
-          {
-            "id": 12,
-            "text": "มี",
-            "pos": "VERB",
-            "lemma": "มี",
-            "depparse": "conj",
-            "head": 3,
-            "start": 48,
-            "end": 50,
-            "lang": "th"
-          },
-          {
-            "id": 13,
-            "text": "รถปรับอากาศ",
-            "pos": "NOUN",
-            "lemma": "รถปรับอากาศ",
-            "depparse": "obj",
-            "head": 12,
-            "start": 50,
-            "end": 61,
-            "lang": "th"
-          },
-          {
-            "id": 14,
-            "text": "บริการ",
-            "pos": "VERB",
-            "lemma": "บริการ",
-            "depparse": "acl",
-            "head": 13,
-            "start": 61,
-            "end": 67,
-            "lang": "th"
-          },
-          {
-            "id": 15,
-            "text": "ใน",
-            "pos": "ADP",
-            "lemma": "ใน",
-            "depparse": "case",
-            "head": 16,
-            "start": 67,
-            "end": 69,
-            "lang": "th"
-          },
-          {
-            "id": 16,
-            "text": "เส้นทาง",
-            "pos": "NOUN",
-            "lemma": "เส้นทาง",
-            "depparse": "nmod",
-            "head": 13,
-            "start": 69,
-            "end": 76,
-            "lang": "th"
-          },
-          {
-            "id": 17,
-            "text": "นั้น",
-            "pos": "DET",
-            "lemma": "นั้น",
-            "depparse": "det",
-            "head": 16,
-            "start": 76,
-            "end": 80,
-            "lang": "th"
-          },
-          {
-            "id": 18,
-            "text": "ๆ",
-            "pos": "PUNCT",
-            "lemma": "ๆ",
-            "depparse": "punct",
-            "head": 17,
-            "start": 81,
-            "end": 82,
-            "lang": "th"
-          },
-          {
-            "id": 19,
-            "text": "75",
-            "pos": "NUM",
-            "lemma": "75",
-            "depparse": "nummod",
-            "head": 20,
-            "start": 83,
-            "end": 85,
-            "lang": "th",
-            "type": "NUMBER"
-          },
-          {
-            "id": 20,
-            "text": "เส้นทาง",
-            "pos": "NOUN",
-            "lemma": "เส้นทาง",
-            "depparse": "clf",
-            "head": 16,
-            "start": 86,
-            "end": 93,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "text": "รถโดยสารร่วมบริการขนาดเล็ก (มินิบัส) ราคา 10 บาทตลอดสาย รถโดยสารธรรมดาของ องค์การขนส่งมวลชนกรุงเทพ ราคา 8 บาทตลอดสาย",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "รถโดยสาร",
-            "pos": "NOUN",
-            "lemma": "รถโดยสาร",
-            "depparse": "root",
-            "head": 0,
-            "start": 0,
-            "end": 8,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "ร่วม",
-            "pos": "VERB",
-            "lemma": "ร่วม",
-            "depparse": "acl",
-            "head": 1,
-            "start": 8,
-            "end": 12,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "บริการ",
-            "pos": "NOUN",
-            "lemma": "บริการ",
-            "depparse": "obj",
-            "head": 2,
-            "start": 12,
-            "end": 18,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "ขนาดเล็ก",
-            "pos": "NUM",
-            "lemma": "ขนาดเล็ก",
-            "depparse": "nmod",
-            "head": 3,
-            "start": 18,
-            "end": 26,
-            "lang": "th",
-            "type": "NUMBER"
-          },
-          {
-            "id": 5,
-            "text": "(",
-            "pos": "PUNCT",
-            "lemma": "(",
-            "depparse": "punct",
-            "head": 6,
-            "start": 27,
-            "end": 28,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "มินิบัส",
-            "pos": "PROPN",
-            "lemma": "มินิบัส",
-            "depparse": "nmod",
-            "head": 3,
-            "start": 28,
-            "end": 35,
-            "lang": "th"
-          },
-          {
-            "id": 7,
-            "text": ")",
-            "pos": "PUNCT",
-            "lemma": ")",
-            "depparse": "punct",
-            "head": 6,
-            "start": 35,
-            "end": 36,
-            "lang": "th"
-          },
-          {
-            "id": 8,
-            "text": "ราคา",
-            "pos": "NOUN",
-            "lemma": "ราคา",
-            "depparse": "nmod",
-            "head": 1,
-            "start": 37,
-            "end": 41,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "10",
-            "pos": "NUM",
-            "lemma": "10",
-            "depparse": "nummod",
-            "head": 10,
-            "start": 42,
-            "end": 44,
-            "lang": "th",
-            "type": "MONEY"
-          },
-          {
-            "id": 10,
-            "text": "บาท",
-            "pos": "NOUN",
-            "lemma": "บาท",
-            "depparse": "clf",
-            "head": 8,
-            "start": 45,
-            "end": 48,
-            "lang": "th",
-            "type": "CURRENCY"
-          },
-          {
-            "id": 11,
-            "text": "ตลอด",
-            "pos": "ADP",
-            "lemma": "ตลอด",
-            "depparse": "case",
-            "head": 12,
-            "start": 48,
-            "end": 52,
-            "lang": "th"
-          },
-          {
-            "id": 12,
-            "text": "สาย",
-            "pos": "NOUN",
-            "lemma": "สาย",
-            "depparse": "obl",
-            "head": 2,
+            "head": 11,
             "start": 52,
             "end": 55,
             "lang": "th"
           },
           {
-            "id": 13,
-            "text": "รถโดยสาร",
-            "pos": "NOUN",
-            "lemma": "รถโดยสาร",
-            "depparse": "nmod",
-            "head": 12,
-            "start": 56,
-            "end": 64,
-            "lang": "th"
-          },
-          {
-            "id": 14,
-            "text": "ธรรมดา",
-            "pos": "ADJ",
-            "lemma": "ธรรมดา",
-            "depparse": "amod",
-            "head": 13,
-            "start": 64,
-            "end": 70,
-            "lang": "th"
-          },
-          {
-            "id": 15,
-            "text": "ของ",
-            "pos": "ADP",
-            "lemma": "ของ",
-            "depparse": "case",
-            "head": 16,
-            "start": 70,
-            "end": 73,
-            "lang": "th"
-          },
-          {
-            "id": 16,
-            "text": "องค์",
-            "pos": "NOUN",
-            "lemma": "องค์",
-            "depparse": "nmod",
-            "head": 13,
-            "start": 74,
-            "end": 78,
-            "lang": "th"
-          },
-          {
-            "id": 17,
-            "text": "การขนส่งมวลชน",
-            "pos": "NOUN",
-            "lemma": "การขนส่งมวลชน",
-            "depparse": "nmod",
-            "head": 16,
-            "start": 78,
-            "end": 91,
-            "lang": "th"
-          },
-          {
-            "id": 18,
-            "text": "กรุงเทพ",
-            "pos": "PROPN",
-            "lemma": "กรุงเทพ",
-            "depparse": "nmod",
-            "head": 17,
-            "start": 91,
-            "end": 98,
-            "lang": "th"
-          },
-          {
-            "id": 19,
-            "text": "ราคา",
-            "pos": "NOUN",
-            "lemma": "ราคา",
-            "depparse": "nmod",
-            "head": 16,
-            "start": 99,
-            "end": 103,
-            "lang": "th"
-          },
-          {
-            "id": 20,
-            "text": "8",
-            "pos": "NUM",
-            "lemma": "8",
-            "depparse": "nummod",
-            "head": 21,
-            "start": 104,
-            "end": 105,
-            "lang": "th",
-            "type": "MONEY"
-          },
-          {
-            "id": 21,
-            "text": "บาท",
-            "pos": "NOUN",
-            "lemma": "บาท",
-            "depparse": "clf",
-            "head": 19,
-            "start": 106,
-            "end": 109,
-            "lang": "th",
-            "type": "CURRENCY"
-          },
-          {
-            "id": 22,
-            "text": "ตลอด",
-            "pos": "ADP",
-            "lemma": "ตลอด",
-            "depparse": "case",
-            "head": 23,
-            "start": 109,
-            "end": 113,
-            "lang": "th"
-          },
-          {
-            "id": 23,
-            "text": "สาย",
-            "pos": "NOUN",
-            "lemma": "สาย",
-            "depparse": "nmod",
-            "head": 12,
-            "start": 113,
-            "end": 116,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "text": "รถโดยสารธรรมดาร่วมบริการราคา 10 บาทตลอดสาย",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "รถโดยสาร",
-            "pos": "NOUN",
-            "lemma": "รถโดยสาร",
-            "depparse": "root",
-            "head": 0,
-            "start": 0,
-            "end": 8,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "ธรรมดา",
-            "pos": "ADJ",
-            "lemma": "ธรรมดา",
-            "depparse": "amod",
-            "head": 1,
-            "start": 8,
-            "end": 14,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "ร่วม",
-            "pos": "VERB",
-            "lemma": "ร่วม",
-            "depparse": "acl",
-            "head": 1,
-            "start": 14,
-            "end": 18,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "บริการ",
-            "pos": "NOUN",
-            "lemma": "บริการ",
-            "depparse": "obj",
-            "head": 3,
-            "start": 18,
-            "end": 24,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "ราคา",
-            "pos": "NOUN",
-            "lemma": "ราคา",
-            "depparse": "nmod",
-            "head": 4,
-            "start": 24,
-            "end": 28,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "10",
-            "pos": "NUM",
-            "lemma": "10",
-            "depparse": "nummod",
-            "head": 7,
-            "start": 29,
-            "end": 31,
-            "lang": "th",
-            "type": "MONEY"
-          },
-          {
-            "id": 7,
-            "text": "บาท",
-            "pos": "NOUN",
-            "lemma": "บาท",
-            "depparse": "clf",
-            "head": 5,
-            "start": 32,
-            "end": 35,
-            "lang": "th",
-            "type": "CURRENCY"
-          },
-          {
-            "id": 8,
-            "text": "ตลอด",
-            "pos": "ADV",
-            "lemma": "ตลอด",
-            "depparse": "advmod",
-            "head": 9,
-            "start": 35,
-            "end": 39,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "สาย",
-            "pos": "NOUN",
-            "lemma": "สาย",
-            "depparse": "obl",
-            "head": 3,
-            "start": 39,
-            "end": 42,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "text": "รถโดยสารธรรมดาร่วมบริการรุ่นใหม่ราคา 12 บาทตลอดสาย",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "รถโดยสาร",
-            "pos": "NOUN",
-            "lemma": "รถโดยสาร",
-            "depparse": "nsubj",
-            "head": 5,
-            "start": 0,
-            "end": 8,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "ธรรมดา",
-            "pos": "ADJ",
-            "lemma": "ธรรมดา",
-            "depparse": "amod",
-            "head": 1,
-            "start": 8,
-            "end": 14,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "ร่วม",
-            "pos": "VERB",
-            "lemma": "ร่วม",
-            "depparse": "acl",
-            "head": 1,
-            "start": 14,
-            "end": 18,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "บริการ",
-            "pos": "NOUN",
-            "lemma": "บริการ",
-            "depparse": "obj",
-            "head": 3,
-            "start": 18,
-            "end": 24,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "รุ่นใหม่",
-            "pos": "VERB",
-            "lemma": "รุ่นใหม่",
-            "depparse": "root",
-            "head": 0,
-            "start": 24,
-            "end": 32,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "ราคา",
-            "pos": "NOUN",
-            "lemma": "ราคา",
-            "depparse": "obj",
-            "head": 5,
-            "start": 32,
-            "end": 36,
-            "lang": "th"
-          },
-          {
-            "id": 7,
-            "text": "12",
-            "pos": "NUM",
-            "lemma": "12",
-            "depparse": "nummod",
-            "head": 8,
-            "start": 37,
-            "end": 39,
-            "lang": "th",
-            "type": "MONEY"
-          },
-          {
-            "id": 8,
-            "text": "บาท",
-            "pos": "NOUN",
-            "lemma": "บาท",
-            "depparse": "clf",
-            "head": 6,
-            "start": 40,
-            "end": 43,
-            "lang": "th",
-            "type": "CURRENCY"
-          },
-          {
-            "id": 9,
-            "text": "ตลอด",
-            "pos": "ADV",
-            "lemma": "ตลอด",
-            "depparse": "advmod",
-            "head": 10,
-            "start": 43,
-            "end": 47,
-            "lang": "th"
-          },
-          {
-            "id": 10,
-            "text": "สาย",
-            "pos": "NOUN",
-            "lemma": "สาย",
-            "depparse": "obl",
-            "head": 5,
-            "start": 47,
-            "end": 50,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "text": "รถโดยสารปรับอากาศแบบครีม-น้ำเงินราคาเริ่มต้น 12 บาท รถโดยสารปรับอากาศแบบยูโร 2 ราคาเริ่มต้น 13 บาท ส่วนรถปรับอากาศรุ่นใหม่ (ใช้แก๊สธรรมชาติ หรือใช้พลังงานไฟฟ้า) ราคาเริ่มต้น 15 บาท",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "รถโดยสาร",
-            "pos": "NOUN",
-            "lemma": "รถโดยสาร",
-            "depparse": "root",
-            "head": 0,
-            "start": 0,
-            "end": 8,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "ปรับอากาศ",
-            "pos": "VERB",
-            "lemma": "ปรับอากาศ",
-            "depparse": "acl",
-            "head": 1,
-            "start": 8,
-            "end": 17,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "แบบ",
-            "pos": "NOUN",
-            "lemma": "แบบ",
-            "depparse": "nmod",
-            "head": 1,
-            "start": 17,
-            "end": 20,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "ครีม",
-            "pos": "NOUN",
-            "lemma": "ครีม",
-            "depparse": "nmod",
-            "head": 3,
-            "start": 20,
-            "end": 24,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "-",
-            "pos": "PUNCT",
-            "lemma": "-",
-            "depparse": "punct",
-            "head": 6,
-            "start": 24,
-            "end": 25,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "น้ำเงิน",
-            "pos": "NOUN",
-            "lemma": "น้ำเงิน",
-            "depparse": "nmod",
-            "head": 4,
-            "start": 25,
-            "end": 32,
-            "lang": "th"
-          },
-          {
-            "id": 7,
-            "text": "ราคา",
-            "pos": "NOUN",
-            "lemma": "ราคา",
-            "depparse": "nmod",
-            "head": 4,
-            "start": 32,
-            "end": 36,
-            "lang": "th"
-          },
-          {
-            "id": 8,
-            "text": "เริ่มต้น",
-            "pos": "ADV",
-            "lemma": "เริ่มต้น",
-            "depparse": "advmod",
-            "head": 9,
-            "start": 36,
-            "end": 44,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "12",
-            "pos": "NUM",
-            "lemma": "12",
-            "depparse": "nummod",
-            "head": 10,
-            "start": 45,
-            "end": 47,
-            "lang": "th",
-            "type": "MONEY"
-          },
-          {
-            "id": 10,
-            "text": "บาท",
-            "pos": "NOUN",
-            "lemma": "บาท",
-            "depparse": "clf",
-            "head": 7,
-            "start": 48,
-            "end": 51,
-            "lang": "th",
-            "type": "CURRENCY"
-          },
-          {
             "id": 11,
-            "text": "รถโดยสาร",
+            "text": "ระดับ",
             "pos": "NOUN",
-            "lemma": "รถโดยสาร",
-            "depparse": "nmod",
-            "head": 1,
-            "start": 52,
+            "lemma": "ระดับ",
+            "depparse": "conj",
+            "head": 8,
+            "start": 55,
             "end": 60,
             "lang": "th"
           },
           {
             "id": 12,
-            "text": "ปรับอากาศ",
-            "pos": "VERB",
-            "lemma": "ปรับอากาศ",
-            "depparse": "acl",
+            "text": "ภูมิภาค",
+            "pos": "NOUN",
+            "lemma": "ภูมิภาค",
+            "depparse": "nmod",
             "head": 11,
             "start": 60,
-            "end": 69,
+            "end": 67,
             "lang": "th"
           },
           {
             "id": 13,
-            "text": "แบบ",
-            "pos": "NOUN",
-            "lemma": "แบบ",
-            "depparse": "obj",
-            "head": 12,
-            "start": 69,
-            "end": 72,
-            "lang": "th"
-          },
-          {
-            "id": 14,
-            "text": "ยูโร",
-            "pos": "NOUN",
-            "lemma": "ยูโร",
-            "depparse": "nmod",
-            "head": 13,
-            "start": 72,
-            "end": 76,
-            "lang": "th",
-            "type": "CURRENCY"
-          },
-          {
-            "id": 15,
-            "text": "2",
-            "pos": "NUM",
-            "lemma": "2",
-            "depparse": "nummod",
-            "head": 16,
-            "start": 77,
-            "end": 78,
-            "lang": "th",
-            "type": "MONEY"
-          },
-          {
-            "id": 16,
-            "text": "ราคา",
-            "pos": "NOUN",
-            "lemma": "ราคา",
-            "depparse": "clf",
-            "head": 13,
-            "start": 79,
-            "end": 83,
-            "lang": "th"
-          },
-          {
-            "id": 17,
-            "text": "เริ่มต้น",
-            "pos": "ADV",
-            "lemma": "เริ่มต้น",
-            "depparse": "advmod",
-            "head": 18,
-            "start": 83,
-            "end": 91,
-            "lang": "th"
-          },
-          {
-            "id": 18,
-            "text": "13",
-            "pos": "NUM",
-            "lemma": "13",
-            "depparse": "nummod",
-            "head": 19,
-            "start": 92,
-            "end": 94,
-            "lang": "th",
-            "type": "MONEY"
-          },
-          {
-            "id": 19,
-            "text": "บาท",
-            "pos": "NOUN",
-            "lemma": "บาท",
-            "depparse": "clf",
-            "head": 16,
-            "start": 95,
-            "end": 98,
-            "lang": "th",
-            "type": "CURRENCY"
-          },
-          {
-            "id": 20,
-            "text": "ส่วน",
-            "pos": "CCONJ",
-            "lemma": "ส่วน",
-            "depparse": "cc",
-            "head": 21,
-            "start": 99,
-            "end": 103,
-            "lang": "th"
-          },
-          {
-            "id": 21,
-            "text": "รถปรับอากาศ",
-            "pos": "NOUN",
-            "lemma": "รถปรับอากาศ",
-            "depparse": "conj",
-            "head": 1,
-            "start": 103,
-            "end": 114,
-            "lang": "th"
-          },
-          {
-            "id": 22,
-            "text": "รุ่นใหม่",
+            "text": "เอเชียตะวันออกเฉียงใต้",
             "pos": "PROPN",
-            "lemma": "รุ่นใหม่",
+            "lemma": "เอเชียตะวันออกเฉียงใต้",
             "depparse": "nmod",
-            "head": 21,
-            "start": 114,
-            "end": 122,
+            "head": 12,
+            "start": 67,
+            "end": 89,
             "lang": "th"
-          },
-          {
-            "id": 23,
-            "text": "(",
-            "pos": "PUNCT",
-            "lemma": "(",
-            "depparse": "punct",
-            "head": 24,
-            "start": 123,
-            "end": 124,
-            "lang": "th"
-          },
-          {
-            "id": 24,
-            "text": "ใช้",
-            "pos": "VERB",
-            "lemma": "ใช้",
-            "depparse": "acl",
-            "head": 21,
-            "start": 124,
-            "end": 127,
-            "lang": "th"
-          },
-          {
-            "id": 25,
-            "text": "แก๊ส",
-            "pos": "NOUN",
-            "lemma": "แก๊ส",
-            "depparse": "obj",
-            "head": 24,
-            "start": 127,
-            "end": 131,
-            "lang": "th"
-          },
-          {
-            "id": 26,
-            "text": "ธรรมชาติ",
-            "pos": "NOUN",
-            "lemma": "ธรรมชาติ",
-            "depparse": "nmod",
-            "head": 25,
-            "start": 131,
-            "end": 139,
-            "lang": "th"
-          },
-          {
-            "id": 27,
-            "text": "หรือ",
-            "pos": "CCONJ",
-            "lemma": "หรือ",
-            "depparse": "cc",
-            "head": 28,
-            "start": 140,
-            "end": 144,
-            "lang": "th"
-          },
-          {
-            "id": 28,
-            "text": "ใช้",
-            "pos": "VERB",
-            "lemma": "ใช้",
-            "depparse": "conj",
-            "head": 24,
-            "start": 144,
-            "end": 147,
-            "lang": "th"
-          },
-          {
-            "id": 29,
-            "text": "พลังงานไฟฟ้า",
-            "pos": "NOUN",
-            "lemma": "พลังงานไฟฟ้า",
-            "depparse": "obj",
-            "head": 28,
-            "start": 147,
-            "end": 159,
-            "lang": "th"
-          },
-          {
-            "id": 30,
-            "text": ")",
-            "pos": "PUNCT",
-            "lemma": ")",
-            "depparse": "punct",
-            "head": 28,
-            "start": 159,
-            "end": 160,
-            "lang": "th"
-          },
-          {
-            "id": 31,
-            "text": "ราคา",
-            "pos": "NOUN",
-            "lemma": "ราคา",
-            "depparse": "conj",
-            "head": 21,
-            "start": 161,
-            "end": 165,
-            "lang": "th"
-          },
-          {
-            "id": 32,
-            "text": "เริ่มต้น",
-            "pos": "ADV",
-            "lemma": "เริ่มต้น",
-            "depparse": "advmod",
-            "head": 33,
-            "start": 165,
-            "end": 173,
-            "lang": "th"
-          },
-          {
-            "id": 33,
-            "text": "15",
-            "pos": "NUM",
-            "lemma": "15",
-            "depparse": "nummod",
-            "head": 34,
-            "start": 174,
-            "end": 176,
-            "lang": "th",
-            "type": "MONEY"
-          },
-          {
-            "id": 34,
-            "text": "บาท",
-            "pos": "NOUN",
-            "lemma": "บาท",
-            "depparse": "clf",
-            "head": 31,
-            "start": 177,
-            "end": 180,
-            "lang": "th",
-            "type": "CURRENCY"
           }
         ]
       },
       {
-        "text": "โดยหากใช้บริการในยามค่ำระหว่างช่วง 23.00 นาฬิกา ถึง 05.00 นาฬิการาคาจะเพิ่มขึ้น 1.50 บาท ตลอดสาย (ค่าธรรมเนียมรถบริการตลอดคืน",
+        "text": "เมืองตั้งอยู่บริเวณสามเหลี่ยมปากแม่น้ำเจ้าพระยา",
+        "tokens": [
+          {
+            "id": 1,
+            "text": "เมือง",
+            "pos": "NOUN",
+            "lemma": "เมือง",
+            "depparse": "root",
+            "head": 0,
+            "start": 0,
+            "end": 5,
+            "lang": "th"
+          },
+          {
+            "id": 2,
+            "text": "ตั้งอยู่",
+            "pos": "VERB",
+            "lemma": "ตั้งอยู่",
+            "depparse": "acl",
+            "head": 1,
+            "start": 5,
+            "end": 13,
+            "lang": "th"
+          },
+          {
+            "id": 3,
+            "text": "บริเวณ",
+            "pos": "NOUN",
+            "lemma": "บริเวณ",
+            "depparse": "nmod",
+            "head": 1,
+            "start": 13,
+            "end": 19,
+            "lang": "th"
+          },
+          {
+            "id": 4,
+            "text": "สามเหลี่ยม",
+            "pos": "NOUN",
+            "lemma": "สามเหลี่ยม",
+            "depparse": "nmod",
+            "head": 3,
+            "start": 19,
+            "end": 29,
+            "lang": "th"
+          },
+          {
+            "id": 5,
+            "text": "ปากแม่น้ำ",
+            "pos": "PROPN",
+            "lemma": "ปากแม่น้ำ",
+            "depparse": "nmod",
+            "head": 4,
+            "start": 29,
+            "end": 38,
+            "lang": "th"
+          },
+          {
+            "id": 6,
+            "text": "เจ้าพระยา",
+            "pos": "PROPN",
+            "lemma": "เจ้าพระยา",
+            "depparse": "nmod",
+            "head": 4,
+            "start": 38,
+            "end": 47,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "text": "โดยมีแม่น้ำเจ้าพระยาไหลผ่านใจกลางเมือง",
         "tokens": [
           {
             "id": 1,
@@ -1694,774 +399,3061 @@
             "pos": "SCONJ",
             "lemma": "โดย",
             "depparse": "mark",
-            "head": 3,
+            "head": 2,
             "start": 0,
             "end": 3,
             "lang": "th"
           },
           {
             "id": 2,
-            "text": "หาก",
-            "pos": "SCONJ",
-            "lemma": "หาก",
-            "depparse": "mark",
-            "head": 3,
+            "text": "มี",
+            "pos": "VERB",
+            "lemma": "มี",
+            "depparse": "root",
+            "head": 0,
             "start": 3,
-            "end": 6,
+            "end": 5,
             "lang": "th"
           },
           {
             "id": 3,
-            "text": "ใช้",
-            "pos": "VERB",
-            "lemma": "ใช้",
-            "depparse": "root",
-            "head": 0,
-            "start": 6,
-            "end": 9,
+            "text": "แม่น้ำ",
+            "pos": "NOUN",
+            "lemma": "แม่น้ำ",
+            "depparse": "obj",
+            "head": 2,
+            "start": 5,
+            "end": 11,
             "lang": "th"
           },
           {
             "id": 4,
-            "text": "บริการ",
-            "pos": "NOUN",
-            "lemma": "บริการ",
-            "depparse": "obj",
+            "text": "เจ้าพระยา",
+            "pos": "PROPN",
+            "lemma": "เจ้าพระยา",
+            "depparse": "nmod",
             "head": 3,
-            "start": 9,
-            "end": 15,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "ใน",
-            "pos": "ADP",
-            "lemma": "ใน",
-            "depparse": "case",
-            "head": 6,
-            "start": 15,
-            "end": 17,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "ยาม",
-            "pos": "NOUN",
-            "lemma": "ยาม",
-            "depparse": "obl",
-            "head": 3,
-            "start": 17,
+            "start": 11,
             "end": 20,
             "lang": "th"
           },
           {
-            "id": 7,
-            "text": "ค่ำ",
-            "pos": "NOUN",
-            "lemma": "ค่ำ",
-            "depparse": "nmod",
-            "head": 6,
+            "id": 5,
+            "text": "ไหลผ่าน",
+            "pos": "VERB",
+            "lemma": "ไหลผ่าน",
+            "depparse": "ccomp",
+            "head": 2,
             "start": 20,
-            "end": 23,
+            "end": 27,
             "lang": "th"
           },
           {
-            "id": 8,
-            "text": "ระหว่าง",
-            "pos": "ADP",
-            "lemma": "ระหว่าง",
-            "depparse": "case",
-            "head": 9,
-            "start": 23,
-            "end": 30,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "ช่วง",
+            "id": 6,
+            "text": "ใจ",
             "pos": "NOUN",
-            "lemma": "ช่วง",
-            "depparse": "obl",
-            "head": 3,
-            "start": 30,
-            "end": 34,
-            "lang": "th"
-          },
-          {
-            "id": 10,
-            "text": "23.00",
-            "pos": "NUM",
-            "lemma": "23.00",
-            "depparse": "nummod",
-            "head": 11,
-            "start": 35,
-            "end": 40,
-            "lang": "th",
-            "type": "TIME"
-          },
-          {
-            "id": 11,
-            "text": "นาฬิกา",
-            "pos": "NOUN",
-            "lemma": "นาฬิกา",
-            "depparse": "clf",
-            "head": 9,
-            "start": 41,
-            "end": 47,
-            "lang": "th",
-            "type": "TIME_UNIT"
-          },
-          {
-            "id": 12,
-            "text": "ถึง",
-            "pos": "ADP",
-            "lemma": "ถึง",
-            "depparse": "case",
-            "head": 13,
-            "start": 48,
-            "end": 51,
-            "lang": "th"
-          },
-          {
-            "id": 13,
-            "text": "05.00",
-            "pos": "NUM",
-            "lemma": "05.00",
-            "depparse": "nummod",
-            "head": 14,
-            "start": 52,
-            "end": 57,
-            "lang": "th",
-            "type": "TIME"
-          },
-          {
-            "id": 14,
-            "text": "นาฬิกา",
-            "pos": "NOUN",
-            "lemma": "นาฬิกา",
-            "depparse": "clf",
-            "head": 9,
-            "start": 58,
-            "end": 64,
-            "lang": "th",
-            "type": "TIME_UNIT"
-          },
-          {
-            "id": 15,
-            "text": "ราคา",
-            "pos": "NOUN",
-            "lemma": "ราคา",
-            "depparse": "nsubj",
-            "head": 17,
-            "start": 64,
-            "end": 68,
-            "lang": "th"
-          },
-          {
-            "id": 16,
-            "text": "จะ",
-            "pos": "AUX",
-            "lemma": "จะ",
-            "depparse": "aux",
-            "head": 17,
-            "start": 68,
-            "end": 70,
-            "lang": "th"
-          },
-          {
-            "id": 17,
-            "text": "เพิ่มขึ้น",
-            "pos": "ADV",
-            "lemma": "เพิ่มขึ้น",
-            "depparse": "advmod",
-            "head": 14,
-            "start": 70,
-            "end": 79,
-            "lang": "th"
-          },
-          {
-            "id": 18,
-            "text": "1.50",
-            "pos": "NUM",
-            "lemma": "1.50",
-            "depparse": "nummod",
-            "head": 19,
-            "start": 80,
-            "end": 84,
-            "lang": "th",
-            "type": "MONEY"
-          },
-          {
-            "id": 19,
-            "text": "บาท",
-            "pos": "NOUN",
-            "lemma": "บาท",
-            "depparse": "clf",
-            "head": 15,
-            "start": 85,
-            "end": 88,
-            "lang": "th",
-            "type": "CURRENCY"
-          },
-          {
-            "id": 20,
-            "text": "ตลอด",
-            "pos": "ADV",
-            "lemma": "ตลอด",
-            "depparse": "advmod",
-            "head": 21,
-            "start": 89,
-            "end": 93,
-            "lang": "th"
-          },
-          {
-            "id": 21,
-            "text": "สาย",
-            "pos": "NOUN",
-            "lemma": "สาย",
-            "depparse": "obl",
-            "head": 17,
-            "start": 93,
-            "end": 96,
-            "lang": "th"
-          },
-          {
-            "id": 22,
-            "text": "(",
-            "pos": "PUNCT",
-            "lemma": "(",
-            "depparse": "punct",
-            "head": 23,
-            "start": 97,
-            "end": 98,
-            "lang": "th"
-          },
-          {
-            "id": 23,
-            "text": "ค่าธรรมเนียม",
-            "pos": "NOUN",
-            "lemma": "ค่าธรรมเนียม",
-            "depparse": "nmod",
-            "head": 21,
-            "start": 98,
-            "end": 110,
-            "lang": "th"
-          },
-          {
-            "id": 24,
-            "text": "รถ",
-            "pos": "NOUN",
-            "lemma": "รถ",
-            "depparse": "nmod",
-            "head": 23,
-            "start": 110,
-            "end": 112,
-            "lang": "th"
-          },
-          {
-            "id": 25,
-            "text": "บริการ",
-            "pos": "NOUN",
-            "lemma": "บริการ",
+            "lemma": "ใจ",
             "depparse": "compound",
-            "head": 24,
-            "start": 112,
-            "end": 118,
+            "head": 5,
+            "start": 27,
+            "end": 29,
             "lang": "th"
           },
           {
-            "id": 26,
-            "text": "ตลอดคืน",
-            "pos": "ADV",
-            "lemma": "ตลอดคืน",
-            "depparse": "advmod",
-            "head": 23,
-            "start": 118,
-            "end": 125,
+            "id": 7,
+            "text": "กลางเมือง",
+            "pos": "NOUN",
+            "lemma": "กลางเมือง",
+            "depparse": "obj",
+            "head": 5,
+            "start": 29,
+            "end": 38,
             "lang": "th"
           }
         ]
       },
       {
-        "text": "จะจัดเก็บเฉพาะรถโดยสารธรรมดา ส่วนรถโดยสารปรับอากาศ",
+        "text": "และแบ่งพื้นที่ออกเป็นสองฝั่งหลัก ได้แก่ ฝั่งพระนครและฝั่งธนบุรี",
         "tokens": [
           {
             "id": 1,
-            "text": "จะ",
-            "pos": "AUX",
-            "lemma": "จะ",
-            "depparse": "aux",
+            "text": "และ",
+            "pos": "CCONJ",
+            "lemma": "และ",
+            "depparse": "cc",
             "head": 2,
             "start": 0,
-            "end": 2,
+            "end": 3,
             "lang": "th"
           },
           {
             "id": 2,
-            "text": "จัดเก็บ",
+            "text": "แบ่ง",
             "pos": "VERB",
-            "lemma": "จัดเก็บ",
+            "lemma": "แบ่ง",
             "depparse": "root",
             "head": 0,
-            "start": 2,
-            "end": 9,
+            "start": 3,
+            "end": 7,
             "lang": "th"
           },
           {
             "id": 3,
-            "text": "เฉพาะ",
-            "pos": "ADV",
-            "lemma": "เฉพาะ",
-            "depparse": "advmod",
-            "head": 4,
-            "start": 9,
+            "text": "พื้นที่",
+            "pos": "NOUN",
+            "lemma": "พื้นที่",
+            "depparse": "obj",
+            "head": 2,
+            "start": 7,
             "end": 14,
             "lang": "th"
           },
           {
             "id": 4,
-            "text": "รถโดยสาร",
-            "pos": "NOUN",
-            "lemma": "รถโดยสาร",
-            "depparse": "obj",
+            "text": "ออก",
+            "pos": "VERB",
+            "lemma": "ออก",
+            "depparse": "compound",
             "head": 2,
             "start": 14,
+            "end": 17,
+            "lang": "th"
+          },
+          {
+            "id": 5,
+            "text": "เป็น",
+            "pos": "AUX",
+            "lemma": "เป็น",
+            "depparse": "cop",
+            "head": 7,
+            "start": 17,
+            "end": 21,
+            "lang": "th"
+          },
+          {
+            "id": 6,
+            "text": "สอง",
+            "pos": "NUM",
+            "lemma": "สอง",
+            "depparse": "nummod",
+            "head": 7,
+            "start": 21,
+            "end": 24,
+            "lang": "th",
+            "type": "NUMBER"
+          },
+          {
+            "id": 7,
+            "text": "ฝั่ง",
+            "pos": "NOUN",
+            "lemma": "ฝั่ง",
+            "depparse": "compound",
+            "head": 4,
+            "start": 24,
+            "end": 28,
+            "lang": "th"
+          },
+          {
+            "id": 8,
+            "text": "หลัก",
+            "pos": "ADJ",
+            "lemma": "หลัก",
+            "depparse": "amod",
+            "head": 7,
+            "start": 28,
+            "end": 32,
+            "lang": "th"
+          },
+          {
+            "id": 9,
+            "text": "ได้แก่",
+            "pos": "SCONJ",
+            "lemma": "ได้แก่",
+            "depparse": "mark",
+            "head": 10,
+            "start": 33,
+            "end": 39,
+            "lang": "th"
+          },
+          {
+            "id": 10,
+            "text": "ฝั่ง",
+            "pos": "NOUN",
+            "lemma": "ฝั่ง",
+            "depparse": "appos",
+            "head": 7,
+            "start": 40,
+            "end": 44,
+            "lang": "th"
+          },
+          {
+            "id": 11,
+            "text": "พระนคร",
+            "pos": "PROPN",
+            "lemma": "พระนคร",
+            "depparse": "nmod",
+            "head": 10,
+            "start": 44,
+            "end": 50,
+            "lang": "th"
+          },
+          {
+            "id": 12,
+            "text": "และ",
+            "pos": "CCONJ",
+            "lemma": "และ",
+            "depparse": "cc",
+            "head": 13,
+            "start": 50,
+            "end": 53,
+            "lang": "th"
+          },
+          {
+            "id": 13,
+            "text": "ฝั่ง",
+            "pos": "NOUN",
+            "lemma": "ฝั่ง",
+            "depparse": "conj",
+            "head": 10,
+            "start": 53,
+            "end": 57,
+            "lang": "th"
+          },
+          {
+            "id": 14,
+            "text": "ธนบุรี",
+            "pos": "PROPN",
+            "lemma": "ธนบุรี",
+            "depparse": "nmod",
+            "head": 13,
+            "start": 57,
+            "end": 63,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "text": "กรุงเทพมหานครมีพื้นที่ทั้งสิ้น 1,568.737 ตารางกิโลเมตร และมีประชากรใน พุทธศักราช 2567 ประมาณ 10 ล้านคน หรือคิดเป็นร้อยละ 13 ของประชากรทั้งประเทศ หากนับรวมเขตปริมณฑล",
+        "tokens": [
+          {
+            "id": 1,
+            "text": "กรุงเทพมหานคร",
+            "pos": "PROPN",
+            "lemma": "กรุงเทพมหานคร",
+            "depparse": "nsubj",
+            "head": 2,
+            "start": 0,
+            "end": 13,
+            "lang": "th"
+          },
+          {
+            "id": 2,
+            "text": "มี",
+            "pos": "VERB",
+            "lemma": "มี",
+            "depparse": "root",
+            "head": 0,
+            "start": 13,
+            "end": 15,
+            "lang": "th"
+          },
+          {
+            "id": 3,
+            "text": "พื้นที่",
+            "pos": "NOUN",
+            "lemma": "พื้นที่",
+            "depparse": "obj",
+            "head": 2,
+            "start": 15,
+            "end": 22,
+            "lang": "th"
+          },
+          {
+            "id": 4,
+            "text": "ทั้งสิ้น",
+            "pos": "ADV",
+            "lemma": "ทั้งสิ้น",
+            "depparse": "advmod",
+            "head": 5,
+            "start": 22,
+            "end": 30,
+            "lang": "th"
+          },
+          {
+            "id": 5,
+            "text": "1,568.737",
+            "pos": "NUM",
+            "lemma": "1,568.737",
+            "depparse": "nummod",
+            "head": 6,
+            "start": 31,
+            "end": 40,
+            "lang": "th",
+            "type": "AREA"
+          },
+          {
+            "id": 6,
+            "text": "ตารางกิโลเมตร",
+            "pos": "NOUN",
+            "lemma": "ตารางกิโลเมตร",
+            "depparse": "clf",
+            "head": 3,
+            "start": 41,
+            "end": 54,
+            "lang": "th",
+            "type": "UNIT_AREA"
+          },
+          {
+            "id": 7,
+            "text": "และ",
+            "pos": "CCONJ",
+            "lemma": "และ",
+            "depparse": "cc",
+            "head": 8,
+            "start": 55,
+            "end": 58,
+            "lang": "th"
+          },
+          {
+            "id": 8,
+            "text": "มี",
+            "pos": "VERB",
+            "lemma": "มี",
+            "depparse": "conj",
+            "head": 2,
+            "start": 58,
+            "end": 60,
+            "lang": "th"
+          },
+          {
+            "id": 9,
+            "text": "ประชากร",
+            "pos": "NOUN",
+            "lemma": "ประชากร",
+            "depparse": "obj",
+            "head": 8,
+            "start": 60,
+            "end": 67,
+            "lang": "th"
+          },
+          {
+            "id": 10,
+            "text": "ใน",
+            "pos": "ADP",
+            "lemma": "ใน",
+            "depparse": "case",
+            "head": 11,
+            "start": 67,
+            "end": 69,
+            "lang": "th"
+          },
+          {
+            "id": 11,
+            "text": "พุทธศักราช",
+            "pos": "NOUN",
+            "lemma": "พุทธศักราช",
+            "depparse": "nmod",
+            "head": 9,
+            "start": 70,
+            "end": 80,
+            "lang": "th"
+          },
+          {
+            "id": 12,
+            "text": "2567",
+            "pos": "NUM",
+            "lemma": "2567",
+            "depparse": "nummod",
+            "head": 11,
+            "start": 81,
+            "end": 85,
+            "lang": "th",
+            "type": "NUMBER"
+          },
+          {
+            "id": 13,
+            "text": "ประมาณ",
+            "pos": "ADV",
+            "lemma": "ประมาณ",
+            "depparse": "advmod",
+            "head": 14,
+            "start": 86,
+            "end": 92,
+            "lang": "th"
+          },
+          {
+            "id": 14,
+            "text": "10",
+            "pos": "NUM",
+            "lemma": "10",
+            "depparse": "nummod",
+            "head": 15,
+            "start": 93,
+            "end": 95,
+            "lang": "th",
+            "type": "NUMBER"
+          },
+          {
+            "id": 15,
+            "text": "ล้าน",
+            "pos": "NUM",
+            "lemma": "ล้าน",
+            "depparse": "nummod",
+            "head": 16,
+            "start": 96,
+            "end": 100,
+            "lang": "th",
+            "type": "NUMBER"
+          },
+          {
+            "id": 16,
+            "text": "คน",
+            "pos": "NOUN",
+            "lemma": "คน",
+            "depparse": "clf",
+            "head": 9,
+            "start": 100,
+            "end": 102,
+            "lang": "th"
+          },
+          {
+            "id": 17,
+            "text": "หรือ",
+            "pos": "CCONJ",
+            "lemma": "หรือ",
+            "depparse": "cc",
+            "head": 18,
+            "start": 103,
+            "end": 107,
+            "lang": "th"
+          },
+          {
+            "id": 18,
+            "text": "คิด",
+            "pos": "VERB",
+            "lemma": "คิด",
+            "depparse": "conj",
+            "head": 2,
+            "start": 107,
+            "end": 110,
+            "lang": "th"
+          },
+          {
+            "id": 19,
+            "text": "เป็น",
+            "pos": "AUX",
+            "lemma": "เป็น",
+            "depparse": "cop",
+            "head": 20,
+            "start": 110,
+            "end": 114,
+            "lang": "th"
+          },
+          {
+            "id": 20,
+            "text": "ร้อยละ",
+            "pos": "NOUN",
+            "lemma": "ร้อยละ",
+            "depparse": "xcomp",
+            "head": 18,
+            "start": 114,
+            "end": 120,
+            "lang": "th"
+          },
+          {
+            "id": 21,
+            "text": "13",
+            "pos": "NUM",
+            "lemma": "13",
+            "depparse": "nummod",
+            "head": 20,
+            "start": 121,
+            "end": 123,
+            "lang": "th",
+            "type": "NUMBER"
+          },
+          {
+            "id": 22,
+            "text": "ของ",
+            "pos": "ADP",
+            "lemma": "ของ",
+            "depparse": "case",
+            "head": 23,
+            "start": 124,
+            "end": 127,
+            "lang": "th"
+          },
+          {
+            "id": 23,
+            "text": "ประชากร",
+            "pos": "NOUN",
+            "lemma": "ประชากร",
+            "depparse": "nmod",
+            "head": 20,
+            "start": 127,
+            "end": 134,
+            "lang": "th"
+          },
+          {
+            "id": 24,
+            "text": "ทั้ง",
+            "pos": "ADV",
+            "lemma": "ทั้ง",
+            "depparse": "advmod",
+            "head": 25,
+            "start": 134,
+            "end": 138,
+            "lang": "th"
+          },
+          {
+            "id": 25,
+            "text": "ประเทศ",
+            "pos": "NOUN",
+            "lemma": "ประเทศ",
+            "depparse": "nmod",
+            "head": 23,
+            "start": 138,
+            "end": 144,
+            "lang": "th"
+          },
+          {
+            "id": 26,
+            "text": "หาก",
+            "pos": "SCONJ",
+            "lemma": "หาก",
+            "depparse": "mark",
+            "head": 27,
+            "start": 145,
+            "end": 148,
+            "lang": "th"
+          },
+          {
+            "id": 27,
+            "text": "นับ",
+            "pos": "VERB",
+            "lemma": "นับ",
+            "depparse": "advcl",
+            "head": 18,
+            "start": 148,
+            "end": 151,
+            "lang": "th"
+          },
+          {
+            "id": 28,
+            "text": "รวม",
+            "pos": "VERB",
+            "lemma": "รวม",
+            "depparse": "compound",
+            "head": 27,
+            "start": 151,
+            "end": 154,
+            "lang": "th"
+          },
+          {
+            "id": 29,
+            "text": "เขต",
+            "pos": "NOUN",
+            "lemma": "เขต",
+            "depparse": "obj",
+            "head": 28,
+            "start": 154,
+            "end": 157,
+            "lang": "th"
+          },
+          {
+            "id": 30,
+            "text": "ปริมณฑล",
+            "pos": "PROPN",
+            "lemma": "ปริมณฑล",
+            "depparse": "nmod",
+            "head": 29,
+            "start": 157,
+            "end": 164,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "text": "ประชากรจะเพิ่มขึ้นเป็นประมาณ 17 ล้านคน",
+        "tokens": [
+          {
+            "id": 1,
+            "text": "ประชากร",
+            "pos": "NOUN",
+            "lemma": "ประชากร",
+            "depparse": "nsubj",
+            "head": 3,
+            "start": 0,
+            "end": 7,
+            "lang": "th"
+          },
+          {
+            "id": 2,
+            "text": "จะ",
+            "pos": "AUX",
+            "lemma": "จะ",
+            "depparse": "aux",
+            "head": 3,
+            "start": 7,
+            "end": 9,
+            "lang": "th"
+          },
+          {
+            "id": 3,
+            "text": "เพิ่มขึ้น",
+            "pos": "VERB",
+            "lemma": "เพิ่มขึ้น",
+            "depparse": "root",
+            "head": 0,
+            "start": 9,
+            "end": 18,
+            "lang": "th"
+          },
+          {
+            "id": 4,
+            "text": "เป็น",
+            "pos": "VERB",
+            "lemma": "เป็น",
+            "depparse": "compound",
+            "head": 3,
+            "start": 18,
             "end": 22,
             "lang": "th"
           },
           {
             "id": 5,
-            "text": "ธรรมดา",
-            "pos": "ADJ",
-            "lemma": "ธรรมดา",
-            "depparse": "amod",
-            "head": 4,
+            "text": "ประมาณ",
+            "pos": "ADV",
+            "lemma": "ประมาณ",
+            "depparse": "advmod",
+            "head": 6,
             "start": 22,
             "end": 28,
             "lang": "th"
           },
           {
             "id": 6,
-            "text": "ส่วน",
-            "pos": "CCONJ",
-            "lemma": "ส่วน",
-            "depparse": "cc",
+            "text": "17",
+            "pos": "NUM",
+            "lemma": "17",
+            "depparse": "nummod",
             "head": 7,
             "start": 29,
-            "end": 33,
+            "end": 31,
+            "lang": "th",
+            "type": "NUMBER"
+          },
+          {
+            "id": 7,
+            "text": "ล้าน",
+            "pos": "NUM",
+            "lemma": "ล้าน",
+            "depparse": "nummod",
+            "head": 8,
+            "start": 32,
+            "end": 36,
+            "lang": "th",
+            "type": "NUMBER"
+          },
+          {
+            "id": 8,
+            "text": "คน",
+            "pos": "NOUN",
+            "lemma": "คน",
+            "depparse": "obj",
+            "head": 4,
+            "start": 36,
+            "end": 38,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "text": "ส่งผลให้กรุงเทพมหานครมีสถานะเป็นมหานครและเอกนคร",
+        "tokens": [
+          {
+            "id": 1,
+            "text": "ส่งผล",
+            "pos": "VERB",
+            "lemma": "ส่งผล",
+            "depparse": "root",
+            "head": 0,
+            "start": 0,
+            "end": 5,
+            "lang": "th"
+          },
+          {
+            "id": 2,
+            "text": "ให้",
+            "pos": "SCONJ",
+            "lemma": "ให้",
+            "depparse": "mark",
+            "head": 4,
+            "start": 5,
+            "end": 8,
+            "lang": "th"
+          },
+          {
+            "id": 3,
+            "text": "กรุงเทพมหานคร",
+            "pos": "PROPN",
+            "lemma": "กรุงเทพมหานคร",
+            "depparse": "nsubj",
+            "head": 4,
+            "start": 8,
+            "end": 21,
+            "lang": "th"
+          },
+          {
+            "id": 4,
+            "text": "มี",
+            "pos": "VERB",
+            "lemma": "มี",
+            "depparse": "ccomp",
+            "head": 1,
+            "start": 21,
+            "end": 23,
+            "lang": "th"
+          },
+          {
+            "id": 5,
+            "text": "สถานะ",
+            "pos": "NOUN",
+            "lemma": "สถานะ",
+            "depparse": "obj",
+            "head": 4,
+            "start": 23,
+            "end": 28,
+            "lang": "th"
+          },
+          {
+            "id": 6,
+            "text": "เป็น",
+            "pos": "AUX",
+            "lemma": "เป็น",
+            "depparse": "cop",
+            "head": 7,
+            "start": 28,
+            "end": 32,
             "lang": "th"
           },
           {
             "id": 7,
-            "text": "รถโดยสาร",
+            "text": "มหานคร",
             "pos": "NOUN",
-            "lemma": "รถโดยสาร",
+            "lemma": "มหานคร",
+            "depparse": "acl",
+            "head": 5,
+            "start": 32,
+            "end": 38,
+            "lang": "th"
+          },
+          {
+            "id": 8,
+            "text": "และ",
+            "pos": "CCONJ",
+            "lemma": "และ",
+            "depparse": "cc",
+            "head": 9,
+            "start": 38,
+            "end": 41,
+            "lang": "th"
+          },
+          {
+            "id": 9,
+            "text": "เอก",
+            "pos": "NOUN",
+            "lemma": "เอก",
             "depparse": "conj",
-            "head": 4,
-            "start": 33,
+            "head": 7,
+            "start": 41,
+            "end": 44,
+            "lang": "th"
+          },
+          {
+            "id": 10,
+            "text": "นคร",
+            "pos": "NOUN",
+            "lemma": "นคร",
+            "depparse": "nmod",
+            "head": 9,
+            "start": 44,
+            "end": 47,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "text": "ซึ่งหมายถึงเมืองที่มีอิทธิพลโดดเด่นอย่างยิ่งเหนือเมืองอื่น ๆ ในประเทศเดียวกัน",
+        "tokens": [
+          {
+            "id": 1,
+            "text": "ซึ่ง",
+            "pos": "SCONJ",
+            "lemma": "ซึ่ง",
+            "depparse": "mark",
+            "head": 2,
+            "start": 0,
+            "end": 4,
+            "lang": "th"
+          },
+          {
+            "id": 2,
+            "text": "หมายถึง",
+            "pos": "VERB",
+            "lemma": "หมายถึง",
+            "depparse": "root",
+            "head": 0,
+            "start": 4,
+            "end": 11,
+            "lang": "th"
+          },
+          {
+            "id": 3,
+            "text": "เมือง",
+            "pos": "NOUN",
+            "lemma": "เมือง",
+            "depparse": "obj",
+            "head": 2,
+            "start": 11,
+            "end": 16,
+            "lang": "th"
+          },
+          {
+            "id": 4,
+            "text": "ที่",
+            "pos": "PRON",
+            "lemma": "ที่",
+            "depparse": "nsubj",
+            "head": 5,
+            "start": 16,
+            "end": 19,
+            "lang": "th",
+            "type": "ORDINAL_MARK"
+          },
+          {
+            "id": 5,
+            "text": "มีอิทธิพล",
+            "pos": "VERB",
+            "lemma": "มีอิทธิพล",
+            "depparse": "acl",
+            "head": 3,
+            "start": 19,
+            "end": 28,
+            "lang": "th"
+          },
+          {
+            "id": 6,
+            "text": "โดดเด่น",
+            "pos": "ADV",
+            "lemma": "โดดเด่น",
+            "depparse": "advmod",
+            "head": 5,
+            "start": 28,
+            "end": 35,
+            "lang": "th"
+          },
+          {
+            "id": 7,
+            "text": "อย่างยิ่ง",
+            "pos": "ADV",
+            "lemma": "อย่างยิ่ง",
+            "depparse": "advmod",
+            "head": 6,
+            "start": 35,
+            "end": 44,
+            "lang": "th"
+          },
+          {
+            "id": 8,
+            "text": "เหนือ",
+            "pos": "ADP",
+            "lemma": "เหนือ",
+            "depparse": "case",
+            "head": 9,
+            "start": 44,
+            "end": 49,
+            "lang": "th"
+          },
+          {
+            "id": 9,
+            "text": "เมือง",
+            "pos": "NOUN",
+            "lemma": "เมือง",
+            "depparse": "obl",
+            "head": 5,
+            "start": 49,
+            "end": 54,
+            "lang": "th"
+          },
+          {
+            "id": 10,
+            "text": "อื่น",
+            "pos": "DET",
+            "lemma": "อื่น",
+            "depparse": "det",
+            "head": 9,
+            "start": 54,
+            "end": 58,
+            "lang": "th"
+          },
+          {
+            "id": 11,
+            "text": "ๆ",
+            "pos": "PUNCT",
+            "lemma": "ๆ",
+            "depparse": "punct",
+            "head": 10,
+            "start": 59,
+            "end": 60,
+            "lang": "th"
+          },
+          {
+            "id": 12,
+            "text": "ในประเทศ",
+            "pos": "NOUN",
+            "lemma": "ในประเทศ",
+            "depparse": "nmod",
+            "head": 9,
+            "start": 61,
+            "end": 69,
+            "lang": "th"
+          },
+          {
+            "id": 13,
+            "text": "เดียวกัน",
+            "pos": "DET",
+            "lemma": "เดียวกัน",
+            "depparse": "det",
+            "head": 12,
+            "start": 69,
+            "end": 77,
+            "lang": "th"
+          }
+        ]
+      }
+    ],
+    "sentence_heads": [
+      {
+        "head": "เมืองหลวง",
+        "text": "กรุงเทพมหานคร เป็น เมืองหลวง เมือง",
+        "tokens": [
+          {
+            "id": 1,
+            "text": "กรุงเทพมหานคร",
+            "pos": "PROPN",
+            "lemma": "กรุงเทพมหานคร",
+            "depparse": "nsubj",
+            "head": 3,
+            "start": 0,
+            "end": 13,
+            "lang": "th"
+          },
+          {
+            "id": 2,
+            "text": "เป็น",
+            "pos": "AUX",
+            "lemma": "เป็น",
+            "depparse": "cop",
+            "head": 3,
+            "start": 14,
+            "end": 18,
+            "lang": "th"
+          },
+          {
+            "id": 3,
+            "text": "เมืองหลวง",
+            "pos": "NOUN",
+            "lemma": "เมืองหลวง",
+            "depparse": "root",
+            "head": 0,
+            "start": 18,
+            "end": 27,
+            "lang": "th"
+          },
+          {
+            "id": 5,
+            "text": "เมือง",
+            "pos": "NOUN",
+            "lemma": "เมือง",
+            "depparse": "conj",
+            "head": 3,
+            "start": 30,
+            "end": 35,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "เมือง",
+        "text": "และ เมือง มี",
+        "tokens": [
+          {
+            "id": 4,
+            "text": "และ",
+            "pos": "CCONJ",
+            "lemma": "และ",
+            "depparse": "cc",
+            "head": 5,
+            "start": 27,
+            "end": 30,
+            "lang": "th"
+          },
+          {
+            "id": 5,
+            "text": "เมือง",
+            "pos": "NOUN",
+            "lemma": "เมือง",
+            "depparse": "conj",
+            "head": 3,
+            "start": 30,
+            "end": 35,
+            "lang": "th"
+          },
+          {
+            "id": 7,
+            "text": "มี",
+            "pos": "VERB",
+            "lemma": "มี",
+            "depparse": "acl",
+            "head": 5,
+            "start": 38,
+            "end": 40,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "มี",
+        "text": "ที่ มี ประชากร",
+        "tokens": [
+          {
+            "id": 6,
+            "text": "ที่",
+            "pos": "PRON",
+            "lemma": "ที่",
+            "depparse": "nsubj",
+            "head": 7,
+            "start": 35,
+            "end": 38,
+            "lang": "th",
+            "type": "ORDINAL_MARK"
+          },
+          {
+            "id": 7,
+            "text": "มี",
+            "pos": "VERB",
+            "lemma": "มี",
+            "depparse": "acl",
+            "head": 5,
+            "start": 38,
+            "end": 40,
+            "lang": "th"
+          },
+          {
+            "id": 8,
+            "text": "ประชากร",
+            "pos": "NOUN",
+            "lemma": "ประชากร",
+            "depparse": "obj",
+            "head": 7,
+            "start": 40,
+            "end": 47,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "ประชากร",
+        "text": "ประชากร มาก ประเทศ",
+        "tokens": [
+          {
+            "id": 8,
+            "text": "ประชากร",
+            "pos": "NOUN",
+            "lemma": "ประชากร",
+            "depparse": "obj",
+            "head": 7,
+            "start": 40,
+            "end": 47,
+            "lang": "th"
+          },
+          {
+            "id": 9,
+            "text": "มาก",
+            "pos": "ADV",
+            "lemma": "มาก",
+            "depparse": "amod",
+            "head": 8,
+            "start": 47,
+            "end": 50,
+            "lang": "th"
+          },
+          {
+            "id": 12,
+            "text": "ประเทศ",
+            "pos": "NOUN",
+            "lemma": "ประเทศ",
+            "depparse": "nmod",
+            "head": 8,
+            "start": 59,
+            "end": 65,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "มาก",
+        "text": "มาก ที่สุด",
+        "tokens": [
+          {
+            "id": 9,
+            "text": "มาก",
+            "pos": "ADV",
+            "lemma": "มาก",
+            "depparse": "amod",
+            "head": 8,
+            "start": 47,
+            "end": 50,
+            "lang": "th"
+          },
+          {
+            "id": 10,
+            "text": "ที่สุด",
+            "pos": "ADV",
+            "lemma": "ที่สุด",
+            "depparse": "advmod",
+            "head": 9,
+            "start": 50,
+            "end": 56,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "ประเทศ",
+        "text": "ของ ประเทศ ไทย",
+        "tokens": [
+          {
+            "id": 11,
+            "text": "ของ",
+            "pos": "ADP",
+            "lemma": "ของ",
+            "depparse": "case",
+            "head": 12,
+            "start": 56,
+            "end": 59,
+            "lang": "th"
+          },
+          {
+            "id": 12,
+            "text": "ประเทศ",
+            "pos": "NOUN",
+            "lemma": "ประเทศ",
+            "depparse": "nmod",
+            "head": 8,
+            "start": 59,
+            "end": 65,
+            "lang": "th"
+          },
+          {
+            "id": 13,
+            "text": "ไทย",
+            "pos": "PROPN",
+            "lemma": "ไทย",
+            "depparse": "nmod",
+            "head": 12,
+            "start": 65,
+            "end": 68,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "จุดรวม",
+        "text": "กรุงเทพมหานคร เป็น จุดรวม ความเจริญ ระดับ",
+        "tokens": [
+          {
+            "id": 1,
+            "text": "กรุงเทพมหานคร",
+            "pos": "PROPN",
+            "lemma": "กรุงเทพมหานคร",
+            "depparse": "nsubj",
+            "head": 3,
+            "start": 0,
+            "end": 13,
+            "lang": "th"
+          },
+          {
+            "id": 2,
+            "text": "เป็น",
+            "pos": "AUX",
+            "lemma": "เป็น",
+            "depparse": "cop",
+            "head": 3,
+            "start": 13,
+            "end": 17,
+            "lang": "th"
+          },
+          {
+            "id": 3,
+            "text": "จุดรวม",
+            "pos": "NOUN",
+            "lemma": "จุดรวม",
+            "depparse": "root",
+            "head": 0,
+            "start": 17,
+            "end": 23,
+            "lang": "th"
+          },
+          {
+            "id": 5,
+            "text": "ความเจริญ",
+            "pos": "NOUN",
+            "lemma": "ความเจริญ",
+            "depparse": "nmod",
+            "head": 3,
+            "start": 26,
+            "end": 35,
+            "lang": "th"
+          },
+          {
+            "id": 8,
+            "text": "ระดับ",
+            "pos": "NOUN",
+            "lemma": "ระดับ",
+            "depparse": "nmod",
+            "head": 3,
+            "start": 41,
+            "end": 46,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "ความเจริญ",
+        "text": "ของ ความเจริญ",
+        "tokens": [
+          {
+            "id": 4,
+            "text": "ของ",
+            "pos": "ADP",
+            "lemma": "ของ",
+            "depparse": "case",
+            "head": 5,
+            "start": 23,
+            "end": 26,
+            "lang": "th"
+          },
+          {
+            "id": 5,
+            "text": "ความเจริญ",
+            "pos": "NOUN",
+            "lemma": "ความเจริญ",
+            "depparse": "nmod",
+            "head": 3,
+            "start": 26,
+            "end": 35,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "ระดับ",
+        "text": "ทั้ง ใน ระดับ ประเทศ ระดับ",
+        "tokens": [
+          {
+            "id": 6,
+            "text": "ทั้ง",
+            "pos": "ADV",
+            "lemma": "ทั้ง",
+            "depparse": "advmod",
+            "head": 8,
+            "start": 35,
+            "end": 39,
+            "lang": "th"
+          },
+          {
+            "id": 7,
+            "text": "ใน",
+            "pos": "ADP",
+            "lemma": "ใน",
+            "depparse": "case",
+            "head": 8,
+            "start": 39,
             "end": 41,
             "lang": "th"
           },
           {
             "id": 8,
-            "text": "ปรับอากาศ",
-            "pos": "ADJ",
-            "lemma": "ปรับอากาศ",
-            "depparse": "amod",
-            "head": 7,
-            "start": 41,
-            "end": 50,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "text": "จะไม่มีการจัดเก็บแต่อย่างใด)",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "จะ",
-            "pos": "AUX",
-            "lemma": "จะ",
-            "depparse": "aux",
-            "head": 3,
-            "start": 0,
-            "end": 2,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "ไม่",
-            "pos": "PART",
-            "lemma": "ไม่",
-            "depparse": "advmod",
-            "head": 3,
-            "start": 2,
-            "end": 5,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "มี",
-            "pos": "VERB",
-            "lemma": "มี",
-            "depparse": "root",
-            "head": 0,
-            "start": 5,
-            "end": 7,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "การ",
+            "text": "ระดับ",
             "pos": "NOUN",
-            "lemma": "การ",
-            "depparse": "obj",
+            "lemma": "ระดับ",
+            "depparse": "nmod",
             "head": 3,
-            "start": 7,
-            "end": 10,
+            "start": 41,
+            "end": 46,
             "lang": "th"
           },
           {
-            "id": 5,
-            "text": "จัดเก็บ",
-            "pos": "VERB",
-            "lemma": "จัดเก็บ",
-            "depparse": "acl",
-            "head": 4,
-            "start": 10,
-            "end": 17,
+            "id": 9,
+            "text": "ประเทศ",
+            "pos": "NOUN",
+            "lemma": "ประเทศ",
+            "depparse": "nmod",
+            "head": 8,
+            "start": 46,
+            "end": 52,
             "lang": "th"
           },
           {
-            "id": 6,
-            "text": "แต่อย่างใด",
-            "pos": "ADV",
-            "lemma": "แต่อย่างใด",
-            "depparse": "advmod",
-            "head": 3,
-            "start": 17,
-            "end": 27,
-            "lang": "th"
-          },
-          {
-            "id": 7,
-            "text": ")",
-            "pos": "PUNCT",
-            "lemma": ")",
-            "depparse": "punct",
-            "head": 3,
-            "start": 27,
-            "end": 28,
+            "id": 11,
+            "text": "ระดับ",
+            "pos": "NOUN",
+            "lemma": "ระดับ",
+            "depparse": "conj",
+            "head": 8,
+            "start": 55,
+            "end": 60,
             "lang": "th"
           }
         ]
       },
       {
-        "text": "และหากรถขึ้นทางด่วนจะเพิ่มราคาขึ้นอีก 2 บาท (ค่าธรรมเนียมรถบริการทางด่วนนี้",
+        "head": "ระดับ",
+        "text": "และ ระดับ ภูมิภาค",
         "tokens": [
           {
-            "id": 1,
+            "id": 10,
             "text": "และ",
             "pos": "CCONJ",
             "lemma": "และ",
             "depparse": "cc",
-            "head": 7,
+            "head": 11,
+            "start": 52,
+            "end": 55,
+            "lang": "th"
+          },
+          {
+            "id": 11,
+            "text": "ระดับ",
+            "pos": "NOUN",
+            "lemma": "ระดับ",
+            "depparse": "conj",
+            "head": 8,
+            "start": 55,
+            "end": 60,
+            "lang": "th"
+          },
+          {
+            "id": 12,
+            "text": "ภูมิภาค",
+            "pos": "NOUN",
+            "lemma": "ภูมิภาค",
+            "depparse": "nmod",
+            "head": 11,
+            "start": 60,
+            "end": 67,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "ภูมิภาค",
+        "text": "ภูมิภาค เอเชียตะวันออกเฉียงใต้",
+        "tokens": [
+          {
+            "id": 12,
+            "text": "ภูมิภาค",
+            "pos": "NOUN",
+            "lemma": "ภูมิภาค",
+            "depparse": "nmod",
+            "head": 11,
+            "start": 60,
+            "end": 67,
+            "lang": "th"
+          },
+          {
+            "id": 13,
+            "text": "เอเชียตะวันออกเฉียงใต้",
+            "pos": "PROPN",
+            "lemma": "เอเชียตะวันออกเฉียงใต้",
+            "depparse": "nmod",
+            "head": 12,
+            "start": 67,
+            "end": 89,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "เมือง",
+        "text": "เมือง ตั้งอยู่ บริเวณ",
+        "tokens": [
+          {
+            "id": 1,
+            "text": "เมือง",
+            "pos": "NOUN",
+            "lemma": "เมือง",
+            "depparse": "root",
+            "head": 0,
+            "start": 0,
+            "end": 5,
+            "lang": "th"
+          },
+          {
+            "id": 2,
+            "text": "ตั้งอยู่",
+            "pos": "VERB",
+            "lemma": "ตั้งอยู่",
+            "depparse": "acl",
+            "head": 1,
+            "start": 5,
+            "end": 13,
+            "lang": "th"
+          },
+          {
+            "id": 3,
+            "text": "บริเวณ",
+            "pos": "NOUN",
+            "lemma": "บริเวณ",
+            "depparse": "nmod",
+            "head": 1,
+            "start": 13,
+            "end": 19,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "บริเวณ",
+        "text": "บริเวณ สามเหลี่ยม",
+        "tokens": [
+          {
+            "id": 3,
+            "text": "บริเวณ",
+            "pos": "NOUN",
+            "lemma": "บริเวณ",
+            "depparse": "nmod",
+            "head": 1,
+            "start": 13,
+            "end": 19,
+            "lang": "th"
+          },
+          {
+            "id": 4,
+            "text": "สามเหลี่ยม",
+            "pos": "NOUN",
+            "lemma": "สามเหลี่ยม",
+            "depparse": "nmod",
+            "head": 3,
+            "start": 19,
+            "end": 29,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "สามเหลี่ยม",
+        "text": "สามเหลี่ยม ปากแม่น้ำ เจ้าพระยา",
+        "tokens": [
+          {
+            "id": 4,
+            "text": "สามเหลี่ยม",
+            "pos": "NOUN",
+            "lemma": "สามเหลี่ยม",
+            "depparse": "nmod",
+            "head": 3,
+            "start": 19,
+            "end": 29,
+            "lang": "th"
+          },
+          {
+            "id": 5,
+            "text": "ปากแม่น้ำ",
+            "pos": "PROPN",
+            "lemma": "ปากแม่น้ำ",
+            "depparse": "nmod",
+            "head": 4,
+            "start": 29,
+            "end": 38,
+            "lang": "th"
+          },
+          {
+            "id": 6,
+            "text": "เจ้าพระยา",
+            "pos": "PROPN",
+            "lemma": "เจ้าพระยา",
+            "depparse": "nmod",
+            "head": 4,
+            "start": 38,
+            "end": 47,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "มี",
+        "text": "โดย มี แม่น้ำ ไหลผ่าน",
+        "tokens": [
+          {
+            "id": 1,
+            "text": "โดย",
+            "pos": "SCONJ",
+            "lemma": "โดย",
+            "depparse": "mark",
+            "head": 2,
             "start": 0,
             "end": 3,
             "lang": "th"
           },
           {
             "id": 2,
-            "text": "หาก",
-            "pos": "SCONJ",
-            "lemma": "หาก",
-            "depparse": "mark",
-            "head": 4,
+            "text": "มี",
+            "pos": "VERB",
+            "lemma": "มี",
+            "depparse": "root",
+            "head": 0,
             "start": 3,
-            "end": 6,
+            "end": 5,
             "lang": "th"
           },
           {
             "id": 3,
-            "text": "รถ",
+            "text": "แม่น้ำ",
             "pos": "NOUN",
-            "lemma": "รถ",
-            "depparse": "nsubj",
-            "head": 7,
-            "start": 6,
-            "end": 8,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "ขึ้น",
-            "pos": "VERB",
-            "lemma": "ขึ้น",
-            "depparse": "acl",
-            "head": 3,
-            "start": 8,
-            "end": 12,
+            "lemma": "แม่น้ำ",
+            "depparse": "obj",
+            "head": 2,
+            "start": 5,
+            "end": 11,
             "lang": "th"
           },
           {
             "id": 5,
-            "text": "ทางด่วน",
-            "pos": "NOUN",
-            "lemma": "ทางด่วน",
-            "depparse": "obj",
-            "head": 4,
-            "start": 12,
-            "end": 19,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "จะ",
-            "pos": "AUX",
-            "lemma": "จะ",
-            "depparse": "aux",
-            "head": 7,
-            "start": 19,
-            "end": 21,
-            "lang": "th"
-          },
-          {
-            "id": 7,
-            "text": "เพิ่ม",
+            "text": "ไหลผ่าน",
             "pos": "VERB",
-            "lemma": "เพิ่ม",
-            "depparse": "root",
-            "head": 0,
-            "start": 21,
-            "end": 26,
-            "lang": "th"
-          },
-          {
-            "id": 8,
-            "text": "ราคา",
-            "pos": "NOUN",
-            "lemma": "ราคา",
-            "depparse": "obj",
-            "head": 7,
-            "start": 26,
-            "end": 30,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "ขึ้น",
-            "pos": "ADV",
-            "lemma": "ขึ้น",
-            "depparse": "advmod",
-            "head": 7,
-            "start": 30,
-            "end": 34,
-            "lang": "th"
-          },
-          {
-            "id": 10,
-            "text": "อีก",
-            "pos": "ADV",
-            "lemma": "อีก",
-            "depparse": "advmod",
-            "head": 11,
-            "start": 34,
-            "end": 37,
-            "lang": "th"
-          },
-          {
-            "id": 11,
-            "text": "2",
-            "pos": "NUM",
-            "lemma": "2",
-            "depparse": "nummod",
-            "head": 12,
-            "start": 38,
-            "end": 39,
-            "lang": "th",
-            "type": "MONEY"
-          },
-          {
-            "id": 12,
-            "text": "บาท",
-            "pos": "NOUN",
-            "lemma": "บาท",
-            "depparse": "obl",
-            "head": 7,
-            "start": 40,
-            "end": 43,
-            "lang": "th",
-            "type": "CURRENCY"
-          },
-          {
-            "id": 13,
-            "text": "(",
-            "pos": "PUNCT",
-            "lemma": "(",
-            "depparse": "punct",
-            "head": 14,
-            "start": 44,
-            "end": 45,
-            "lang": "th"
-          },
-          {
-            "id": 14,
-            "text": "ค่าธรรมเนียม",
-            "pos": "NOUN",
-            "lemma": "ค่าธรรมเนียม",
-            "depparse": "obl",
-            "head": 7,
-            "start": 45,
-            "end": 57,
-            "lang": "th"
-          },
-          {
-            "id": 15,
-            "text": "รถ",
-            "pos": "NOUN",
-            "lemma": "รถ",
-            "depparse": "nmod",
-            "head": 14,
-            "start": 57,
-            "end": 59,
-            "lang": "th"
-          },
-          {
-            "id": 16,
-            "text": "บริการ",
-            "pos": "NOUN",
-            "lemma": "บริการ",
-            "depparse": "compound",
-            "head": 15,
-            "start": 59,
-            "end": 65,
-            "lang": "th"
-          },
-          {
-            "id": 17,
-            "text": "ทางด่วน",
-            "pos": "NOUN",
-            "lemma": "ทางด่วน",
-            "depparse": "nmod",
-            "head": 15,
-            "start": 65,
-            "end": 72,
-            "lang": "th"
-          },
-          {
-            "id": 18,
-            "text": "นี้",
-            "pos": "DET",
-            "lemma": "นี้",
-            "depparse": "det",
-            "head": 17,
-            "start": 72,
-            "end": 75,
+            "lemma": "ไหลผ่าน",
+            "depparse": "ccomp",
+            "head": 2,
+            "start": 20,
+            "end": 27,
             "lang": "th"
           }
         ]
       },
       {
-        "text": "จะจัดเก็บทั้งรถโดยสารธรรมดา และรถโดยสารปรับอากาศ)",
+        "head": "แม่น้ำ",
+        "text": "แม่น้ำ เจ้าพระยา",
         "tokens": [
           {
-            "id": 1,
-            "text": "จะ",
-            "pos": "AUX",
-            "lemma": "จะ",
-            "depparse": "aux",
-            "head": 2,
-            "start": 0,
-            "end": 2,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "จัดเก็บ",
-            "pos": "VERB",
-            "lemma": "จัดเก็บ",
-            "depparse": "root",
-            "head": 0,
-            "start": 2,
-            "end": 9,
-            "lang": "th"
-          },
-          {
             "id": 3,
-            "text": "ทั้ง",
-            "pos": "CCONJ",
-            "lemma": "ทั้ง",
-            "depparse": "cc",
-            "head": 4,
-            "start": 9,
-            "end": 13,
+            "text": "แม่น้ำ",
+            "pos": "NOUN",
+            "lemma": "แม่น้ำ",
+            "depparse": "obj",
+            "head": 2,
+            "start": 5,
+            "end": 11,
             "lang": "th"
           },
           {
             "id": 4,
-            "text": "รถโดยสาร",
-            "pos": "NOUN",
-            "lemma": "รถโดยสาร",
-            "depparse": "obj",
-            "head": 2,
-            "start": 13,
-            "end": 21,
+            "text": "เจ้าพระยา",
+            "pos": "PROPN",
+            "lemma": "เจ้าพระยา",
+            "depparse": "nmod",
+            "head": 3,
+            "start": 11,
+            "end": 20,
             "lang": "th"
-          },
+          }
+        ]
+      },
+      {
+        "head": "ไหลผ่าน",
+        "text": "ไหลผ่าน ใจ กลางเมือง",
+        "tokens": [
           {
             "id": 5,
-            "text": "ธรรมดา",
-            "pos": "ADJ",
-            "lemma": "ธรรมดา",
-            "depparse": "amod",
-            "head": 4,
-            "start": 21,
+            "text": "ไหลผ่าน",
+            "pos": "VERB",
+            "lemma": "ไหลผ่าน",
+            "depparse": "ccomp",
+            "head": 2,
+            "start": 20,
             "end": 27,
             "lang": "th"
           },
           {
             "id": 6,
-            "text": "และ",
-            "pos": "CCONJ",
-            "lemma": "และ",
-            "depparse": "cc",
-            "head": 7,
-            "start": 28,
-            "end": 31,
+            "text": "ใจ",
+            "pos": "NOUN",
+            "lemma": "ใจ",
+            "depparse": "compound",
+            "head": 5,
+            "start": 27,
+            "end": 29,
             "lang": "th"
           },
           {
             "id": 7,
-            "text": "รถโดยสาร",
+            "text": "กลางเมือง",
             "pos": "NOUN",
-            "lemma": "รถโดยสาร",
-            "depparse": "conj",
+            "lemma": "กลางเมือง",
+            "depparse": "obj",
+            "head": 5,
+            "start": 29,
+            "end": 38,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "แบ่ง",
+        "text": "และ แบ่ง พื้นที่ ออก",
+        "tokens": [
+          {
+            "id": 1,
+            "text": "และ",
+            "pos": "CCONJ",
+            "lemma": "และ",
+            "depparse": "cc",
+            "head": 2,
+            "start": 0,
+            "end": 3,
+            "lang": "th"
+          },
+          {
+            "id": 2,
+            "text": "แบ่ง",
+            "pos": "VERB",
+            "lemma": "แบ่ง",
+            "depparse": "root",
+            "head": 0,
+            "start": 3,
+            "end": 7,
+            "lang": "th"
+          },
+          {
+            "id": 3,
+            "text": "พื้นที่",
+            "pos": "NOUN",
+            "lemma": "พื้นที่",
+            "depparse": "obj",
+            "head": 2,
+            "start": 7,
+            "end": 14,
+            "lang": "th"
+          },
+          {
+            "id": 4,
+            "text": "ออก",
+            "pos": "VERB",
+            "lemma": "ออก",
+            "depparse": "compound",
+            "head": 2,
+            "start": 14,
+            "end": 17,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "ฝั่ง",
+        "text": "เป็น สอง ฝั่ง หลัก ฝั่ง",
+        "tokens": [
+          {
+            "id": 5,
+            "text": "เป็น",
+            "pos": "AUX",
+            "lemma": "เป็น",
+            "depparse": "cop",
+            "head": 7,
+            "start": 17,
+            "end": 21,
+            "lang": "th"
+          },
+          {
+            "id": 6,
+            "text": "สอง",
+            "pos": "NUM",
+            "lemma": "สอง",
+            "depparse": "nummod",
+            "head": 7,
+            "start": 21,
+            "end": 24,
+            "lang": "th",
+            "type": "NUMBER"
+          },
+          {
+            "id": 7,
+            "text": "ฝั่ง",
+            "pos": "NOUN",
+            "lemma": "ฝั่ง",
+            "depparse": "compound",
             "head": 4,
-            "start": 31,
-            "end": 39,
+            "start": 24,
+            "end": 28,
             "lang": "th"
           },
           {
             "id": 8,
-            "text": "ปรับอากาศ",
-            "pos": "VERB",
-            "lemma": "ปรับอากาศ",
-            "depparse": "acl",
+            "text": "หลัก",
+            "pos": "ADJ",
+            "lemma": "หลัก",
+            "depparse": "amod",
             "head": 7,
-            "start": 39,
-            "end": 48,
+            "start": 28,
+            "end": 32,
+            "lang": "th"
+          },
+          {
+            "id": 10,
+            "text": "ฝั่ง",
+            "pos": "NOUN",
+            "lemma": "ฝั่ง",
+            "depparse": "appos",
+            "head": 7,
+            "start": 40,
+            "end": 44,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "ออก",
+        "text": "ออก ฝั่ง",
+        "tokens": [
+          {
+            "id": 4,
+            "text": "ออก",
+            "pos": "VERB",
+            "lemma": "ออก",
+            "depparse": "compound",
+            "head": 2,
+            "start": 14,
+            "end": 17,
+            "lang": "th"
+          },
+          {
+            "id": 7,
+            "text": "ฝั่ง",
+            "pos": "NOUN",
+            "lemma": "ฝั่ง",
+            "depparse": "compound",
+            "head": 4,
+            "start": 24,
+            "end": 28,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "ฝั่ง",
+        "text": "ได้แก่ ฝั่ง พระนคร ฝั่ง",
+        "tokens": [
+          {
+            "id": 9,
+            "text": "ได้แก่",
+            "pos": "SCONJ",
+            "lemma": "ได้แก่",
+            "depparse": "mark",
+            "head": 10,
+            "start": 33,
+            "end": 39,
+            "lang": "th"
+          },
+          {
+            "id": 10,
+            "text": "ฝั่ง",
+            "pos": "NOUN",
+            "lemma": "ฝั่ง",
+            "depparse": "appos",
+            "head": 7,
+            "start": 40,
+            "end": 44,
+            "lang": "th"
+          },
+          {
+            "id": 11,
+            "text": "พระนคร",
+            "pos": "PROPN",
+            "lemma": "พระนคร",
+            "depparse": "nmod",
+            "head": 10,
+            "start": 44,
+            "end": 50,
+            "lang": "th"
+          },
+          {
+            "id": 13,
+            "text": "ฝั่ง",
+            "pos": "NOUN",
+            "lemma": "ฝั่ง",
+            "depparse": "conj",
+            "head": 10,
+            "start": 53,
+            "end": 57,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "ฝั่ง",
+        "text": "และ ฝั่ง ธนบุรี",
+        "tokens": [
+          {
+            "id": 12,
+            "text": "และ",
+            "pos": "CCONJ",
+            "lemma": "และ",
+            "depparse": "cc",
+            "head": 13,
+            "start": 50,
+            "end": 53,
+            "lang": "th"
+          },
+          {
+            "id": 13,
+            "text": "ฝั่ง",
+            "pos": "NOUN",
+            "lemma": "ฝั่ง",
+            "depparse": "conj",
+            "head": 10,
+            "start": 53,
+            "end": 57,
+            "lang": "th"
+          },
+          {
+            "id": 14,
+            "text": "ธนบุรี",
+            "pos": "PROPN",
+            "lemma": "ธนบุรี",
+            "depparse": "nmod",
+            "head": 13,
+            "start": 57,
+            "end": 63,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "มี",
+        "text": "กรุงเทพมหานคร มี พื้นที่ มี คิด",
+        "tokens": [
+          {
+            "id": 1,
+            "text": "กรุงเทพมหานคร",
+            "pos": "PROPN",
+            "lemma": "กรุงเทพมหานคร",
+            "depparse": "nsubj",
+            "head": 2,
+            "start": 0,
+            "end": 13,
+            "lang": "th"
+          },
+          {
+            "id": 2,
+            "text": "มี",
+            "pos": "VERB",
+            "lemma": "มี",
+            "depparse": "root",
+            "head": 0,
+            "start": 13,
+            "end": 15,
+            "lang": "th"
+          },
+          {
+            "id": 3,
+            "text": "พื้นที่",
+            "pos": "NOUN",
+            "lemma": "พื้นที่",
+            "depparse": "obj",
+            "head": 2,
+            "start": 15,
+            "end": 22,
+            "lang": "th"
+          },
+          {
+            "id": 8,
+            "text": "มี",
+            "pos": "VERB",
+            "lemma": "มี",
+            "depparse": "conj",
+            "head": 2,
+            "start": 58,
+            "end": 60,
+            "lang": "th"
+          },
+          {
+            "id": 18,
+            "text": "คิด",
+            "pos": "VERB",
+            "lemma": "คิด",
+            "depparse": "conj",
+            "head": 2,
+            "start": 107,
+            "end": 110,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "1,568.737",
+        "text": "ทั้งสิ้น 1,568.737",
+        "tokens": [
+          {
+            "id": 4,
+            "text": "ทั้งสิ้น",
+            "pos": "ADV",
+            "lemma": "ทั้งสิ้น",
+            "depparse": "advmod",
+            "head": 5,
+            "start": 22,
+            "end": 30,
+            "lang": "th"
+          },
+          {
+            "id": 5,
+            "text": "1,568.737",
+            "pos": "NUM",
+            "lemma": "1,568.737",
+            "depparse": "nummod",
+            "head": 6,
+            "start": 31,
+            "end": 40,
+            "lang": "th",
+            "type": "AREA"
+          }
+        ]
+      },
+      {
+        "head": "ตารางกิโลเมตร",
+        "text": "1,568.737 ตารางกิโลเมตร",
+        "tokens": [
+          {
+            "id": 5,
+            "text": "1,568.737",
+            "pos": "NUM",
+            "lemma": "1,568.737",
+            "depparse": "nummod",
+            "head": 6,
+            "start": 31,
+            "end": 40,
+            "lang": "th",
+            "type": "AREA"
+          },
+          {
+            "id": 6,
+            "text": "ตารางกิโลเมตร",
+            "pos": "NOUN",
+            "lemma": "ตารางกิโลเมตร",
+            "depparse": "clf",
+            "head": 3,
+            "start": 41,
+            "end": 54,
+            "lang": "th",
+            "type": "UNIT_AREA"
+          }
+        ]
+      },
+      {
+        "head": "พื้นที่",
+        "text": "พื้นที่ ตารางกิโลเมตร",
+        "tokens": [
+          {
+            "id": 3,
+            "text": "พื้นที่",
+            "pos": "NOUN",
+            "lemma": "พื้นที่",
+            "depparse": "obj",
+            "head": 2,
+            "start": 15,
+            "end": 22,
+            "lang": "th"
+          },
+          {
+            "id": 6,
+            "text": "ตารางกิโลเมตร",
+            "pos": "NOUN",
+            "lemma": "ตารางกิโลเมตร",
+            "depparse": "clf",
+            "head": 3,
+            "start": 41,
+            "end": 54,
+            "lang": "th",
+            "type": "UNIT_AREA"
+          }
+        ]
+      },
+      {
+        "head": "มี",
+        "text": "และ มี ประชากร",
+        "tokens": [
+          {
+            "id": 7,
+            "text": "และ",
+            "pos": "CCONJ",
+            "lemma": "และ",
+            "depparse": "cc",
+            "head": 8,
+            "start": 55,
+            "end": 58,
+            "lang": "th"
+          },
+          {
+            "id": 8,
+            "text": "มี",
+            "pos": "VERB",
+            "lemma": "มี",
+            "depparse": "conj",
+            "head": 2,
+            "start": 58,
+            "end": 60,
             "lang": "th"
           },
           {
             "id": 9,
-            "text": ")",
-            "pos": "PUNCT",
-            "lemma": ")",
-            "depparse": "punct",
+            "text": "ประชากร",
+            "pos": "NOUN",
+            "lemma": "ประชากร",
+            "depparse": "obj",
+            "head": 8,
+            "start": 60,
+            "end": 67,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "พุทธศักราช",
+        "text": "ใน พุทธศักราช 2567",
+        "tokens": [
+          {
+            "id": 10,
+            "text": "ใน",
+            "pos": "ADP",
+            "lemma": "ใน",
+            "depparse": "case",
+            "head": 11,
+            "start": 67,
+            "end": 69,
+            "lang": "th"
+          },
+          {
+            "id": 11,
+            "text": "พุทธศักราช",
+            "pos": "NOUN",
+            "lemma": "พุทธศักราช",
+            "depparse": "nmod",
+            "head": 9,
+            "start": 70,
+            "end": 80,
+            "lang": "th"
+          },
+          {
+            "id": 12,
+            "text": "2567",
+            "pos": "NUM",
+            "lemma": "2567",
+            "depparse": "nummod",
+            "head": 11,
+            "start": 81,
+            "end": 85,
+            "lang": "th",
+            "type": "NUMBER"
+          }
+        ]
+      },
+      {
+        "head": "ประชากร",
+        "text": "ประชากร พุทธศักราช คน",
+        "tokens": [
+          {
+            "id": 9,
+            "text": "ประชากร",
+            "pos": "NOUN",
+            "lemma": "ประชากร",
+            "depparse": "obj",
+            "head": 8,
+            "start": 60,
+            "end": 67,
+            "lang": "th"
+          },
+          {
+            "id": 11,
+            "text": "พุทธศักราช",
+            "pos": "NOUN",
+            "lemma": "พุทธศักราช",
+            "depparse": "nmod",
+            "head": 9,
+            "start": 70,
+            "end": 80,
+            "lang": "th"
+          },
+          {
+            "id": 16,
+            "text": "คน",
+            "pos": "NOUN",
+            "lemma": "คน",
+            "depparse": "clf",
+            "head": 9,
+            "start": 100,
+            "end": 102,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "10",
+        "text": "ประมาณ 10",
+        "tokens": [
+          {
+            "id": 13,
+            "text": "ประมาณ",
+            "pos": "ADV",
+            "lemma": "ประมาณ",
+            "depparse": "advmod",
+            "head": 14,
+            "start": 86,
+            "end": 92,
+            "lang": "th"
+          },
+          {
+            "id": 14,
+            "text": "10",
+            "pos": "NUM",
+            "lemma": "10",
+            "depparse": "nummod",
+            "head": 15,
+            "start": 93,
+            "end": 95,
+            "lang": "th",
+            "type": "NUMBER"
+          }
+        ]
+      },
+      {
+        "head": "ล้าน",
+        "text": "10 ล้าน",
+        "tokens": [
+          {
+            "id": 14,
+            "text": "10",
+            "pos": "NUM",
+            "lemma": "10",
+            "depparse": "nummod",
+            "head": 15,
+            "start": 93,
+            "end": 95,
+            "lang": "th",
+            "type": "NUMBER"
+          },
+          {
+            "id": 15,
+            "text": "ล้าน",
+            "pos": "NUM",
+            "lemma": "ล้าน",
+            "depparse": "nummod",
+            "head": 16,
+            "start": 96,
+            "end": 100,
+            "lang": "th",
+            "type": "NUMBER"
+          }
+        ]
+      },
+      {
+        "head": "คน",
+        "text": "ล้าน คน",
+        "tokens": [
+          {
+            "id": 15,
+            "text": "ล้าน",
+            "pos": "NUM",
+            "lemma": "ล้าน",
+            "depparse": "nummod",
+            "head": 16,
+            "start": 96,
+            "end": 100,
+            "lang": "th",
+            "type": "NUMBER"
+          },
+          {
+            "id": 16,
+            "text": "คน",
+            "pos": "NOUN",
+            "lemma": "คน",
+            "depparse": "clf",
+            "head": 9,
+            "start": 100,
+            "end": 102,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "คิด",
+        "text": "หรือ คิด ร้อยละ นับ",
+        "tokens": [
+          {
+            "id": 17,
+            "text": "หรือ",
+            "pos": "CCONJ",
+            "lemma": "หรือ",
+            "depparse": "cc",
+            "head": 18,
+            "start": 103,
+            "end": 107,
+            "lang": "th"
+          },
+          {
+            "id": 18,
+            "text": "คิด",
+            "pos": "VERB",
+            "lemma": "คิด",
+            "depparse": "conj",
+            "head": 2,
+            "start": 107,
+            "end": 110,
+            "lang": "th"
+          },
+          {
+            "id": 20,
+            "text": "ร้อยละ",
+            "pos": "NOUN",
+            "lemma": "ร้อยละ",
+            "depparse": "xcomp",
+            "head": 18,
+            "start": 114,
+            "end": 120,
+            "lang": "th"
+          },
+          {
+            "id": 27,
+            "text": "นับ",
+            "pos": "VERB",
+            "lemma": "นับ",
+            "depparse": "advcl",
+            "head": 18,
+            "start": 148,
+            "end": 151,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "ร้อยละ",
+        "text": "เป็น ร้อยละ 13 ประชากร",
+        "tokens": [
+          {
+            "id": 19,
+            "text": "เป็น",
+            "pos": "AUX",
+            "lemma": "เป็น",
+            "depparse": "cop",
+            "head": 20,
+            "start": 110,
+            "end": 114,
+            "lang": "th"
+          },
+          {
+            "id": 20,
+            "text": "ร้อยละ",
+            "pos": "NOUN",
+            "lemma": "ร้อยละ",
+            "depparse": "xcomp",
+            "head": 18,
+            "start": 114,
+            "end": 120,
+            "lang": "th"
+          },
+          {
+            "id": 21,
+            "text": "13",
+            "pos": "NUM",
+            "lemma": "13",
+            "depparse": "nummod",
+            "head": 20,
+            "start": 121,
+            "end": 123,
+            "lang": "th",
+            "type": "NUMBER"
+          },
+          {
+            "id": 23,
+            "text": "ประชากร",
+            "pos": "NOUN",
+            "lemma": "ประชากร",
+            "depparse": "nmod",
+            "head": 20,
+            "start": 127,
+            "end": 134,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "ประชากร",
+        "text": "ของ ประชากร ประเทศ",
+        "tokens": [
+          {
+            "id": 22,
+            "text": "ของ",
+            "pos": "ADP",
+            "lemma": "ของ",
+            "depparse": "case",
+            "head": 23,
+            "start": 124,
+            "end": 127,
+            "lang": "th"
+          },
+          {
+            "id": 23,
+            "text": "ประชากร",
+            "pos": "NOUN",
+            "lemma": "ประชากร",
+            "depparse": "nmod",
+            "head": 20,
+            "start": 127,
+            "end": 134,
+            "lang": "th"
+          },
+          {
+            "id": 25,
+            "text": "ประเทศ",
+            "pos": "NOUN",
+            "lemma": "ประเทศ",
+            "depparse": "nmod",
+            "head": 23,
+            "start": 138,
+            "end": 144,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "ประเทศ",
+        "text": "ทั้ง ประเทศ",
+        "tokens": [
+          {
+            "id": 24,
+            "text": "ทั้ง",
+            "pos": "ADV",
+            "lemma": "ทั้ง",
+            "depparse": "advmod",
+            "head": 25,
+            "start": 134,
+            "end": 138,
+            "lang": "th"
+          },
+          {
+            "id": 25,
+            "text": "ประเทศ",
+            "pos": "NOUN",
+            "lemma": "ประเทศ",
+            "depparse": "nmod",
+            "head": 23,
+            "start": 138,
+            "end": 144,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "นับ",
+        "text": "หาก นับ รวม",
+        "tokens": [
+          {
+            "id": 26,
+            "text": "หาก",
+            "pos": "SCONJ",
+            "lemma": "หาก",
+            "depparse": "mark",
+            "head": 27,
+            "start": 145,
+            "end": 148,
+            "lang": "th"
+          },
+          {
+            "id": 27,
+            "text": "นับ",
+            "pos": "VERB",
+            "lemma": "นับ",
+            "depparse": "advcl",
+            "head": 18,
+            "start": 148,
+            "end": 151,
+            "lang": "th"
+          },
+          {
+            "id": 28,
+            "text": "รวม",
+            "pos": "VERB",
+            "lemma": "รวม",
+            "depparse": "compound",
+            "head": 27,
+            "start": 151,
+            "end": 154,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "รวม",
+        "text": "รวม เขต",
+        "tokens": [
+          {
+            "id": 28,
+            "text": "รวม",
+            "pos": "VERB",
+            "lemma": "รวม",
+            "depparse": "compound",
+            "head": 27,
+            "start": 151,
+            "end": 154,
+            "lang": "th"
+          },
+          {
+            "id": 29,
+            "text": "เขต",
+            "pos": "NOUN",
+            "lemma": "เขต",
+            "depparse": "obj",
+            "head": 28,
+            "start": 154,
+            "end": 157,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "เขต",
+        "text": "เขต ปริมณฑล",
+        "tokens": [
+          {
+            "id": 29,
+            "text": "เขต",
+            "pos": "NOUN",
+            "lemma": "เขต",
+            "depparse": "obj",
+            "head": 28,
+            "start": 154,
+            "end": 157,
+            "lang": "th"
+          },
+          {
+            "id": 30,
+            "text": "ปริมณฑล",
+            "pos": "PROPN",
+            "lemma": "ปริมณฑล",
+            "depparse": "nmod",
+            "head": 29,
+            "start": 157,
+            "end": 164,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "เพิ่มขึ้น",
+        "text": "ประชากร จะ เพิ่มขึ้น เป็น",
+        "tokens": [
+          {
+            "id": 1,
+            "text": "ประชากร",
+            "pos": "NOUN",
+            "lemma": "ประชากร",
+            "depparse": "nsubj",
+            "head": 3,
+            "start": 0,
+            "end": 7,
+            "lang": "th"
+          },
+          {
+            "id": 2,
+            "text": "จะ",
+            "pos": "AUX",
+            "lemma": "จะ",
+            "depparse": "aux",
+            "head": 3,
+            "start": 7,
+            "end": 9,
+            "lang": "th"
+          },
+          {
+            "id": 3,
+            "text": "เพิ่มขึ้น",
+            "pos": "VERB",
+            "lemma": "เพิ่มขึ้น",
+            "depparse": "root",
+            "head": 0,
+            "start": 9,
+            "end": 18,
+            "lang": "th"
+          },
+          {
+            "id": 4,
+            "text": "เป็น",
+            "pos": "VERB",
+            "lemma": "เป็น",
+            "depparse": "compound",
+            "head": 3,
+            "start": 18,
+            "end": 22,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "17",
+        "text": "ประมาณ 17",
+        "tokens": [
+          {
+            "id": 5,
+            "text": "ประมาณ",
+            "pos": "ADV",
+            "lemma": "ประมาณ",
+            "depparse": "advmod",
+            "head": 6,
+            "start": 22,
+            "end": 28,
+            "lang": "th"
+          },
+          {
+            "id": 6,
+            "text": "17",
+            "pos": "NUM",
+            "lemma": "17",
+            "depparse": "nummod",
             "head": 7,
-            "start": 48,
+            "start": 29,
+            "end": 31,
+            "lang": "th",
+            "type": "NUMBER"
+          }
+        ]
+      },
+      {
+        "head": "ล้าน",
+        "text": "17 ล้าน",
+        "tokens": [
+          {
+            "id": 6,
+            "text": "17",
+            "pos": "NUM",
+            "lemma": "17",
+            "depparse": "nummod",
+            "head": 7,
+            "start": 29,
+            "end": 31,
+            "lang": "th",
+            "type": "NUMBER"
+          },
+          {
+            "id": 7,
+            "text": "ล้าน",
+            "pos": "NUM",
+            "lemma": "ล้าน",
+            "depparse": "nummod",
+            "head": 8,
+            "start": 32,
+            "end": 36,
+            "lang": "th",
+            "type": "NUMBER"
+          }
+        ]
+      },
+      {
+        "head": "คน",
+        "text": "ล้าน คน",
+        "tokens": [
+          {
+            "id": 7,
+            "text": "ล้าน",
+            "pos": "NUM",
+            "lemma": "ล้าน",
+            "depparse": "nummod",
+            "head": 8,
+            "start": 32,
+            "end": 36,
+            "lang": "th",
+            "type": "NUMBER"
+          },
+          {
+            "id": 8,
+            "text": "คน",
+            "pos": "NOUN",
+            "lemma": "คน",
+            "depparse": "obj",
+            "head": 4,
+            "start": 36,
+            "end": 38,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "เป็น",
+        "text": "เป็น คน",
+        "tokens": [
+          {
+            "id": 4,
+            "text": "เป็น",
+            "pos": "VERB",
+            "lemma": "เป็น",
+            "depparse": "compound",
+            "head": 3,
+            "start": 18,
+            "end": 22,
+            "lang": "th"
+          },
+          {
+            "id": 8,
+            "text": "คน",
+            "pos": "NOUN",
+            "lemma": "คน",
+            "depparse": "obj",
+            "head": 4,
+            "start": 36,
+            "end": 38,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "มี",
+        "text": "ให้ กรุงเทพมหานคร มี สถานะ",
+        "tokens": [
+          {
+            "id": 2,
+            "text": "ให้",
+            "pos": "SCONJ",
+            "lemma": "ให้",
+            "depparse": "mark",
+            "head": 4,
+            "start": 5,
+            "end": 8,
+            "lang": "th"
+          },
+          {
+            "id": 3,
+            "text": "กรุงเทพมหานคร",
+            "pos": "PROPN",
+            "lemma": "กรุงเทพมหานคร",
+            "depparse": "nsubj",
+            "head": 4,
+            "start": 8,
+            "end": 21,
+            "lang": "th"
+          },
+          {
+            "id": 4,
+            "text": "มี",
+            "pos": "VERB",
+            "lemma": "มี",
+            "depparse": "ccomp",
+            "head": 1,
+            "start": 21,
+            "end": 23,
+            "lang": "th"
+          },
+          {
+            "id": 5,
+            "text": "สถานะ",
+            "pos": "NOUN",
+            "lemma": "สถานะ",
+            "depparse": "obj",
+            "head": 4,
+            "start": 23,
+            "end": 28,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "ส่งผล",
+        "text": "ส่งผล มี",
+        "tokens": [
+          {
+            "id": 1,
+            "text": "ส่งผล",
+            "pos": "VERB",
+            "lemma": "ส่งผล",
+            "depparse": "root",
+            "head": 0,
+            "start": 0,
+            "end": 5,
+            "lang": "th"
+          },
+          {
+            "id": 4,
+            "text": "มี",
+            "pos": "VERB",
+            "lemma": "มี",
+            "depparse": "ccomp",
+            "head": 1,
+            "start": 21,
+            "end": 23,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "มหานคร",
+        "text": "เป็น มหานคร เอก",
+        "tokens": [
+          {
+            "id": 6,
+            "text": "เป็น",
+            "pos": "AUX",
+            "lemma": "เป็น",
+            "depparse": "cop",
+            "head": 7,
+            "start": 28,
+            "end": 32,
+            "lang": "th"
+          },
+          {
+            "id": 7,
+            "text": "มหานคร",
+            "pos": "NOUN",
+            "lemma": "มหานคร",
+            "depparse": "acl",
+            "head": 5,
+            "start": 32,
+            "end": 38,
+            "lang": "th"
+          },
+          {
+            "id": 9,
+            "text": "เอก",
+            "pos": "NOUN",
+            "lemma": "เอก",
+            "depparse": "conj",
+            "head": 7,
+            "start": 41,
+            "end": 44,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "สถานะ",
+        "text": "สถานะ มหานคร",
+        "tokens": [
+          {
+            "id": 5,
+            "text": "สถานะ",
+            "pos": "NOUN",
+            "lemma": "สถานะ",
+            "depparse": "obj",
+            "head": 4,
+            "start": 23,
+            "end": 28,
+            "lang": "th"
+          },
+          {
+            "id": 7,
+            "text": "มหานคร",
+            "pos": "NOUN",
+            "lemma": "มหานคร",
+            "depparse": "acl",
+            "head": 5,
+            "start": 32,
+            "end": 38,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "เอก",
+        "text": "และ เอก นคร",
+        "tokens": [
+          {
+            "id": 8,
+            "text": "และ",
+            "pos": "CCONJ",
+            "lemma": "และ",
+            "depparse": "cc",
+            "head": 9,
+            "start": 38,
+            "end": 41,
+            "lang": "th"
+          },
+          {
+            "id": 9,
+            "text": "เอก",
+            "pos": "NOUN",
+            "lemma": "เอก",
+            "depparse": "conj",
+            "head": 7,
+            "start": 41,
+            "end": 44,
+            "lang": "th"
+          },
+          {
+            "id": 10,
+            "text": "นคร",
+            "pos": "NOUN",
+            "lemma": "นคร",
+            "depparse": "nmod",
+            "head": 9,
+            "start": 44,
+            "end": 47,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "หมายถึง",
+        "text": "ซึ่ง หมายถึง เมือง",
+        "tokens": [
+          {
+            "id": 1,
+            "text": "ซึ่ง",
+            "pos": "SCONJ",
+            "lemma": "ซึ่ง",
+            "depparse": "mark",
+            "head": 2,
+            "start": 0,
+            "end": 4,
+            "lang": "th"
+          },
+          {
+            "id": 2,
+            "text": "หมายถึง",
+            "pos": "VERB",
+            "lemma": "หมายถึง",
+            "depparse": "root",
+            "head": 0,
+            "start": 4,
+            "end": 11,
+            "lang": "th"
+          },
+          {
+            "id": 3,
+            "text": "เมือง",
+            "pos": "NOUN",
+            "lemma": "เมือง",
+            "depparse": "obj",
+            "head": 2,
+            "start": 11,
+            "end": 16,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "มีอิทธิพล",
+        "text": "ที่ มีอิทธิพล โดดเด่น เมือง",
+        "tokens": [
+          {
+            "id": 4,
+            "text": "ที่",
+            "pos": "PRON",
+            "lemma": "ที่",
+            "depparse": "nsubj",
+            "head": 5,
+            "start": 16,
+            "end": 19,
+            "lang": "th",
+            "type": "ORDINAL_MARK"
+          },
+          {
+            "id": 5,
+            "text": "มีอิทธิพล",
+            "pos": "VERB",
+            "lemma": "มีอิทธิพล",
+            "depparse": "acl",
+            "head": 3,
+            "start": 19,
+            "end": 28,
+            "lang": "th"
+          },
+          {
+            "id": 6,
+            "text": "โดดเด่น",
+            "pos": "ADV",
+            "lemma": "โดดเด่น",
+            "depparse": "advmod",
+            "head": 5,
+            "start": 28,
+            "end": 35,
+            "lang": "th"
+          },
+          {
+            "id": 9,
+            "text": "เมือง",
+            "pos": "NOUN",
+            "lemma": "เมือง",
+            "depparse": "obl",
+            "head": 5,
+            "start": 49,
+            "end": 54,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "เมือง",
+        "text": "เมือง มีอิทธิพล",
+        "tokens": [
+          {
+            "id": 3,
+            "text": "เมือง",
+            "pos": "NOUN",
+            "lemma": "เมือง",
+            "depparse": "obj",
+            "head": 2,
+            "start": 11,
+            "end": 16,
+            "lang": "th"
+          },
+          {
+            "id": 5,
+            "text": "มีอิทธิพล",
+            "pos": "VERB",
+            "lemma": "มีอิทธิพล",
+            "depparse": "acl",
+            "head": 3,
+            "start": 19,
+            "end": 28,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "โดดเด่น",
+        "text": "โดดเด่น อย่างยิ่ง",
+        "tokens": [
+          {
+            "id": 6,
+            "text": "โดดเด่น",
+            "pos": "ADV",
+            "lemma": "โดดเด่น",
+            "depparse": "advmod",
+            "head": 5,
+            "start": 28,
+            "end": 35,
+            "lang": "th"
+          },
+          {
+            "id": 7,
+            "text": "อย่างยิ่ง",
+            "pos": "ADV",
+            "lemma": "อย่างยิ่ง",
+            "depparse": "advmod",
+            "head": 6,
+            "start": 35,
+            "end": 44,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "เมือง",
+        "text": "เหนือ เมือง อื่น ในประเทศ",
+        "tokens": [
+          {
+            "id": 8,
+            "text": "เหนือ",
+            "pos": "ADP",
+            "lemma": "เหนือ",
+            "depparse": "case",
+            "head": 9,
+            "start": 44,
             "end": 49,
+            "lang": "th"
+          },
+          {
+            "id": 9,
+            "text": "เมือง",
+            "pos": "NOUN",
+            "lemma": "เมือง",
+            "depparse": "obl",
+            "head": 5,
+            "start": 49,
+            "end": 54,
+            "lang": "th"
+          },
+          {
+            "id": 10,
+            "text": "อื่น",
+            "pos": "DET",
+            "lemma": "อื่น",
+            "depparse": "det",
+            "head": 9,
+            "start": 54,
+            "end": 58,
+            "lang": "th"
+          },
+          {
+            "id": 12,
+            "text": "ในประเทศ",
+            "pos": "NOUN",
+            "lemma": "ในประเทศ",
+            "depparse": "nmod",
+            "head": 9,
+            "start": 61,
+            "end": 69,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "อื่น",
+        "text": "อื่น ๆ",
+        "tokens": [
+          {
+            "id": 10,
+            "text": "อื่น",
+            "pos": "DET",
+            "lemma": "อื่น",
+            "depparse": "det",
+            "head": 9,
+            "start": 54,
+            "end": 58,
+            "lang": "th"
+          },
+          {
+            "id": 11,
+            "text": "ๆ",
+            "pos": "PUNCT",
+            "lemma": "ๆ",
+            "depparse": "punct",
+            "head": 10,
+            "start": 59,
+            "end": 60,
+            "lang": "th"
+          }
+        ]
+      },
+      {
+        "head": "ในประเทศ",
+        "text": "ในประเทศ เดียวกัน",
+        "tokens": [
+          {
+            "id": 12,
+            "text": "ในประเทศ",
+            "pos": "NOUN",
+            "lemma": "ในประเทศ",
+            "depparse": "nmod",
+            "head": 9,
+            "start": 61,
+            "end": 69,
+            "lang": "th"
+          },
+          {
+            "id": 13,
+            "text": "เดียวกัน",
+            "pos": "DET",
+            "lemma": "เดียวกัน",
+            "depparse": "det",
+            "head": 12,
+            "start": 69,
+            "end": 77,
             "lang": "th"
           }
         ]
