@@ -48,8 +48,12 @@ param(
   [switch]$Segment
 )
 
+
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
+
+# Record pipeline start time
+$__pipelineStart = Get-Date
 
 function Invoke-StepUntilQuiet {
   param(
@@ -58,7 +62,10 @@ function Invoke-StepUntilQuiet {
   )
 
   for ($i = 1; $i -le $MaxIterations; $i++) {
-    Write-Host "==== [$StepName] Iteration $i ====" -ForegroundColor Cyan
+    $now = Get-Date -Format 'HH:mm'
+    $elapsed = (New-TimeSpan -Start $__pipelineStart -End (Get-Date))
+    $elapsedStr = "{0:D2}:{1:D2}" -f $elapsed.Hours, $elapsed.Minutes
+    Write-Host ("==== [$StepName] Iteration $i [{0}] (+{1}) ====" -f $now, $elapsedStr) -ForegroundColor Cyan
     # Avoid treating stderr from native commands (e.g., docker) as terminating errors
     $origEAP = $ErrorActionPreference
     try {
@@ -90,7 +97,10 @@ function Invoke-StepUntilMatch {
   )
 
   for ($i = 1; $i -le $MaxIterations; $i++) {
-    Write-Host "==== [$StepName] Iteration $i ====" -ForegroundColor Cyan
+    $now = Get-Date -Format 'HH:mm'
+    $elapsed = (New-TimeSpan -Start $__pipelineStart -End (Get-Date))
+    $elapsedStr = "{0:D2}:{1:D2}" -f $elapsed.Hours, $elapsed.Minutes
+    Write-Host ("==== [$StepName] Iteration $i [{0}] (+{1}) ====" -f $now, $elapsedStr) -ForegroundColor Cyan
     # Avoid treating stderr from native commands (e.g., docker) as terminating errors
     $origEAP = $ErrorActionPreference
     try {
