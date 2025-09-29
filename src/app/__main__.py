@@ -14,6 +14,7 @@ from .abbreviation import update_corpus_abbreviation
 from .tokenize import update_corpus_tokenize
 from .sentence_heads import update_corpus_sentence_heads
 from .word_pattern import update_corpus_word_pattern
+from .embeddings import update_corpus_embeddings, finetune_model, collect_training_corpus, TrainConfig
 
 
 def cmd_greet(args) -> int:
@@ -174,6 +175,26 @@ def build_parser() -> argparse.ArgumentParser:
     p_wp.add_argument("--verbose", action="store_true", help="แสดงสรุปหลังรัน")
     p_wp.set_defaults(func=cmd_word_pattern)
 
+    # embeddings (fine-tune optional, then incremental embed)
+    p_emb = sub.add_parser(
+        "embeddings",
+        help="ฝังเวกเตอร์ด้วย sentence-transformers (intfloat/multilingual-e5-large) จาก sentences และ sentence_heads",
+    )
+    p_emb.add_argument("--collection", default="corpus", help="collection เป้าหมาย (ดีฟอลต์: corpus)")
+    p_emb.add_argument("--limit", type=int, default=None, help="จำนวนเอกสารสูงสุดที่จะอัปเดต")
+    p_emb.add_argument("--batch", type=int, default=100, help="ขนาด batch ต่อ bulk_write")
+    p_emb.add_argument("--all", action="store_true", help="อัปเดตทุกเอกสาร (ไม่จำกัดเฉพาะที่ยังไม่ถูก embeddings)")
+    p_emb.add_argument("--model", default="intfloat/multilingual-e5-large", help="base model ของ sentence-transformers")
+    p_emb.add_argument("--finetuned-dir", default="models/e5-finetuned", help="โฟลเดอร์โมเดลที่ fine-tune แล้ว (ถ้ามีจะโหลดจากตรงนี้)")
+    p_emb.add_argument("--encode-batch", type=int, default=64, help="ขนาดแบตช์ตอน encode")
+    p_emb.add_argument("--device", choices=["cpu", "cuda"], default="cpu", help="บังคับอุปกรณ์ (เว้นว่าง=auto)")
+    p_emb.add_argument("--train", action="store_true", help="ทำการ fine-tune แบบ unsupervised ก่อน (SimCSE-style)")
+    p_emb.add_argument("--train-epochs", type=int, default=1, help="จำนวนรอบ epoch สำหรับ fine-tune")
+    p_emb.add_argument("--train-batch", type=int, default=64, help="batch size ระหว่าง fine-tune")
+    p_emb.add_argument("--train-limit-docs", type=int, default=None, help="จำนวนเอกสารสูงสุดที่จะรวบรวมเป็นคอร์ปัสสำหรับ fine-tune")
+    p_emb.add_argument("--verbose", action="store_true", help="แสดงสรุปหลังรัน")
+    p_emb.set_defaults(func=cmd_embeddings)
+
     return parser
 
 
@@ -305,6 +326,41 @@ def cmd_word_pattern(args) -> int:
         limit=args.limit,
         batch=args.batch,
         missing_only=not args.all,
+        verbose=args.verbose,
+    )
+    print(f"modified documents: {modified}")
+    return 0
+
+
+def cmd_embeddings(args) -> int:
+    col = get_collection(args.collection)
+    finetuned_dir = args.finetuned_dir
+    base_model = args.model
+
+    if args.train:
+        from .embeddings import mark_finetuned
+        print("Before collect_training_corpus")
+        texts, doc_ids = collect_training_corpus(col, limit_docs=args.train_limit_docs)
+        print("After collect_training_corpus, doc_ids:", doc_ids)
+        if args.verbose:
+            print(f"train corpus size: {len(texts)} (docs: {len(doc_ids)})")
+        cfg = TrainConfig(output_dir=finetuned_dir, epochs=args.train_epochs, batch_size=args.train_batch)
+        finetuned_dir = finetune_model(base_model, texts, cfg)
+        print("Before mark_finetuned")
+        n_ft = mark_finetuned(col, doc_ids)
+        print("After mark_finetuned, n_ft:", n_ft)
+        if args.verbose:
+            print(f"marked process.finetuned: true for {n_ft} docs")
+
+    modified = update_corpus_embeddings(
+        col,
+        base_model=base_model,
+        finetuned_dir=finetuned_dir,
+        limit=args.limit,
+        batch=args.batch,
+        missing_only=not args.all,
+        encode_batch_size=args.encode_batch,
+        device_override=args.device,
         verbose=args.verbose,
     )
     print(f"modified documents: {modified}")
