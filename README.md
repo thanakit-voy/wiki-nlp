@@ -1,158 +1,144 @@
-# โปรเจกต์สคริปต์ Python 3.12.10 แบบ Docker (ไม่มี API)
-
-.\scripts\fetch.ps1
-.\scripts\segment.ps1
-.\scripts\thai_clock.ps1
-.\scripts\sentences.ps1
-.\scripts\sentence_token.ps1
-.\scripts\tag_num.ps1
-.\scripts\connectors.ps1
-.\scripts\abbreviation.ps1
-
-
-โปรเจกต์นี้เป็น CLI ที่รันใน Docker สำหรับงานดึงบทความวิกิพีเดียภาษาไทย, แยกหัวข้อ, ตัดประโยค และประมวลผลข้อความลง MongoDB โดยมีการติดตามสถานะการประมวลผลในฟิลด์ `process.*` ของเอกสาร
-
-## โครงสร้าง
-
-```
-.
-├─ Dockerfile
-├─ .dockerignore
-├─ requirements.txt
-├─ data/
-│  ├─ input/
-│  │  └─ titles.txt
-│  ├─ output/
-│  │  └─ articles/ (ผลลัพธ์ไฟล์ .txt)
-│  └─ state.json (ไฟล์สถานะ)
-└─ src/
-   └─ app/
-      ├─ __init__.py
-      └─ __main__.py
-```
-
-   ├─ __main__.py          # CLI entry
-   ├─ wiki_fetcher.py      # ดึงบทความจากวิกิพีเดีย
-   ├─ segmenter.py         # แยกหัวข้อและเตรียมบันทึกลง DB
-   ├─ sentence_split.py    # ตัดประโยคแบบเว้นวรรค (เบื้องต้น)
-   ├─ sentence_token.py    # ตัดประโยคด้วย PyThaiNLP จาก sentences เดิม
-   ├─ num_tag.py           # ใส่แท็กให้ประโยคที่เป็นตัวเลข
-   ├─ text_normalize.py    # ทำความสะอาด/ normalize ข้อความ
-   ├─ db.py                # เชื่อมต่อ MongoDB ผ่าน env
-   ├─ state_store.py       # จัดการไฟล์สถานะ
-   └─ constants.py         # ค่าคงที่/regex ใช้ร่วมกัน
-## วิธีใช้งาน (Windows PowerShell)
-
-
-# ตั้งชื่อ image ตามต้องการ (เช่น wiki-nlp-cli)
-```
-## การเตรียมใช้งาน (Windows PowerShell)
-docker run --rm wiki-nlp-cli
 # wiki-nlp CLI (Python 3.12.10 + Docker)
 
-CLI สำหรับดึงบทความวิกิพีเดียภาษาไทย แยกหัวข้อ ตัดประโยค และประมวลผลข้อความลง MongoDB รองรับสถานะการประมวลผลผ่านฟิลด์ `process.*` ของแต่ละเอกสาร
+CLI สำหรับดึงบทความวิกิพีเดียภาษาไทย แยกหัวข้อ ตัด/โทเค็นประโยค วิเคราะห์ไวยากรณ์ และสกัดลวดลายคำ (word patterns) ลง MongoDB โดยติดตามสถานะผ่านฟิลด์ `process.*` ของเอกสาร
 
 ## โครงสร้างโปรเจกต์
 
 ```
 .
 ├─ Dockerfile
-├─ .dockerignore
 ├─ requirements.txt
 ├─ scripts/
-│  ├─ build.ps1
-│  ├─ run.ps1
-│  ├─ fetch.ps1
-│  ├─ segment.ps1
-│  ├─ sentences.ps1
-│  ├─ sentence_token.ps1
-│  └─ tag_num.ps1
+│  ├─ build.ps1              # สร้าง Docker image (wiki-nlp-cli)
+│  ├─ run.ps1                # รันคำสั่ง任意ในคอนเทนเนอร์
+│  ├─ fetch.ps1              # ดึงบทความ .txt ตาม titles.txt
+│  ├─ segment.ps1            # แยกหัวข้อ/ย่อย document แล้วบันทึกลง Mongo (collection: corpus)
+│  ├─ sentences.ps1          # สร้าง sentences แบบเว้นวรรคจาก raw.content
+│  ├─ sentence_token.ps1     # ตัดประโยคใหม่ด้วย PyThaiNLP จาก sentences เดิม
+│  ├─ thai_clock.ps1         # ปรับรูปแบบเวลาไทยใน raw.content
+│  ├─ tag_num.ps1            # ติดแท็ก NUM ให้ข้อความที่เป็นตัวเลข
+│  ├─ connectors.ps1         # รวมประโยคสั้นตามกฎเชื่อม (connectors)
+│  ├─ abbreviation.ps1       # ขยายตัวย่อและบันทึก candidates
+│  ├─ tokenize.ps1           # สร้าง tokens (POS/lemma/deprel) ด้วย Stanza + custom dict
+│  ├─ sentence_heads.ps1     # สร้างประโยคย่อยตาม dependency heads
+│  ├─ word_pattern.ps1       # สร้าง masked word patterns ลง collections words/patterns
+│  └─ pipeline.ps1           # รันทุกขั้นแบบวนจนเสร็จ
 ├─ data/
 │  ├─ input/
-│  │  └─ titles.txt
-│  ├─ output/
-│  │  └─ articles/
+│  │  ├─ titles.txt
+│  │  └─ custom_dict.txt     # (ตัวเลือก) คำศัพท์เพิ่มสำหรับ tokenizer
 │  └─ state.json
 └─ src/
-    └─ app/
-         ├─ __main__.py          # CLI entry
-         ├─ wiki_fetcher.py      # ดึงบทความจากวิกิพีเดีย
-         ├─ segmenter.py         # แยกหัวข้อและเตรียมบันทึกลง DB
-         ├─ sentence_split.py    # ตัดประโยคแบบเว้นวรรค (เบื้องต้น)
-         ├─ sentence_token.py    # ตัดประโยคด้วย PyThaiNLP จาก sentences เดิม
-         ├─ num_tag.py           # ใส่แท็กให้ประโยคที่เป็นตัวเลข
-         ├─ text_normalize.py    # ทำความสะอาด/ normalize ข้อความ
-         ├─ db.py                # เชื่อมต่อ MongoDB
-         ├─ state_store.py       # จัดการไฟล์สถานะ
-         └─ constants.py         # ค่าคงที่/regex ใช้ร่วมกัน
+   └─ app/
+      ├─ __main__.py         # CLI entry (python -m app ...)
+      ├─ wiki_fetcher.py     # ดึงบทความวิกิพีเดีย
+      ├─ segmenter.py        # เตรียมเอกสารลง Mongo
+      ├─ sentence_split.py   # ตัดประโยคเว้นวรรค
+      ├─ sentence_token.py   # ตัดประโยคด้วย PyThaiNLP
+      ├─ thai_clock.py       # ปรับรูปแบบเวลา
+      ├─ connectors.py       # รวมประโยคตามกฎเชื่อม
+      ├─ abbreviation.py     # ขยายตัวย่อและเก็บ candidates
+      ├─ tokenize.py         # สร้าง tokens ด้วย Stanza (POS/lemma/depparse)
+      ├─ sentence_heads.py   # กลุ่ม token ตาม dependency head
+      ├─ word_pattern.py     # สร้าง masked patterns
+      ├─ num_tag.py          # ติดแท็กตัวเลข
+      ├─ text_normalize.py   # ทำความสะอาดข้อความ
+      ├─ constants.py        # ค่าคงที่/พจนานุกรมโดเมน
+      ├─ db.py               # เชื่อม MongoDB จาก env
+      └─ state_store.py      # จัดการ state อัปโหลดไฟล์
 ```
 
-## เตรียมใช้งาน (Windows PowerShell)
+## ติดตั้ง/รัน (Windows PowerShell)
 
-1) Build Docker image (รวม PyThaiNLP แล้ว)
+1) สร้าง Docker image
 
 ```powershell
-./scripts/build.ps1  # จะสร้าง image ชื่อ wiki-nlp-cli
+./scripts/build.ps1
 ```
 
-2) ใช้งานผ่านสคริปต์ (แนะนำ)
-
-สคริปต์รองรับพารามิเตอร์ `-Image` (ดีฟอลต์ `wiki-nlp-cli`) และตัวเลือก MongoDB เช่น `-MongoUri`, `-MongoDb`, `-MongoUser`, `-MongoPassword`, `-MongoAuthDb`, และ `-Network` (กรณีใช้ Docker network เดียวกับ Mongo)
-
-- ดึงบทความวิกิพีเดียตามรายการหัวข้อ
+2) ดึง > แยก > เตรียม sentences
 
 ```powershell
 ./scripts/fetch.ps1
-```
-
-- แยกหัวข้อและบันทึกลง MongoDB (collection: corpus)
-
-```powershell
 ./scripts/segment.ps1 -Collection corpus -Batch 100
-```
-
-- ตัดประโยคแบบเว้นวรรคจาก raw.content และตั้ง `process.sentence_split=true`
-
-```powershell
 ./scripts/sentences.ps1 -Collection corpus -Limit 200 -Batch 500
-```
-
-- นำ sentences เดิมมา “ตัดอีกรอบ” ด้วย PyThaiNLP และตั้ง `process.sentence_token=true`
-
-```powershell
 ./scripts/sentence_token.ps1 -Collection corpus -Limit 200 -Batch 200
 ```
 
-- ใส่แท็กให้ประโยคที่เป็นตัวเลข และตั้ง `process.num_tag=true`
+3) ขั้นวิเคราะห์เพิ่มเติม (เลือกใช้ได้)
 
 ```powershell
-./scripts/tag_num.ps1 -Collection corpus -Limit 200 -Batch 200
+./scripts/thai_clock.ps1
+./scripts/tag_num.ps1
+./scripts/connectors.ps1
+./scripts/abbreviation.ps1
 ```
 
-3) เรียกผ่าน Docker ตรง (ตัวเลือก)
-
-ตัวอย่าง (แมปโฟลเดอร์โปรเจกต์เข้าไปเพื่อให้ไฟล์ผลลัพธ์/สถานะเก็บบนเครื่อง):
+4) โทเค็นคำ + ไวยากรณ์ + head phrases + word patterns
 
 ```powershell
-docker run --rm -v "${PWD}:/app" wiki-nlp-cli fetch --titles data/input/titles.txt --out-dir data/output/articles --state data/state.json
+./scripts/tokenize.ps1          # เพิ่ม fields: id/start/end/head/pos/lemma/depparse/type/lang ต่อ token
+./scripts/sentence_heads.ps1    # สร้าง sentence_heads[] จาก dependency
+./scripts/word_pattern.ps1      # เติม collections: patterns, words (อธิบายด้านล่าง)
 ```
 
-ตั้งค่าเชื่อมต่อ MongoDB ด้วยตัวแปรแวดล้อม (ตัวอย่าง):
+5) ทางลัดครบชุดแบบวนจนจบขั้นละ 0 changes
 
 ```powershell
-docker run --rm -v "${PWD}:/app" `
-   -e MONGO_URI="mongodb://host.docker.internal:27017" `
-   -e MONGO_DB="tiktok_live" -e MONGO_USER="appuser" -e MONGO_PASSWORD="apppass" -e MONGO_AUTH_DB="admin" `
-   wiki-nlp-cli segment --articles-dir data/output/articles --collection corpus --batch 100 --state data/state.json
+./scripts/pipeline.ps1 -Fetch -Segment
 ```
+
+หมายเหตุ: ทุกสคริปต์รองรับพารามิเตอร์ Mongo เช่น `-MongoUri`, `-MongoDb`, `-MongoUser`, `-MongoPassword`, `-MongoAuthDb` และ `-Network` สำหรับ docker network เดียวกับ MongoDB
+
+## คำสั่ง CLI (python -m app)
+
+- fetch: ดึงบทความตาม `data/input/titles.txt`
+- segment: สร้างเอกสารลง Mongo collection (ดีฟอลต์: corpus)
+- sentences: ตัดประโยคเว้นวรรค → `process.sentence_split=true`
+- sentence-token: ตัดประโยคด้วย PyThaiNLP → `process.sentence_token=true`
+- thai-clock: ปรับเวลาไทยใน raw.content → `process.thai_clock=true`
+- connectors: รวมประโยคสั้นตามกฎ → `process.connector=true`
+- abbreviation: ขยายตัวย่อและบันทึก candidates → `process.abbreviation=true`
+- tokenize: สร้าง tokens ต่อ sentence ด้วย Stanza (รองรับ custom dict) → `process.tokenize=true`
+- sentence-heads: กลุ่ม token ตาม dependency head → `process.sentence_heads=true`
+- word-pattern: สร้าง masked patterns และนับสถิติ → `process.word_pattern=true`
+
+ตัวเลือกทั่วไป: `--collection/--corpus`, `--limit`, `--batch`, `--all`, `--verbose`
+
+## พจนานุกรมเสริม (custom dict)
+
+- วางไฟล์คำศัพท์ใน `data/input/custom_dict.txt` (หนึ่งคำต่อบรรทัด)
+- ใช้ร่วมกับตัวตัดคำ PyThaiNLP ก่อนป้อนเข้า Stanza เพื่อให้ตัดตรงกับโดเมนของคุณ
+
+## แบบจำลองข้อมูล (สำคัญ)
+
+1) corpus.sentences[].tokens[] จากคำสั่ง tokenize
+
+- ฟิลด์ต่อ token: `id` (เริ่ม 1), `text`, `pos` (UPOS), `lemma`, `depparse` (deprel), `head` (int), `start`, `end` (offset อักษร), `lang` ("th"), `type` (อนุมาน เช่น TIME/DATE/MONEY/UNIT_*/PERCENT เป็นต้น)
+- หลังรันจะตั้ง `process.tokenize=true`
+
+2) corpus.sentence_heads[] จากคำสั่ง sentence-heads
+
+- รายการของ `{ head: <หัว (lemma)>, text: <บรรทัดสรุป>, tokens: [<กลุ่มโทเค็น> ] }` ต่อ head id (ยกเว้น root)
+- หลังรันจะตั้ง `process.sentence_heads=true`
+
+3) patterns (คอลเลกชันใหม่) จากคำสั่ง word-pattern
+
+- เอกสาร: `{ _id, pattern: <string>, tokens: [<string>], length: <int>, count: <นับรวมทั่วทั้ง corpora> }`
+
+4) words (คอลเลกชันสถิติตามคำ)
+
+- เอกลักษณ์ต่อเอกสาร: `word`
+- โครงสร้าง: `{ word, count, pos: [ { pos, count } ], depparse: [ { depparse, count } ], patterns: [ { pattern_id, count } ] }`
+- เก็บเฉพาะ pivot token ที่ POS อยู่ในชุด `MASK_POS` (กำหนดใน `constants.py` เช่น {NOUN, PROPN, VERB})
+- การสร้าง pattern:
+  - โทเค็น pivot แทนเป็น `<WORD|{deprel}>`
+  - โทเค็นอื่น หาก `type ∈ NOT_MASK_TYPE` จะคง lemma; มิฉะนั้นถ้า `POS ∈ MASK_POS` จะใช้ `<POS|{deprel}>`; ไม่เช่นนั้นใช้ lemma
 
 ## สถานะการประมวลผล (process flags)
 
-- `process.sentence_split`: ถูกตั้งเป็น `true` หลังสร้างฟิลด์ `sentences` แบบเว้นวรรคจาก `raw.content`
-- `process.sentence_token`: ถูกตั้งเป็น `true` หลัง retokenize `sentences` เดิมด้วย PyThaiNLP
-- `process.num_tag`: ถูกตั้งเป็น `true` หลังใส่ `type=NUM` และ `pos=NUM` ให้ประโยคที่เป็นตัวเลข
-
-ค่าเริ่มต้นของแต่ละคำสั่งจะประมวลผลเฉพาะเอกสารที่ยังไม่ถูกทำขั้นตอนนั้น (เช็ค flag ข้างต้น) หากต้องการประมวลผลทั้งหมด ใช้ตัวเลือก `-All` (หรือ `--all` สำหรับเรียกผ่าน Docker)
+- `process.sentence_split`, `process.sentence_token`, `process.num_tag`, `process.thai_clock`, `process.connector`, `process.abbreviation`, `process.tokenize`, `process.sentence_heads`, `process.word_pattern`
+- ดีฟอลต์จะประมวลผลเฉพาะเอกสารที่ยังไม่ถูกตั้ง flag นั้น ๆ; ใช้ `-All` เพื่อประมวลผลทั้งหมด
 
 ## ตัวแปรแวดล้อม MongoDB
 
@@ -160,64 +146,9 @@ docker run --rm -v "${PWD}:/app" `
 - `MONGO_DB` เช่น `tiktok_live`
 - `MONGO_USER`, `MONGO_PASSWORD`, `MONGO_AUTH_DB`
 
-## รันแบบไม่ใช้ Docker (ตัวเลือก)
+## รันแบบไม่ใช้ Docker (ตัวเลือกนักพัฒนา)
 
-ติดตั้ง Python 3.12.10 และตั้งค่า PYTHONPATH ให้เห็นโฟลเดอร์ `src`
-
-```powershell
-$env:PYTHONPATH = ".\src"; python -m app --help
-```
-
-## ใบอนุญาต
-
-MIT
-
-- นำ sentences เดิมมา “ตัดอีกรอบ” ด้วย PyThaiNLP และตั้ง `process.sentence_token=true`
-
-```powershell
-./scripts/sentence_token.ps1 -Collection corpus -Limit 200 -Batch 200
-```
-
-- ใส่แท็กให้ประโยคที่เป็นตัวเลข และตั้ง `process.num_tag=true`
-
-```powershell
-./scripts/tag_num.ps1 -Collection corpus -Limit 200 -Batch 200
-```
-
-3) เรียกผ่าน Docker ตรง (ตัวเลือก)
-
-ตัวอย่าง (แมปโฟลเดอร์โปรเจกต์เข้าไปเพื่อให้ไฟล์ผลลัพธ์/สถานะเก็บบนเครื่อง):
-
-```powershell
-docker run --rm -v "${PWD}:/app" wiki-nlp-cli fetch --titles data/input/titles.txt --out-dir data/output/articles --state data/state.json
-```
-
-ตั้งค่าเชื่อมต่อ MongoDB ด้วยตัวแปรแวดล้อม (ตัวอย่าง):
-
-```powershell
-docker run --rm -v "${PWD}:/app" `
-  -e MONGO_URI="mongodb://host.docker.internal:27017" `
-  -e MONGO_DB="tiktok_live" -e MONGO_USER="appuser" -e MONGO_PASSWORD="apppass" -e MONGO_AUTH_DB="admin" `
-  wiki-nlp-cli segment --articles-dir data/output/articles --collection corpus --batch 100 --state data/state.json
-```
-
-## สถานะการประมวลผล (process flags)
-
-- `process.sentence_split`: ถูกตั้งเป็น `true` หลังสร้างฟิลด์ `sentences` แบบเว้นวรรคจาก `raw.content`
-- `process.sentence_token`: ถูกตั้งเป็น `true` หลัง retokenize `sentences` เดิมด้วย PyThaiNLP
-- `process.num_tag`: ถูกตั้งเป็น `true` หลังใส่ `type=NUM` และ `pos=NUM` ให้ประโยคที่เป็นตัวเลข
-
-ค่าเริ่มต้นของแต่ละคำสั่งจะประมวลผลเฉพาะเอกสารที่ยังไม่ถูกทำขั้นตอนนั้น (เช็ค flag ข้างต้น) หากต้องการประมวลผลทั้งหมด ใช้ตัวเลือก `-All` (หรือ `--all` สำหรับเรียกผ่าน Docker)
-
-## ตัวแปรแวดล้อม MongoDB
-
-- `MONGO_URI` เช่น `mongodb://host.docker.internal:27017`
-- `MONGO_DB` เช่น `tiktok_live`
-- `MONGO_USER`, `MONGO_PASSWORD`, `MONGO_AUTH_DB`
-
-## รันแบบไม่ใช้ Docker (ตัวเลือก)
-
-ติดตั้ง Python 3.12.10 และตั้งค่า PYTHONPATH ให้เห็นโฟลเดอร์ `src`
+ติดตั้ง Python 3.12.10 และตั้งค่า PYTHONPATH ให้เห็น `src`
 
 ```powershell
 $env:PYTHONPATH = ".\src"; python -m app --help
