@@ -3,7 +3,7 @@ param(
   [string]$Corpus = "corpus",
   [string]$Words = "words",
   [string]$Patterns = "patterns",
-  [int]$Limit = 500,
+  [int]$Limit = 1000,
   [int]$Batch = 200,
   [switch]$All,
   [switch]$Verbose,
