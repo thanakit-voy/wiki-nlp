@@ -1,3463 +1,2014 @@
-{
-  "collection": "corpus",
-  "data": {
-    "_id": {
-      "$oid": "68d9143dce4df72b710194c4"
-    },
-    "title": "กรุงเทพมหานคร",
-    "content_index": 1,
-    "raw": {
-      "header": "",
-      "content": "กรุงเทพมหานคร เป็นเมืองหลวงและเมืองที่มีประชากรมากที่สุดของประเทศไทย กรุงเทพมหานครเป็นจุดรวมของความเจริญทั้งในระดับประเทศและระดับภูมิภาคเอเชียตะวันออกเฉียงใต้ เมืองตั้งอยู่บริเวณสามเหลี่ยมปากแม่น้ำเจ้าพระยา โดยมีแม่น้ำเจ้าพระยาไหลผ่านใจกลางเมือง และแบ่งพื้นที่ออกเป็นสองฝั่งหลัก ได้แก่ ฝั่งพระนครและฝั่งธนบุรี กรุงเทพมหานครมีพื้นที่ทั้งสิ้น 1,568.737 ตารางกิโลเมตร และมีประชากรใน พ.ศ. 2567 ประมาณ 10 ล้านคน หรือคิดเป็นร้อยละ 13 ของประชากรทั้งประเทศ หากนับรวมเขตปริมณฑล ประชากรจะเพิ่มขึ้นเป็นประมาณ 17 ล้านคน ส่งผลให้กรุงเทพมหานครมีสถานะเป็นมหานครและเอกนคร ซึ่งหมายถึงเมืองที่มีอิทธิพลโดดเด่นอย่างยิ่งเหนือเมืองอื่น ๆ ในประเทศเดียวกัน",
-      "created_at": "2025-09-28T10:55:57Z"
-    },
-    "process": {
-      "thai_clock": true,
-      "sentence_split": true,
-      "sentence_token": true,
-      "num_tag": true,
-      "connector": true,
-      "abbreviation": true,
-      "tokenize": true,
-      "sentence_heads": true
-    },
-    "sentences": [
-      {
-        "text": "กรุงเทพมหานคร เป็นเมืองหลวงและเมืองที่มีประชากรมากที่สุดของประเทศไทย",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "กรุงเทพมหานคร",
-            "pos": "PROPN",
-            "lemma": "กรุงเทพมหานคร",
-            "depparse": "nsubj",
-            "head": 3,
-            "start": 0,
-            "end": 13,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "เป็น",
-            "pos": "AUX",
-            "lemma": "เป็น",
-            "depparse": "cop",
-            "head": 3,
-            "start": 14,
-            "end": 18,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "เมืองหลวง",
-            "pos": "NOUN",
-            "lemma": "เมืองหลวง",
-            "depparse": "root",
-            "head": 0,
-            "start": 18,
-            "end": 27,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "และ",
-            "pos": "CCONJ",
-            "lemma": "และ",
-            "depparse": "cc",
-            "head": 5,
-            "start": 27,
-            "end": 30,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "เมือง",
-            "pos": "NOUN",
-            "lemma": "เมือง",
-            "depparse": "conj",
-            "head": 3,
-            "start": 30,
-            "end": 35,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "ที่",
-            "pos": "PRON",
-            "lemma": "ที่",
-            "depparse": "nsubj",
-            "head": 7,
-            "start": 35,
-            "end": 38,
-            "lang": "th",
-            "type": "ORDINAL_MARK"
-          },
-          {
-            "id": 7,
-            "text": "มี",
-            "pos": "VERB",
-            "lemma": "มี",
-            "depparse": "acl",
-            "head": 5,
-            "start": 38,
-            "end": 40,
-            "lang": "th"
-          },
-          {
-            "id": 8,
-            "text": "ประชากร",
-            "pos": "NOUN",
-            "lemma": "ประชากร",
-            "depparse": "obj",
-            "head": 7,
-            "start": 40,
-            "end": 47,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "มาก",
-            "pos": "ADV",
-            "lemma": "มาก",
-            "depparse": "amod",
-            "head": 8,
-            "start": 47,
-            "end": 50,
-            "lang": "th"
-          },
-          {
-            "id": 10,
-            "text": "ที่สุด",
-            "pos": "ADV",
-            "lemma": "ที่สุด",
-            "depparse": "advmod",
-            "head": 9,
-            "start": 50,
-            "end": 56,
-            "lang": "th"
-          },
-          {
-            "id": 11,
-            "text": "ของ",
-            "pos": "ADP",
-            "lemma": "ของ",
-            "depparse": "case",
-            "head": 12,
-            "start": 56,
-            "end": 59,
-            "lang": "th"
-          },
-          {
-            "id": 12,
-            "text": "ประเทศ",
-            "pos": "NOUN",
-            "lemma": "ประเทศ",
-            "depparse": "nmod",
-            "head": 8,
-            "start": 59,
-            "end": 65,
-            "lang": "th"
-          },
-          {
-            "id": 13,
-            "text": "ไทย",
-            "pos": "PROPN",
-            "lemma": "ไทย",
-            "depparse": "nmod",
-            "head": 12,
-            "start": 65,
-            "end": 68,
-            "lang": "th"
-          }
-        ]
+[
+  {
+    "collection": "corpus",
+    "data": {
+      "_id": {
+        "$oid": "68d981bed480622865477a85"
       },
-      {
-        "text": "กรุงเทพมหานครเป็นจุดรวมของความเจริญทั้งในระดับประเทศและระดับภูมิภาคเอเชียตะวันออกเฉียงใต้",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "กรุงเทพมหานคร",
-            "pos": "PROPN",
-            "lemma": "กรุงเทพมหานคร",
-            "depparse": "nsubj",
-            "head": 3,
-            "start": 0,
-            "end": 13,
-            "lang": "th"
+      "word": "กรุงเทพมหานคร",
+      "count": 240,
+      "depparse": [
+        {
+          "depparse": "nsubj",
+          "count": 73
+        },
+        {
+          "depparse": "nmod",
+          "count": 119
+        },
+        {
+          "depparse": "obj",
+          "count": 7
+        },
+        {
+          "depparse": "compound",
+          "count": 2
+        },
+        {
+          "depparse": "obl",
+          "count": 30
+        },
+        {
+          "depparse": "advcl",
+          "count": 2
+        },
+        {
+          "depparse": "flat",
+          "count": 1
+        },
+        {
+          "depparse": "root",
+          "count": 4
+        },
+        {
+          "depparse": "conj",
+          "count": 2
+        }
+      ],
+      "patterns": [
+        {
+          "pattern_id": {
+            "$oid": "68d981bed480622865477a81"
           },
-          {
-            "id": 2,
-            "text": "เป็น",
-            "pos": "AUX",
-            "lemma": "เป็น",
-            "depparse": "cop",
-            "head": 3,
-            "start": 13,
-            "end": 17,
-            "lang": "th"
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bed480622865477ae5"
           },
-          {
-            "id": 3,
-            "text": "จุดรวม",
-            "pos": "NOUN",
-            "lemma": "จุดรวม",
-            "depparse": "root",
-            "head": 0,
-            "start": 17,
-            "end": 23,
-            "lang": "th"
+          "count": 4
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bfd480622865477c3f"
           },
-          {
-            "id": 4,
-            "text": "ของ",
-            "pos": "ADP",
-            "lemma": "ของ",
-            "depparse": "case",
-            "head": 5,
-            "start": 23,
-            "end": 26,
-            "lang": "th"
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bfd480622865477d59"
           },
-          {
-            "id": 5,
-            "text": "ความเจริญ",
-            "pos": "NOUN",
-            "lemma": "ความเจริญ",
-            "depparse": "nmod",
-            "head": 3,
-            "start": 26,
-            "end": 35,
-            "lang": "th"
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bfd480622865477e15"
           },
-          {
-            "id": 6,
-            "text": "ทั้ง",
-            "pos": "ADV",
-            "lemma": "ทั้ง",
-            "depparse": "advmod",
-            "head": 8,
-            "start": 35,
-            "end": 39,
-            "lang": "th"
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c0d480622865477ecd"
           },
-          {
-            "id": 7,
-            "text": "ใน",
-            "pos": "ADP",
-            "lemma": "ใน",
-            "depparse": "case",
-            "head": 8,
-            "start": 39,
-            "end": 41,
-            "lang": "th"
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c0d480622865477f1e"
           },
-          {
-            "id": 8,
-            "text": "ระดับ",
-            "pos": "NOUN",
-            "lemma": "ระดับ",
-            "depparse": "nmod",
-            "head": 3,
-            "start": 41,
-            "end": 46,
-            "lang": "th"
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bfd480622865477bb5"
           },
-          {
-            "id": 9,
-            "text": "ประเทศ",
-            "pos": "NOUN",
-            "lemma": "ประเทศ",
-            "depparse": "nmod",
-            "head": 8,
-            "start": 46,
-            "end": 52,
-            "lang": "th"
+          "count": 6
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bed480622865477b0a"
           },
-          {
-            "id": 10,
-            "text": "และ",
-            "pos": "CCONJ",
-            "lemma": "และ",
-            "depparse": "cc",
-            "head": 11,
-            "start": 52,
-            "end": 55,
-            "lang": "th"
+          "count": 12
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c0d480622865477fdb"
           },
-          {
-            "id": 11,
-            "text": "ระดับ",
-            "pos": "NOUN",
-            "lemma": "ระดับ",
-            "depparse": "conj",
-            "head": 8,
-            "start": 55,
-            "end": 60,
-            "lang": "th"
+          "count": 4
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bed480622865477b3f"
           },
-          {
-            "id": 12,
-            "text": "ภูมิภาค",
-            "pos": "NOUN",
-            "lemma": "ภูมิภาค",
-            "depparse": "nmod",
-            "head": 11,
-            "start": 60,
-            "end": 67,
-            "lang": "th"
+          "count": 6
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c2d4806228654783c8"
           },
-          {
-            "id": 13,
-            "text": "เอเชียตะวันออกเฉียงใต้",
-            "pos": "PROPN",
-            "lemma": "เอเชียตะวันออกเฉียงใต้",
-            "depparse": "nmod",
-            "head": 12,
-            "start": 67,
-            "end": 89,
-            "lang": "th"
-          }
-        ]
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c2d480622865478436"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c3d480622865478586"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c4d480622865478652"
+          },
+          "count": 9
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c5d480622865478990"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c1d480622865478180"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981cbd48062286547974e"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981cbd480622865479755"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981ccd480622865479897"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981cdd480622865479a39"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981cdd480622865479a4b"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981cdd480622865479ab2"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981cdd480622865479b95"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981ced480622865479c11"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c4d4806228654786a5"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981ced480622865479c33"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c4d480622865478745"
+          },
+          "count": 3
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981d1d48062286547a207"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981d1d48062286547a21c"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c8d4806228654790f0"
+          },
+          "count": 8
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981d4d48062286547a6bf"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981d5d48062286547a8d3"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981d5d48062286547a995"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981d9d48062286547b089"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981dad48062286547b1db"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981dad48062286547b206"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981dbd48062286547b2b0"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c5d480622865478a1e"
+          },
+          "count": 21
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981dcd48062286547b485"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981dfd48062286547ba51"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e0d48062286547bbd8"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e1d48062286547bd3e"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c3d480622865478533"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e1d48062286547be0a"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e1d48062286547be11"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e2d48062286547be64"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e2d48062286547bfd7"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bed480622865477aca"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c1d48062286547816a"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e4d48062286547c2a2"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e4d48062286547c2ea"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e4d48062286547c2f1"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e6d48062286547c608"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e7d48062286547c70c"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e9d48062286547cafe"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e9d48062286547cb8d"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981ead48062286547cc3b"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981ebd48062286547cf0f"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c7d480622865478d08"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bfd480622865477d0c"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f0d48062286547d726"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f0d48062286547d793"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c3d480622865478522"
+          },
+          "count": 5
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f1d48062286547d845"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c0d480622865477e82"
+          },
+          "count": 3
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f2d48062286547d992"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c0d480622865477ebc"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f2d48062286547da92"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f2d48062286547dacb"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f4d48062286547dda3"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f5d48062286547df51"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f6d48062286547e055"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f8d48062286547e3e1"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f8d48062286547e425"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f8d48062286547e433"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f8d48062286547e4ad"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981cbd4806228654797f2"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f9d48062286547e697"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c7d480622865478de7"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981fbd48062286547ea00"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981fcd48062286547eb02"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981fdd48062286547eccc"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981fdd48062286547ed95"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981fed48062286547ee38"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981fed48062286547eeab"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981fed48062286547ef47"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981ffd48062286547f064"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98200d48062286547f275"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981dbd48062286547b324"
+          },
+          "count": 3
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98204d48062286547f842"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98204d48062286547f8bb"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98206d48062286547fb12"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c1d4806228654781aa"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9820fd4806228654808e1"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98210d480622865480b4e"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98211d480622865480c37"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98218d480622865481502"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c5d4806228654789fa"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bed480622865477b5b"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98219d4806228654815fd"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981d8d48062286547aeaf"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98222d4806228654823a8"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c2d4806228654782d6"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981eed48062286547d3b3"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981dbd48062286547b354"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9822cd480622865483296"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98233d480622865483cd0"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e6d48062286547c550"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98234d480622865483fa0"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98234d480622865483fb9"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bed480622865477adb"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98237d48062286548451e"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9823cd480622865484c33"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9823ed480622865484eff"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9823ed480622865484f28"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98244d480622865485769"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98244d480622865485827"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98245d480622865485911"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98246d480622865485ba5"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9824bd480622865486211"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9824cd480622865486333"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9824cd480622865486394"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98253d480622865486c69"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98253d480622865486c7d"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c5d480622865478a02"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bfd480622865477c85"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98270d4806228654894ce"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9826fd48062286548927e"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98297d48062286548cc2e"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98297d48062286548cd17"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98233d480622865483db0"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98299d48062286548d008"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d982b7d48062286548f8e6"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d982b7d48062286548f902"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98203d48062286547f686"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98303d480622865495acc"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981eed48062286547d312"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981ddd48062286547b71d"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c8d480622865478eec"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c3d480622865478529"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c1d48062286547818a"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9827ed48062286548a922"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f0d48062286547d670"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98367d48062286549cd2b"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9837ad48062286549e177"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9831bd480622865497941"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d983c1d4806228654a2618"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d983c4d4806228654a2913"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c1d4806228654780d4"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d983ced4806228654a335d"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c1d480622865478171"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98419d4806228654a7e0c"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9866fd4806228654c4a0c"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98674d4806228654c4d5b"
+          },
+          "count": 1
+        }
+      ],
+      "pos": [
+        {
+          "pos": "PROPN",
+          "count": 231
+        },
+        {
+          "pos": "NOUN",
+          "count": 9
+        }
+      ]
+    }
+  },
+  {
+    "collection": "patterns",
+    "data": {
+      "_id": {
+        "$oid": "68d9822fd48062286548380b"
       },
-      {
-        "text": "เมืองตั้งอยู่บริเวณสามเหลี่ยมปากแม่น้ำเจ้าพระยา",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "เมือง",
-            "pos": "NOUN",
-            "lemma": "เมือง",
-            "depparse": "root",
-            "head": 0,
-            "start": 0,
-            "end": 5,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "ตั้งอยู่",
-            "pos": "VERB",
-            "lemma": "ตั้งอยู่",
-            "depparse": "acl",
-            "head": 1,
-            "start": 5,
-            "end": 13,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "บริเวณ",
-            "pos": "NOUN",
-            "lemma": "บริเวณ",
-            "depparse": "nmod",
-            "head": 1,
-            "start": 13,
-            "end": 19,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "สามเหลี่ยม",
-            "pos": "NOUN",
-            "lemma": "สามเหลี่ยม",
-            "depparse": "nmod",
-            "head": 3,
-            "start": 19,
-            "end": 29,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "ปากแม่น้ำ",
-            "pos": "PROPN",
-            "lemma": "ปากแม่น้ำ",
-            "depparse": "nmod",
-            "head": 4,
-            "start": 29,
-            "end": 38,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "เจ้าพระยา",
-            "pos": "PROPN",
-            "lemma": "เจ้าพระยา",
-            "depparse": "nmod",
-            "head": 4,
-            "start": 38,
-            "end": 47,
-            "lang": "th"
-          }
-        ]
+      "pattern": "จาก <NOUN|obl> <PROPN|nmod> <PROPN|conj> <PROPN|conj> <PROPN|conj> <PROPN|conj> <PROPN|conj> <PROPN|conj> <WORD|conj> <PROPN|conj> <PROPN|conj> <PROPN|conj> <PROPN|conj> <PROPN|conj> <PROPN|conj> <NOUN|conj> <PROPN|conj> <NOUN|conj>",
+      "count": 1,
+      "length": 19,
+      "tokens": [
+        "จาก",
+        "<NOUN|obl>",
+        "<PROPN|nmod>",
+        "<PROPN|conj>",
+        "<PROPN|conj>",
+        "<PROPN|conj>",
+        "<PROPN|conj>",
+        "<PROPN|conj>",
+        "<PROPN|conj>",
+        "<WORD|conj>",
+        "<PROPN|conj>",
+        "<PROPN|conj>",
+        "<PROPN|conj>",
+        "<PROPN|conj>",
+        "<PROPN|conj>",
+        "<PROPN|conj>",
+        "<NOUN|conj>",
+        "<PROPN|conj>",
+        "<NOUN|conj>"
+      ]
+    }
+  },
+  {
+    "collection": "words",
+    "data": {
+      "_id": {
+        "$oid": "68d981bed480622865477a85"
       },
-      {
-        "text": "โดยมีแม่น้ำเจ้าพระยาไหลผ่านใจกลางเมือง",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "โดย",
-            "pos": "SCONJ",
-            "lemma": "โดย",
-            "depparse": "mark",
-            "head": 2,
-            "start": 0,
-            "end": 3,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "มี",
-            "pos": "VERB",
-            "lemma": "มี",
-            "depparse": "root",
-            "head": 0,
-            "start": 3,
-            "end": 5,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "แม่น้ำ",
-            "pos": "NOUN",
-            "lemma": "แม่น้ำ",
-            "depparse": "obj",
-            "head": 2,
-            "start": 5,
-            "end": 11,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "เจ้าพระยา",
-            "pos": "PROPN",
-            "lemma": "เจ้าพระยา",
-            "depparse": "nmod",
-            "head": 3,
-            "start": 11,
-            "end": 20,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "ไหลผ่าน",
-            "pos": "VERB",
-            "lemma": "ไหลผ่าน",
-            "depparse": "ccomp",
-            "head": 2,
-            "start": 20,
-            "end": 27,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "ใจ",
-            "pos": "NOUN",
-            "lemma": "ใจ",
-            "depparse": "compound",
-            "head": 5,
-            "start": 27,
-            "end": 29,
-            "lang": "th"
-          },
-          {
-            "id": 7,
-            "text": "กลางเมือง",
-            "pos": "NOUN",
-            "lemma": "กลางเมือง",
-            "depparse": "obj",
-            "head": 5,
-            "start": 29,
-            "end": 38,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "text": "และแบ่งพื้นที่ออกเป็นสองฝั่งหลัก ได้แก่ ฝั่งพระนครและฝั่งธนบุรี",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "และ",
-            "pos": "CCONJ",
-            "lemma": "และ",
-            "depparse": "cc",
-            "head": 2,
-            "start": 0,
-            "end": 3,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "แบ่ง",
-            "pos": "VERB",
-            "lemma": "แบ่ง",
-            "depparse": "root",
-            "head": 0,
-            "start": 3,
-            "end": 7,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "พื้นที่",
-            "pos": "NOUN",
-            "lemma": "พื้นที่",
-            "depparse": "obj",
-            "head": 2,
-            "start": 7,
-            "end": 14,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "ออก",
-            "pos": "VERB",
-            "lemma": "ออก",
-            "depparse": "compound",
-            "head": 2,
-            "start": 14,
-            "end": 17,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "เป็น",
-            "pos": "AUX",
-            "lemma": "เป็น",
-            "depparse": "cop",
-            "head": 7,
-            "start": 17,
-            "end": 21,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "สอง",
-            "pos": "NUM",
-            "lemma": "สอง",
-            "depparse": "nummod",
-            "head": 7,
-            "start": 21,
-            "end": 24,
-            "lang": "th",
-            "type": "NUMBER"
-          },
-          {
-            "id": 7,
-            "text": "ฝั่ง",
-            "pos": "NOUN",
-            "lemma": "ฝั่ง",
-            "depparse": "compound",
-            "head": 4,
-            "start": 24,
-            "end": 28,
-            "lang": "th"
-          },
-          {
-            "id": 8,
-            "text": "หลัก",
-            "pos": "ADJ",
-            "lemma": "หลัก",
-            "depparse": "amod",
-            "head": 7,
-            "start": 28,
-            "end": 32,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "ได้แก่",
-            "pos": "SCONJ",
-            "lemma": "ได้แก่",
-            "depparse": "mark",
-            "head": 10,
-            "start": 33,
-            "end": 39,
-            "lang": "th"
-          },
-          {
-            "id": 10,
-            "text": "ฝั่ง",
-            "pos": "NOUN",
-            "lemma": "ฝั่ง",
-            "depparse": "appos",
-            "head": 7,
-            "start": 40,
-            "end": 44,
-            "lang": "th"
-          },
-          {
-            "id": 11,
-            "text": "พระนคร",
-            "pos": "PROPN",
-            "lemma": "พระนคร",
-            "depparse": "nmod",
-            "head": 10,
-            "start": 44,
-            "end": 50,
-            "lang": "th"
-          },
-          {
-            "id": 12,
-            "text": "และ",
-            "pos": "CCONJ",
-            "lemma": "และ",
-            "depparse": "cc",
-            "head": 13,
-            "start": 50,
-            "end": 53,
-            "lang": "th"
-          },
-          {
-            "id": 13,
-            "text": "ฝั่ง",
-            "pos": "NOUN",
-            "lemma": "ฝั่ง",
-            "depparse": "conj",
-            "head": 10,
-            "start": 53,
-            "end": 57,
-            "lang": "th"
-          },
-          {
-            "id": 14,
-            "text": "ธนบุรี",
-            "pos": "PROPN",
-            "lemma": "ธนบุรี",
-            "depparse": "nmod",
-            "head": 13,
-            "start": 57,
-            "end": 63,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "text": "กรุงเทพมหานครมีพื้นที่ทั้งสิ้น 1,568.737 ตารางกิโลเมตร และมีประชากรใน พุทธศักราช 2567 ประมาณ 10 ล้านคน หรือคิดเป็นร้อยละ 13 ของประชากรทั้งประเทศ หากนับรวมเขตปริมณฑล",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "กรุงเทพมหานคร",
-            "pos": "PROPN",
-            "lemma": "กรุงเทพมหานคร",
-            "depparse": "nsubj",
-            "head": 2,
-            "start": 0,
-            "end": 13,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "มี",
-            "pos": "VERB",
-            "lemma": "มี",
-            "depparse": "root",
-            "head": 0,
-            "start": 13,
-            "end": 15,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "พื้นที่",
-            "pos": "NOUN",
-            "lemma": "พื้นที่",
-            "depparse": "obj",
-            "head": 2,
-            "start": 15,
-            "end": 22,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "ทั้งสิ้น",
-            "pos": "ADV",
-            "lemma": "ทั้งสิ้น",
-            "depparse": "advmod",
-            "head": 5,
-            "start": 22,
-            "end": 30,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "1,568.737",
-            "pos": "NUM",
-            "lemma": "1,568.737",
-            "depparse": "nummod",
-            "head": 6,
-            "start": 31,
-            "end": 40,
-            "lang": "th",
-            "type": "AREA"
-          },
-          {
-            "id": 6,
-            "text": "ตารางกิโลเมตร",
-            "pos": "NOUN",
-            "lemma": "ตารางกิโลเมตร",
-            "depparse": "clf",
-            "head": 3,
-            "start": 41,
-            "end": 54,
-            "lang": "th",
-            "type": "UNIT_AREA"
-          },
-          {
-            "id": 7,
-            "text": "และ",
-            "pos": "CCONJ",
-            "lemma": "และ",
-            "depparse": "cc",
-            "head": 8,
-            "start": 55,
-            "end": 58,
-            "lang": "th"
-          },
-          {
-            "id": 8,
-            "text": "มี",
-            "pos": "VERB",
-            "lemma": "มี",
-            "depparse": "conj",
-            "head": 2,
-            "start": 58,
-            "end": 60,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "ประชากร",
-            "pos": "NOUN",
-            "lemma": "ประชากร",
-            "depparse": "obj",
-            "head": 8,
-            "start": 60,
-            "end": 67,
-            "lang": "th"
-          },
-          {
-            "id": 10,
-            "text": "ใน",
-            "pos": "ADP",
-            "lemma": "ใน",
-            "depparse": "case",
-            "head": 11,
-            "start": 67,
-            "end": 69,
-            "lang": "th"
-          },
-          {
-            "id": 11,
-            "text": "พุทธศักราช",
-            "pos": "NOUN",
-            "lemma": "พุทธศักราช",
-            "depparse": "nmod",
-            "head": 9,
-            "start": 70,
-            "end": 80,
-            "lang": "th"
-          },
-          {
-            "id": 12,
-            "text": "2567",
-            "pos": "NUM",
-            "lemma": "2567",
-            "depparse": "nummod",
-            "head": 11,
-            "start": 81,
-            "end": 85,
-            "lang": "th",
-            "type": "NUMBER"
-          },
-          {
-            "id": 13,
-            "text": "ประมาณ",
-            "pos": "ADV",
-            "lemma": "ประมาณ",
-            "depparse": "advmod",
-            "head": 14,
-            "start": 86,
-            "end": 92,
-            "lang": "th"
-          },
-          {
-            "id": 14,
-            "text": "10",
-            "pos": "NUM",
-            "lemma": "10",
-            "depparse": "nummod",
-            "head": 15,
-            "start": 93,
-            "end": 95,
-            "lang": "th",
-            "type": "NUMBER"
-          },
-          {
-            "id": 15,
-            "text": "ล้าน",
-            "pos": "NUM",
-            "lemma": "ล้าน",
-            "depparse": "nummod",
-            "head": 16,
-            "start": 96,
-            "end": 100,
-            "lang": "th",
-            "type": "NUMBER"
-          },
-          {
-            "id": 16,
-            "text": "คน",
-            "pos": "NOUN",
-            "lemma": "คน",
-            "depparse": "clf",
-            "head": 9,
-            "start": 100,
-            "end": 102,
-            "lang": "th"
-          },
-          {
-            "id": 17,
-            "text": "หรือ",
-            "pos": "CCONJ",
-            "lemma": "หรือ",
-            "depparse": "cc",
-            "head": 18,
-            "start": 103,
-            "end": 107,
-            "lang": "th"
-          },
-          {
-            "id": 18,
-            "text": "คิด",
-            "pos": "VERB",
-            "lemma": "คิด",
-            "depparse": "conj",
-            "head": 2,
-            "start": 107,
-            "end": 110,
-            "lang": "th"
-          },
-          {
-            "id": 19,
-            "text": "เป็น",
-            "pos": "AUX",
-            "lemma": "เป็น",
-            "depparse": "cop",
-            "head": 20,
-            "start": 110,
-            "end": 114,
-            "lang": "th"
-          },
-          {
-            "id": 20,
-            "text": "ร้อยละ",
-            "pos": "NOUN",
-            "lemma": "ร้อยละ",
-            "depparse": "xcomp",
-            "head": 18,
-            "start": 114,
-            "end": 120,
-            "lang": "th"
-          },
-          {
-            "id": 21,
-            "text": "13",
-            "pos": "NUM",
-            "lemma": "13",
-            "depparse": "nummod",
-            "head": 20,
-            "start": 121,
-            "end": 123,
-            "lang": "th",
-            "type": "NUMBER"
-          },
-          {
-            "id": 22,
-            "text": "ของ",
-            "pos": "ADP",
-            "lemma": "ของ",
-            "depparse": "case",
-            "head": 23,
-            "start": 124,
-            "end": 127,
-            "lang": "th"
-          },
-          {
-            "id": 23,
-            "text": "ประชากร",
-            "pos": "NOUN",
-            "lemma": "ประชากร",
-            "depparse": "nmod",
-            "head": 20,
-            "start": 127,
-            "end": 134,
-            "lang": "th"
-          },
-          {
-            "id": 24,
-            "text": "ทั้ง",
-            "pos": "ADV",
-            "lemma": "ทั้ง",
-            "depparse": "advmod",
-            "head": 25,
-            "start": 134,
-            "end": 138,
-            "lang": "th"
-          },
-          {
-            "id": 25,
-            "text": "ประเทศ",
-            "pos": "NOUN",
-            "lemma": "ประเทศ",
-            "depparse": "nmod",
-            "head": 23,
-            "start": 138,
-            "end": 144,
-            "lang": "th"
-          },
-          {
-            "id": 26,
-            "text": "หาก",
-            "pos": "SCONJ",
-            "lemma": "หาก",
-            "depparse": "mark",
-            "head": 27,
-            "start": 145,
-            "end": 148,
-            "lang": "th"
-          },
-          {
-            "id": 27,
-            "text": "นับ",
-            "pos": "VERB",
-            "lemma": "นับ",
-            "depparse": "advcl",
-            "head": 18,
-            "start": 148,
-            "end": 151,
-            "lang": "th"
-          },
-          {
-            "id": 28,
-            "text": "รวม",
-            "pos": "VERB",
-            "lemma": "รวม",
-            "depparse": "compound",
-            "head": 27,
-            "start": 151,
-            "end": 154,
-            "lang": "th"
-          },
-          {
-            "id": 29,
-            "text": "เขต",
-            "pos": "NOUN",
-            "lemma": "เขต",
-            "depparse": "obj",
-            "head": 28,
-            "start": 154,
-            "end": 157,
-            "lang": "th"
-          },
-          {
-            "id": 30,
-            "text": "ปริมณฑล",
-            "pos": "PROPN",
-            "lemma": "ปริมณฑล",
-            "depparse": "nmod",
-            "head": 29,
-            "start": 157,
-            "end": 164,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "text": "ประชากรจะเพิ่มขึ้นเป็นประมาณ 17 ล้านคน",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "ประชากร",
-            "pos": "NOUN",
-            "lemma": "ประชากร",
-            "depparse": "nsubj",
-            "head": 3,
-            "start": 0,
-            "end": 7,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "จะ",
-            "pos": "AUX",
-            "lemma": "จะ",
-            "depparse": "aux",
-            "head": 3,
-            "start": 7,
-            "end": 9,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "เพิ่มขึ้น",
-            "pos": "VERB",
-            "lemma": "เพิ่มขึ้น",
-            "depparse": "root",
-            "head": 0,
-            "start": 9,
-            "end": 18,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "เป็น",
-            "pos": "VERB",
-            "lemma": "เป็น",
-            "depparse": "compound",
-            "head": 3,
-            "start": 18,
-            "end": 22,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "ประมาณ",
-            "pos": "ADV",
-            "lemma": "ประมาณ",
-            "depparse": "advmod",
-            "head": 6,
-            "start": 22,
-            "end": 28,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "17",
-            "pos": "NUM",
-            "lemma": "17",
-            "depparse": "nummod",
-            "head": 7,
-            "start": 29,
-            "end": 31,
-            "lang": "th",
-            "type": "NUMBER"
-          },
-          {
-            "id": 7,
-            "text": "ล้าน",
-            "pos": "NUM",
-            "lemma": "ล้าน",
-            "depparse": "nummod",
-            "head": 8,
-            "start": 32,
-            "end": 36,
-            "lang": "th",
-            "type": "NUMBER"
-          },
-          {
-            "id": 8,
-            "text": "คน",
-            "pos": "NOUN",
-            "lemma": "คน",
-            "depparse": "obj",
-            "head": 4,
-            "start": 36,
-            "end": 38,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "text": "ส่งผลให้กรุงเทพมหานครมีสถานะเป็นมหานครและเอกนคร",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "ส่งผล",
-            "pos": "VERB",
-            "lemma": "ส่งผล",
-            "depparse": "root",
-            "head": 0,
-            "start": 0,
-            "end": 5,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "ให้",
-            "pos": "SCONJ",
-            "lemma": "ให้",
-            "depparse": "mark",
-            "head": 4,
-            "start": 5,
-            "end": 8,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "กรุงเทพมหานคร",
-            "pos": "PROPN",
-            "lemma": "กรุงเทพมหานคร",
-            "depparse": "nsubj",
-            "head": 4,
-            "start": 8,
-            "end": 21,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "มี",
-            "pos": "VERB",
-            "lemma": "มี",
-            "depparse": "ccomp",
-            "head": 1,
-            "start": 21,
-            "end": 23,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "สถานะ",
-            "pos": "NOUN",
-            "lemma": "สถานะ",
-            "depparse": "obj",
-            "head": 4,
-            "start": 23,
-            "end": 28,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "เป็น",
-            "pos": "AUX",
-            "lemma": "เป็น",
-            "depparse": "cop",
-            "head": 7,
-            "start": 28,
-            "end": 32,
-            "lang": "th"
-          },
-          {
-            "id": 7,
-            "text": "มหานคร",
-            "pos": "NOUN",
-            "lemma": "มหานคร",
-            "depparse": "acl",
-            "head": 5,
-            "start": 32,
-            "end": 38,
-            "lang": "th"
-          },
-          {
-            "id": 8,
-            "text": "และ",
-            "pos": "CCONJ",
-            "lemma": "และ",
-            "depparse": "cc",
-            "head": 9,
-            "start": 38,
-            "end": 41,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "เอก",
-            "pos": "NOUN",
-            "lemma": "เอก",
-            "depparse": "conj",
-            "head": 7,
-            "start": 41,
-            "end": 44,
-            "lang": "th"
-          },
-          {
-            "id": 10,
-            "text": "นคร",
-            "pos": "NOUN",
-            "lemma": "นคร",
-            "depparse": "nmod",
-            "head": 9,
-            "start": 44,
-            "end": 47,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "text": "ซึ่งหมายถึงเมืองที่มีอิทธิพลโดดเด่นอย่างยิ่งเหนือเมืองอื่น ๆ ในประเทศเดียวกัน",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "ซึ่ง",
-            "pos": "SCONJ",
-            "lemma": "ซึ่ง",
-            "depparse": "mark",
-            "head": 2,
-            "start": 0,
-            "end": 4,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "หมายถึง",
-            "pos": "VERB",
-            "lemma": "หมายถึง",
-            "depparse": "root",
-            "head": 0,
-            "start": 4,
-            "end": 11,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "เมือง",
-            "pos": "NOUN",
-            "lemma": "เมือง",
-            "depparse": "obj",
-            "head": 2,
-            "start": 11,
-            "end": 16,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "ที่",
-            "pos": "PRON",
-            "lemma": "ที่",
-            "depparse": "nsubj",
-            "head": 5,
-            "start": 16,
-            "end": 19,
-            "lang": "th",
-            "type": "ORDINAL_MARK"
-          },
-          {
-            "id": 5,
-            "text": "มีอิทธิพล",
-            "pos": "VERB",
-            "lemma": "มีอิทธิพล",
-            "depparse": "acl",
-            "head": 3,
-            "start": 19,
-            "end": 28,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "โดดเด่น",
-            "pos": "ADV",
-            "lemma": "โดดเด่น",
-            "depparse": "advmod",
-            "head": 5,
-            "start": 28,
-            "end": 35,
-            "lang": "th"
-          },
-          {
-            "id": 7,
-            "text": "อย่างยิ่ง",
-            "pos": "ADV",
-            "lemma": "อย่างยิ่ง",
-            "depparse": "advmod",
-            "head": 6,
-            "start": 35,
-            "end": 44,
-            "lang": "th"
-          },
-          {
-            "id": 8,
-            "text": "เหนือ",
-            "pos": "ADP",
-            "lemma": "เหนือ",
-            "depparse": "case",
-            "head": 9,
-            "start": 44,
-            "end": 49,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "เมือง",
-            "pos": "NOUN",
-            "lemma": "เมือง",
-            "depparse": "obl",
-            "head": 5,
-            "start": 49,
-            "end": 54,
-            "lang": "th"
-          },
-          {
-            "id": 10,
-            "text": "อื่น",
-            "pos": "DET",
-            "lemma": "อื่น",
-            "depparse": "det",
-            "head": 9,
-            "start": 54,
-            "end": 58,
-            "lang": "th"
-          },
-          {
-            "id": 11,
-            "text": "ๆ",
-            "pos": "PUNCT",
-            "lemma": "ๆ",
-            "depparse": "punct",
-            "head": 10,
-            "start": 59,
-            "end": 60,
-            "lang": "th"
-          },
-          {
-            "id": 12,
-            "text": "ในประเทศ",
-            "pos": "NOUN",
-            "lemma": "ในประเทศ",
-            "depparse": "nmod",
-            "head": 9,
-            "start": 61,
-            "end": 69,
-            "lang": "th"
-          },
-          {
-            "id": 13,
-            "text": "เดียวกัน",
-            "pos": "DET",
-            "lemma": "เดียวกัน",
-            "depparse": "det",
-            "head": 12,
-            "start": 69,
-            "end": 77,
-            "lang": "th"
-          }
-        ]
-      }
-    ],
-    "sentence_heads": [
-      {
-        "head": "เมืองหลวง",
-        "text": "กรุงเทพมหานคร เป็น เมืองหลวง เมือง",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "กรุงเทพมหานคร",
-            "pos": "PROPN",
-            "lemma": "กรุงเทพมหานคร",
-            "depparse": "nsubj",
-            "head": 3,
-            "start": 0,
-            "end": 13,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "เป็น",
-            "pos": "AUX",
-            "lemma": "เป็น",
-            "depparse": "cop",
-            "head": 3,
-            "start": 14,
-            "end": 18,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "เมืองหลวง",
-            "pos": "NOUN",
-            "lemma": "เมืองหลวง",
-            "depparse": "root",
-            "head": 0,
-            "start": 18,
-            "end": 27,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "เมือง",
-            "pos": "NOUN",
-            "lemma": "เมือง",
-            "depparse": "conj",
-            "head": 3,
-            "start": 30,
-            "end": 35,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "เมือง",
-        "text": "และ เมือง มี",
-        "tokens": [
-          {
-            "id": 4,
-            "text": "และ",
-            "pos": "CCONJ",
-            "lemma": "และ",
-            "depparse": "cc",
-            "head": 5,
-            "start": 27,
-            "end": 30,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "เมือง",
-            "pos": "NOUN",
-            "lemma": "เมือง",
-            "depparse": "conj",
-            "head": 3,
-            "start": 30,
-            "end": 35,
-            "lang": "th"
-          },
-          {
-            "id": 7,
-            "text": "มี",
-            "pos": "VERB",
-            "lemma": "มี",
-            "depparse": "acl",
-            "head": 5,
-            "start": 38,
-            "end": 40,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "มี",
-        "text": "ที่ มี ประชากร",
-        "tokens": [
-          {
-            "id": 6,
-            "text": "ที่",
-            "pos": "PRON",
-            "lemma": "ที่",
-            "depparse": "nsubj",
-            "head": 7,
-            "start": 35,
-            "end": 38,
-            "lang": "th",
-            "type": "ORDINAL_MARK"
-          },
-          {
-            "id": 7,
-            "text": "มี",
-            "pos": "VERB",
-            "lemma": "มี",
-            "depparse": "acl",
-            "head": 5,
-            "start": 38,
-            "end": 40,
-            "lang": "th"
-          },
-          {
-            "id": 8,
-            "text": "ประชากร",
-            "pos": "NOUN",
-            "lemma": "ประชากร",
-            "depparse": "obj",
-            "head": 7,
-            "start": 40,
-            "end": 47,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "ประชากร",
-        "text": "ประชากร มาก ประเทศ",
-        "tokens": [
-          {
-            "id": 8,
-            "text": "ประชากร",
-            "pos": "NOUN",
-            "lemma": "ประชากร",
-            "depparse": "obj",
-            "head": 7,
-            "start": 40,
-            "end": 47,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "มาก",
-            "pos": "ADV",
-            "lemma": "มาก",
-            "depparse": "amod",
-            "head": 8,
-            "start": 47,
-            "end": 50,
-            "lang": "th"
-          },
-          {
-            "id": 12,
-            "text": "ประเทศ",
-            "pos": "NOUN",
-            "lemma": "ประเทศ",
-            "depparse": "nmod",
-            "head": 8,
-            "start": 59,
-            "end": 65,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "มาก",
-        "text": "มาก ที่สุด",
-        "tokens": [
-          {
-            "id": 9,
-            "text": "มาก",
-            "pos": "ADV",
-            "lemma": "มาก",
-            "depparse": "amod",
-            "head": 8,
-            "start": 47,
-            "end": 50,
-            "lang": "th"
-          },
-          {
-            "id": 10,
-            "text": "ที่สุด",
-            "pos": "ADV",
-            "lemma": "ที่สุด",
-            "depparse": "advmod",
-            "head": 9,
-            "start": 50,
-            "end": 56,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "ประเทศ",
-        "text": "ของ ประเทศ ไทย",
-        "tokens": [
-          {
-            "id": 11,
-            "text": "ของ",
-            "pos": "ADP",
-            "lemma": "ของ",
-            "depparse": "case",
-            "head": 12,
-            "start": 56,
-            "end": 59,
-            "lang": "th"
-          },
-          {
-            "id": 12,
-            "text": "ประเทศ",
-            "pos": "NOUN",
-            "lemma": "ประเทศ",
-            "depparse": "nmod",
-            "head": 8,
-            "start": 59,
-            "end": 65,
-            "lang": "th"
-          },
-          {
-            "id": 13,
-            "text": "ไทย",
-            "pos": "PROPN",
-            "lemma": "ไทย",
-            "depparse": "nmod",
-            "head": 12,
-            "start": 65,
-            "end": 68,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "จุดรวม",
-        "text": "กรุงเทพมหานคร เป็น จุดรวม ความเจริญ ระดับ",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "กรุงเทพมหานคร",
-            "pos": "PROPN",
-            "lemma": "กรุงเทพมหานคร",
-            "depparse": "nsubj",
-            "head": 3,
-            "start": 0,
-            "end": 13,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "เป็น",
-            "pos": "AUX",
-            "lemma": "เป็น",
-            "depparse": "cop",
-            "head": 3,
-            "start": 13,
-            "end": 17,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "จุดรวม",
-            "pos": "NOUN",
-            "lemma": "จุดรวม",
-            "depparse": "root",
-            "head": 0,
-            "start": 17,
-            "end": 23,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "ความเจริญ",
-            "pos": "NOUN",
-            "lemma": "ความเจริญ",
-            "depparse": "nmod",
-            "head": 3,
-            "start": 26,
-            "end": 35,
-            "lang": "th"
-          },
-          {
-            "id": 8,
-            "text": "ระดับ",
-            "pos": "NOUN",
-            "lemma": "ระดับ",
-            "depparse": "nmod",
-            "head": 3,
-            "start": 41,
-            "end": 46,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "ความเจริญ",
-        "text": "ของ ความเจริญ",
-        "tokens": [
-          {
-            "id": 4,
-            "text": "ของ",
-            "pos": "ADP",
-            "lemma": "ของ",
-            "depparse": "case",
-            "head": 5,
-            "start": 23,
-            "end": 26,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "ความเจริญ",
-            "pos": "NOUN",
-            "lemma": "ความเจริญ",
-            "depparse": "nmod",
-            "head": 3,
-            "start": 26,
-            "end": 35,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "ระดับ",
-        "text": "ทั้ง ใน ระดับ ประเทศ ระดับ",
-        "tokens": [
-          {
-            "id": 6,
-            "text": "ทั้ง",
-            "pos": "ADV",
-            "lemma": "ทั้ง",
-            "depparse": "advmod",
-            "head": 8,
-            "start": 35,
-            "end": 39,
-            "lang": "th"
-          },
-          {
-            "id": 7,
-            "text": "ใน",
-            "pos": "ADP",
-            "lemma": "ใน",
-            "depparse": "case",
-            "head": 8,
-            "start": 39,
-            "end": 41,
-            "lang": "th"
-          },
-          {
-            "id": 8,
-            "text": "ระดับ",
-            "pos": "NOUN",
-            "lemma": "ระดับ",
-            "depparse": "nmod",
-            "head": 3,
-            "start": 41,
-            "end": 46,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "ประเทศ",
-            "pos": "NOUN",
-            "lemma": "ประเทศ",
-            "depparse": "nmod",
-            "head": 8,
-            "start": 46,
-            "end": 52,
-            "lang": "th"
-          },
-          {
-            "id": 11,
-            "text": "ระดับ",
-            "pos": "NOUN",
-            "lemma": "ระดับ",
-            "depparse": "conj",
-            "head": 8,
-            "start": 55,
-            "end": 60,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "ระดับ",
-        "text": "และ ระดับ ภูมิภาค",
-        "tokens": [
-          {
-            "id": 10,
-            "text": "และ",
-            "pos": "CCONJ",
-            "lemma": "และ",
-            "depparse": "cc",
-            "head": 11,
-            "start": 52,
-            "end": 55,
-            "lang": "th"
-          },
-          {
-            "id": 11,
-            "text": "ระดับ",
-            "pos": "NOUN",
-            "lemma": "ระดับ",
-            "depparse": "conj",
-            "head": 8,
-            "start": 55,
-            "end": 60,
-            "lang": "th"
-          },
-          {
-            "id": 12,
-            "text": "ภูมิภาค",
-            "pos": "NOUN",
-            "lemma": "ภูมิภาค",
-            "depparse": "nmod",
-            "head": 11,
-            "start": 60,
-            "end": 67,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "ภูมิภาค",
-        "text": "ภูมิภาค เอเชียตะวันออกเฉียงใต้",
-        "tokens": [
-          {
-            "id": 12,
-            "text": "ภูมิภาค",
-            "pos": "NOUN",
-            "lemma": "ภูมิภาค",
-            "depparse": "nmod",
-            "head": 11,
-            "start": 60,
-            "end": 67,
-            "lang": "th"
-          },
-          {
-            "id": 13,
-            "text": "เอเชียตะวันออกเฉียงใต้",
-            "pos": "PROPN",
-            "lemma": "เอเชียตะวันออกเฉียงใต้",
-            "depparse": "nmod",
-            "head": 12,
-            "start": 67,
-            "end": 89,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "เมือง",
-        "text": "เมือง ตั้งอยู่ บริเวณ",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "เมือง",
-            "pos": "NOUN",
-            "lemma": "เมือง",
-            "depparse": "root",
-            "head": 0,
-            "start": 0,
-            "end": 5,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "ตั้งอยู่",
-            "pos": "VERB",
-            "lemma": "ตั้งอยู่",
-            "depparse": "acl",
-            "head": 1,
-            "start": 5,
-            "end": 13,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "บริเวณ",
-            "pos": "NOUN",
-            "lemma": "บริเวณ",
-            "depparse": "nmod",
-            "head": 1,
-            "start": 13,
-            "end": 19,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "บริเวณ",
-        "text": "บริเวณ สามเหลี่ยม",
-        "tokens": [
-          {
-            "id": 3,
-            "text": "บริเวณ",
-            "pos": "NOUN",
-            "lemma": "บริเวณ",
-            "depparse": "nmod",
-            "head": 1,
-            "start": 13,
-            "end": 19,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "สามเหลี่ยม",
-            "pos": "NOUN",
-            "lemma": "สามเหลี่ยม",
-            "depparse": "nmod",
-            "head": 3,
-            "start": 19,
-            "end": 29,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "สามเหลี่ยม",
-        "text": "สามเหลี่ยม ปากแม่น้ำ เจ้าพระยา",
-        "tokens": [
-          {
-            "id": 4,
-            "text": "สามเหลี่ยม",
-            "pos": "NOUN",
-            "lemma": "สามเหลี่ยม",
-            "depparse": "nmod",
-            "head": 3,
-            "start": 19,
-            "end": 29,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "ปากแม่น้ำ",
-            "pos": "PROPN",
-            "lemma": "ปากแม่น้ำ",
-            "depparse": "nmod",
-            "head": 4,
-            "start": 29,
-            "end": 38,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "เจ้าพระยา",
-            "pos": "PROPN",
-            "lemma": "เจ้าพระยา",
-            "depparse": "nmod",
-            "head": 4,
-            "start": 38,
-            "end": 47,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "มี",
-        "text": "โดย มี แม่น้ำ ไหลผ่าน",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "โดย",
-            "pos": "SCONJ",
-            "lemma": "โดย",
-            "depparse": "mark",
-            "head": 2,
-            "start": 0,
-            "end": 3,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "มี",
-            "pos": "VERB",
-            "lemma": "มี",
-            "depparse": "root",
-            "head": 0,
-            "start": 3,
-            "end": 5,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "แม่น้ำ",
-            "pos": "NOUN",
-            "lemma": "แม่น้ำ",
-            "depparse": "obj",
-            "head": 2,
-            "start": 5,
-            "end": 11,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "ไหลผ่าน",
-            "pos": "VERB",
-            "lemma": "ไหลผ่าน",
-            "depparse": "ccomp",
-            "head": 2,
-            "start": 20,
-            "end": 27,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "แม่น้ำ",
-        "text": "แม่น้ำ เจ้าพระยา",
-        "tokens": [
-          {
-            "id": 3,
-            "text": "แม่น้ำ",
-            "pos": "NOUN",
-            "lemma": "แม่น้ำ",
-            "depparse": "obj",
-            "head": 2,
-            "start": 5,
-            "end": 11,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "เจ้าพระยา",
-            "pos": "PROPN",
-            "lemma": "เจ้าพระยา",
-            "depparse": "nmod",
-            "head": 3,
-            "start": 11,
-            "end": 20,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "ไหลผ่าน",
-        "text": "ไหลผ่าน ใจ กลางเมือง",
-        "tokens": [
-          {
-            "id": 5,
-            "text": "ไหลผ่าน",
-            "pos": "VERB",
-            "lemma": "ไหลผ่าน",
-            "depparse": "ccomp",
-            "head": 2,
-            "start": 20,
-            "end": 27,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "ใจ",
-            "pos": "NOUN",
-            "lemma": "ใจ",
-            "depparse": "compound",
-            "head": 5,
-            "start": 27,
-            "end": 29,
-            "lang": "th"
-          },
-          {
-            "id": 7,
-            "text": "กลางเมือง",
-            "pos": "NOUN",
-            "lemma": "กลางเมือง",
-            "depparse": "obj",
-            "head": 5,
-            "start": 29,
-            "end": 38,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "แบ่ง",
-        "text": "และ แบ่ง พื้นที่ ออก",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "และ",
-            "pos": "CCONJ",
-            "lemma": "และ",
-            "depparse": "cc",
-            "head": 2,
-            "start": 0,
-            "end": 3,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "แบ่ง",
-            "pos": "VERB",
-            "lemma": "แบ่ง",
-            "depparse": "root",
-            "head": 0,
-            "start": 3,
-            "end": 7,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "พื้นที่",
-            "pos": "NOUN",
-            "lemma": "พื้นที่",
-            "depparse": "obj",
-            "head": 2,
-            "start": 7,
-            "end": 14,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "ออก",
-            "pos": "VERB",
-            "lemma": "ออก",
-            "depparse": "compound",
-            "head": 2,
-            "start": 14,
-            "end": 17,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "ฝั่ง",
-        "text": "เป็น สอง ฝั่ง หลัก ฝั่ง",
-        "tokens": [
-          {
-            "id": 5,
-            "text": "เป็น",
-            "pos": "AUX",
-            "lemma": "เป็น",
-            "depparse": "cop",
-            "head": 7,
-            "start": 17,
-            "end": 21,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "สอง",
-            "pos": "NUM",
-            "lemma": "สอง",
-            "depparse": "nummod",
-            "head": 7,
-            "start": 21,
-            "end": 24,
-            "lang": "th",
-            "type": "NUMBER"
-          },
-          {
-            "id": 7,
-            "text": "ฝั่ง",
-            "pos": "NOUN",
-            "lemma": "ฝั่ง",
-            "depparse": "compound",
-            "head": 4,
-            "start": 24,
-            "end": 28,
-            "lang": "th"
-          },
-          {
-            "id": 8,
-            "text": "หลัก",
-            "pos": "ADJ",
-            "lemma": "หลัก",
-            "depparse": "amod",
-            "head": 7,
-            "start": 28,
-            "end": 32,
-            "lang": "th"
-          },
-          {
-            "id": 10,
-            "text": "ฝั่ง",
-            "pos": "NOUN",
-            "lemma": "ฝั่ง",
-            "depparse": "appos",
-            "head": 7,
-            "start": 40,
-            "end": 44,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "ออก",
-        "text": "ออก ฝั่ง",
-        "tokens": [
-          {
-            "id": 4,
-            "text": "ออก",
-            "pos": "VERB",
-            "lemma": "ออก",
-            "depparse": "compound",
-            "head": 2,
-            "start": 14,
-            "end": 17,
-            "lang": "th"
-          },
-          {
-            "id": 7,
-            "text": "ฝั่ง",
-            "pos": "NOUN",
-            "lemma": "ฝั่ง",
-            "depparse": "compound",
-            "head": 4,
-            "start": 24,
-            "end": 28,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "ฝั่ง",
-        "text": "ได้แก่ ฝั่ง พระนคร ฝั่ง",
-        "tokens": [
-          {
-            "id": 9,
-            "text": "ได้แก่",
-            "pos": "SCONJ",
-            "lemma": "ได้แก่",
-            "depparse": "mark",
-            "head": 10,
-            "start": 33,
-            "end": 39,
-            "lang": "th"
-          },
-          {
-            "id": 10,
-            "text": "ฝั่ง",
-            "pos": "NOUN",
-            "lemma": "ฝั่ง",
-            "depparse": "appos",
-            "head": 7,
-            "start": 40,
-            "end": 44,
-            "lang": "th"
-          },
-          {
-            "id": 11,
-            "text": "พระนคร",
-            "pos": "PROPN",
-            "lemma": "พระนคร",
-            "depparse": "nmod",
-            "head": 10,
-            "start": 44,
-            "end": 50,
-            "lang": "th"
-          },
-          {
-            "id": 13,
-            "text": "ฝั่ง",
-            "pos": "NOUN",
-            "lemma": "ฝั่ง",
-            "depparse": "conj",
-            "head": 10,
-            "start": 53,
-            "end": 57,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "ฝั่ง",
-        "text": "และ ฝั่ง ธนบุรี",
-        "tokens": [
-          {
-            "id": 12,
-            "text": "และ",
-            "pos": "CCONJ",
-            "lemma": "และ",
-            "depparse": "cc",
-            "head": 13,
-            "start": 50,
-            "end": 53,
-            "lang": "th"
-          },
-          {
-            "id": 13,
-            "text": "ฝั่ง",
-            "pos": "NOUN",
-            "lemma": "ฝั่ง",
-            "depparse": "conj",
-            "head": 10,
-            "start": 53,
-            "end": 57,
-            "lang": "th"
-          },
-          {
-            "id": 14,
-            "text": "ธนบุรี",
-            "pos": "PROPN",
-            "lemma": "ธนบุรี",
-            "depparse": "nmod",
-            "head": 13,
-            "start": 57,
-            "end": 63,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "มี",
-        "text": "กรุงเทพมหานคร มี พื้นที่ มี คิด",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "กรุงเทพมหานคร",
-            "pos": "PROPN",
-            "lemma": "กรุงเทพมหานคร",
-            "depparse": "nsubj",
-            "head": 2,
-            "start": 0,
-            "end": 13,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "มี",
-            "pos": "VERB",
-            "lemma": "มี",
-            "depparse": "root",
-            "head": 0,
-            "start": 13,
-            "end": 15,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "พื้นที่",
-            "pos": "NOUN",
-            "lemma": "พื้นที่",
-            "depparse": "obj",
-            "head": 2,
-            "start": 15,
-            "end": 22,
-            "lang": "th"
-          },
-          {
-            "id": 8,
-            "text": "มี",
-            "pos": "VERB",
-            "lemma": "มี",
-            "depparse": "conj",
-            "head": 2,
-            "start": 58,
-            "end": 60,
-            "lang": "th"
-          },
-          {
-            "id": 18,
-            "text": "คิด",
-            "pos": "VERB",
-            "lemma": "คิด",
-            "depparse": "conj",
-            "head": 2,
-            "start": 107,
-            "end": 110,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "1,568.737",
-        "text": "ทั้งสิ้น 1,568.737",
-        "tokens": [
-          {
-            "id": 4,
-            "text": "ทั้งสิ้น",
-            "pos": "ADV",
-            "lemma": "ทั้งสิ้น",
-            "depparse": "advmod",
-            "head": 5,
-            "start": 22,
-            "end": 30,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "1,568.737",
-            "pos": "NUM",
-            "lemma": "1,568.737",
-            "depparse": "nummod",
-            "head": 6,
-            "start": 31,
-            "end": 40,
-            "lang": "th",
-            "type": "AREA"
-          }
-        ]
-      },
-      {
-        "head": "ตารางกิโลเมตร",
-        "text": "1,568.737 ตารางกิโลเมตร",
-        "tokens": [
-          {
-            "id": 5,
-            "text": "1,568.737",
-            "pos": "NUM",
-            "lemma": "1,568.737",
-            "depparse": "nummod",
-            "head": 6,
-            "start": 31,
-            "end": 40,
-            "lang": "th",
-            "type": "AREA"
-          },
-          {
-            "id": 6,
-            "text": "ตารางกิโลเมตร",
-            "pos": "NOUN",
-            "lemma": "ตารางกิโลเมตร",
-            "depparse": "clf",
-            "head": 3,
-            "start": 41,
-            "end": 54,
-            "lang": "th",
-            "type": "UNIT_AREA"
-          }
-        ]
-      },
-      {
-        "head": "พื้นที่",
-        "text": "พื้นที่ ตารางกิโลเมตร",
-        "tokens": [
-          {
-            "id": 3,
-            "text": "พื้นที่",
-            "pos": "NOUN",
-            "lemma": "พื้นที่",
-            "depparse": "obj",
-            "head": 2,
-            "start": 15,
-            "end": 22,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "ตารางกิโลเมตร",
-            "pos": "NOUN",
-            "lemma": "ตารางกิโลเมตร",
-            "depparse": "clf",
-            "head": 3,
-            "start": 41,
-            "end": 54,
-            "lang": "th",
-            "type": "UNIT_AREA"
-          }
-        ]
-      },
-      {
-        "head": "มี",
-        "text": "และ มี ประชากร",
-        "tokens": [
-          {
-            "id": 7,
-            "text": "และ",
-            "pos": "CCONJ",
-            "lemma": "และ",
-            "depparse": "cc",
-            "head": 8,
-            "start": 55,
-            "end": 58,
-            "lang": "th"
-          },
-          {
-            "id": 8,
-            "text": "มี",
-            "pos": "VERB",
-            "lemma": "มี",
-            "depparse": "conj",
-            "head": 2,
-            "start": 58,
-            "end": 60,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "ประชากร",
-            "pos": "NOUN",
-            "lemma": "ประชากร",
-            "depparse": "obj",
-            "head": 8,
-            "start": 60,
-            "end": 67,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "พุทธศักราช",
-        "text": "ใน พุทธศักราช 2567",
-        "tokens": [
-          {
-            "id": 10,
-            "text": "ใน",
-            "pos": "ADP",
-            "lemma": "ใน",
-            "depparse": "case",
-            "head": 11,
-            "start": 67,
-            "end": 69,
-            "lang": "th"
-          },
-          {
-            "id": 11,
-            "text": "พุทธศักราช",
-            "pos": "NOUN",
-            "lemma": "พุทธศักราช",
-            "depparse": "nmod",
-            "head": 9,
-            "start": 70,
-            "end": 80,
-            "lang": "th"
-          },
-          {
-            "id": 12,
-            "text": "2567",
-            "pos": "NUM",
-            "lemma": "2567",
-            "depparse": "nummod",
-            "head": 11,
-            "start": 81,
-            "end": 85,
-            "lang": "th",
-            "type": "NUMBER"
-          }
-        ]
-      },
-      {
-        "head": "ประชากร",
-        "text": "ประชากร พุทธศักราช คน",
-        "tokens": [
-          {
-            "id": 9,
-            "text": "ประชากร",
-            "pos": "NOUN",
-            "lemma": "ประชากร",
-            "depparse": "obj",
-            "head": 8,
-            "start": 60,
-            "end": 67,
-            "lang": "th"
-          },
-          {
-            "id": 11,
-            "text": "พุทธศักราช",
-            "pos": "NOUN",
-            "lemma": "พุทธศักราช",
-            "depparse": "nmod",
-            "head": 9,
-            "start": 70,
-            "end": 80,
-            "lang": "th"
-          },
-          {
-            "id": 16,
-            "text": "คน",
-            "pos": "NOUN",
-            "lemma": "คน",
-            "depparse": "clf",
-            "head": 9,
-            "start": 100,
-            "end": 102,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "10",
-        "text": "ประมาณ 10",
-        "tokens": [
-          {
-            "id": 13,
-            "text": "ประมาณ",
-            "pos": "ADV",
-            "lemma": "ประมาณ",
-            "depparse": "advmod",
-            "head": 14,
-            "start": 86,
-            "end": 92,
-            "lang": "th"
-          },
-          {
-            "id": 14,
-            "text": "10",
-            "pos": "NUM",
-            "lemma": "10",
-            "depparse": "nummod",
-            "head": 15,
-            "start": 93,
-            "end": 95,
-            "lang": "th",
-            "type": "NUMBER"
-          }
-        ]
-      },
-      {
-        "head": "ล้าน",
-        "text": "10 ล้าน",
-        "tokens": [
-          {
-            "id": 14,
-            "text": "10",
-            "pos": "NUM",
-            "lemma": "10",
-            "depparse": "nummod",
-            "head": 15,
-            "start": 93,
-            "end": 95,
-            "lang": "th",
-            "type": "NUMBER"
-          },
-          {
-            "id": 15,
-            "text": "ล้าน",
-            "pos": "NUM",
-            "lemma": "ล้าน",
-            "depparse": "nummod",
-            "head": 16,
-            "start": 96,
-            "end": 100,
-            "lang": "th",
-            "type": "NUMBER"
-          }
-        ]
-      },
-      {
-        "head": "คน",
-        "text": "ล้าน คน",
-        "tokens": [
-          {
-            "id": 15,
-            "text": "ล้าน",
-            "pos": "NUM",
-            "lemma": "ล้าน",
-            "depparse": "nummod",
-            "head": 16,
-            "start": 96,
-            "end": 100,
-            "lang": "th",
-            "type": "NUMBER"
-          },
-          {
-            "id": 16,
-            "text": "คน",
-            "pos": "NOUN",
-            "lemma": "คน",
-            "depparse": "clf",
-            "head": 9,
-            "start": 100,
-            "end": 102,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "คิด",
-        "text": "หรือ คิด ร้อยละ นับ",
-        "tokens": [
-          {
-            "id": 17,
-            "text": "หรือ",
-            "pos": "CCONJ",
-            "lemma": "หรือ",
-            "depparse": "cc",
-            "head": 18,
-            "start": 103,
-            "end": 107,
-            "lang": "th"
-          },
-          {
-            "id": 18,
-            "text": "คิด",
-            "pos": "VERB",
-            "lemma": "คิด",
-            "depparse": "conj",
-            "head": 2,
-            "start": 107,
-            "end": 110,
-            "lang": "th"
-          },
-          {
-            "id": 20,
-            "text": "ร้อยละ",
-            "pos": "NOUN",
-            "lemma": "ร้อยละ",
-            "depparse": "xcomp",
-            "head": 18,
-            "start": 114,
-            "end": 120,
-            "lang": "th"
-          },
-          {
-            "id": 27,
-            "text": "นับ",
-            "pos": "VERB",
-            "lemma": "นับ",
-            "depparse": "advcl",
-            "head": 18,
-            "start": 148,
-            "end": 151,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "ร้อยละ",
-        "text": "เป็น ร้อยละ 13 ประชากร",
-        "tokens": [
-          {
-            "id": 19,
-            "text": "เป็น",
-            "pos": "AUX",
-            "lemma": "เป็น",
-            "depparse": "cop",
-            "head": 20,
-            "start": 110,
-            "end": 114,
-            "lang": "th"
-          },
-          {
-            "id": 20,
-            "text": "ร้อยละ",
-            "pos": "NOUN",
-            "lemma": "ร้อยละ",
-            "depparse": "xcomp",
-            "head": 18,
-            "start": 114,
-            "end": 120,
-            "lang": "th"
-          },
-          {
-            "id": 21,
-            "text": "13",
-            "pos": "NUM",
-            "lemma": "13",
-            "depparse": "nummod",
-            "head": 20,
-            "start": 121,
-            "end": 123,
-            "lang": "th",
-            "type": "NUMBER"
-          },
-          {
-            "id": 23,
-            "text": "ประชากร",
-            "pos": "NOUN",
-            "lemma": "ประชากร",
-            "depparse": "nmod",
-            "head": 20,
-            "start": 127,
-            "end": 134,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "ประชากร",
-        "text": "ของ ประชากร ประเทศ",
-        "tokens": [
-          {
-            "id": 22,
-            "text": "ของ",
-            "pos": "ADP",
-            "lemma": "ของ",
-            "depparse": "case",
-            "head": 23,
-            "start": 124,
-            "end": 127,
-            "lang": "th"
-          },
-          {
-            "id": 23,
-            "text": "ประชากร",
-            "pos": "NOUN",
-            "lemma": "ประชากร",
-            "depparse": "nmod",
-            "head": 20,
-            "start": 127,
-            "end": 134,
-            "lang": "th"
-          },
-          {
-            "id": 25,
-            "text": "ประเทศ",
-            "pos": "NOUN",
-            "lemma": "ประเทศ",
-            "depparse": "nmod",
-            "head": 23,
-            "start": 138,
-            "end": 144,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "ประเทศ",
-        "text": "ทั้ง ประเทศ",
-        "tokens": [
-          {
-            "id": 24,
-            "text": "ทั้ง",
-            "pos": "ADV",
-            "lemma": "ทั้ง",
-            "depparse": "advmod",
-            "head": 25,
-            "start": 134,
-            "end": 138,
-            "lang": "th"
-          },
-          {
-            "id": 25,
-            "text": "ประเทศ",
-            "pos": "NOUN",
-            "lemma": "ประเทศ",
-            "depparse": "nmod",
-            "head": 23,
-            "start": 138,
-            "end": 144,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "นับ",
-        "text": "หาก นับ รวม",
-        "tokens": [
-          {
-            "id": 26,
-            "text": "หาก",
-            "pos": "SCONJ",
-            "lemma": "หาก",
-            "depparse": "mark",
-            "head": 27,
-            "start": 145,
-            "end": 148,
-            "lang": "th"
-          },
-          {
-            "id": 27,
-            "text": "นับ",
-            "pos": "VERB",
-            "lemma": "นับ",
-            "depparse": "advcl",
-            "head": 18,
-            "start": 148,
-            "end": 151,
-            "lang": "th"
-          },
-          {
-            "id": 28,
-            "text": "รวม",
-            "pos": "VERB",
-            "lemma": "รวม",
-            "depparse": "compound",
-            "head": 27,
-            "start": 151,
-            "end": 154,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "รวม",
-        "text": "รวม เขต",
-        "tokens": [
-          {
-            "id": 28,
-            "text": "รวม",
-            "pos": "VERB",
-            "lemma": "รวม",
-            "depparse": "compound",
-            "head": 27,
-            "start": 151,
-            "end": 154,
-            "lang": "th"
-          },
-          {
-            "id": 29,
-            "text": "เขต",
-            "pos": "NOUN",
-            "lemma": "เขต",
-            "depparse": "obj",
-            "head": 28,
-            "start": 154,
-            "end": 157,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "เขต",
-        "text": "เขต ปริมณฑล",
-        "tokens": [
-          {
-            "id": 29,
-            "text": "เขต",
-            "pos": "NOUN",
-            "lemma": "เขต",
-            "depparse": "obj",
-            "head": 28,
-            "start": 154,
-            "end": 157,
-            "lang": "th"
-          },
-          {
-            "id": 30,
-            "text": "ปริมณฑล",
-            "pos": "PROPN",
-            "lemma": "ปริมณฑล",
-            "depparse": "nmod",
-            "head": 29,
-            "start": 157,
-            "end": 164,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "เพิ่มขึ้น",
-        "text": "ประชากร จะ เพิ่มขึ้น เป็น",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "ประชากร",
-            "pos": "NOUN",
-            "lemma": "ประชากร",
-            "depparse": "nsubj",
-            "head": 3,
-            "start": 0,
-            "end": 7,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "จะ",
-            "pos": "AUX",
-            "lemma": "จะ",
-            "depparse": "aux",
-            "head": 3,
-            "start": 7,
-            "end": 9,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "เพิ่มขึ้น",
-            "pos": "VERB",
-            "lemma": "เพิ่มขึ้น",
-            "depparse": "root",
-            "head": 0,
-            "start": 9,
-            "end": 18,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "เป็น",
-            "pos": "VERB",
-            "lemma": "เป็น",
-            "depparse": "compound",
-            "head": 3,
-            "start": 18,
-            "end": 22,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "17",
-        "text": "ประมาณ 17",
-        "tokens": [
-          {
-            "id": 5,
-            "text": "ประมาณ",
-            "pos": "ADV",
-            "lemma": "ประมาณ",
-            "depparse": "advmod",
-            "head": 6,
-            "start": 22,
-            "end": 28,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "17",
-            "pos": "NUM",
-            "lemma": "17",
-            "depparse": "nummod",
-            "head": 7,
-            "start": 29,
-            "end": 31,
-            "lang": "th",
-            "type": "NUMBER"
-          }
-        ]
-      },
-      {
-        "head": "ล้าน",
-        "text": "17 ล้าน",
-        "tokens": [
-          {
-            "id": 6,
-            "text": "17",
-            "pos": "NUM",
-            "lemma": "17",
-            "depparse": "nummod",
-            "head": 7,
-            "start": 29,
-            "end": 31,
-            "lang": "th",
-            "type": "NUMBER"
-          },
-          {
-            "id": 7,
-            "text": "ล้าน",
-            "pos": "NUM",
-            "lemma": "ล้าน",
-            "depparse": "nummod",
-            "head": 8,
-            "start": 32,
-            "end": 36,
-            "lang": "th",
-            "type": "NUMBER"
-          }
-        ]
-      },
-      {
-        "head": "คน",
-        "text": "ล้าน คน",
-        "tokens": [
-          {
-            "id": 7,
-            "text": "ล้าน",
-            "pos": "NUM",
-            "lemma": "ล้าน",
-            "depparse": "nummod",
-            "head": 8,
-            "start": 32,
-            "end": 36,
-            "lang": "th",
-            "type": "NUMBER"
-          },
-          {
-            "id": 8,
-            "text": "คน",
-            "pos": "NOUN",
-            "lemma": "คน",
-            "depparse": "obj",
-            "head": 4,
-            "start": 36,
-            "end": 38,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "เป็น",
-        "text": "เป็น คน",
-        "tokens": [
-          {
-            "id": 4,
-            "text": "เป็น",
-            "pos": "VERB",
-            "lemma": "เป็น",
-            "depparse": "compound",
-            "head": 3,
-            "start": 18,
-            "end": 22,
-            "lang": "th"
-          },
-          {
-            "id": 8,
-            "text": "คน",
-            "pos": "NOUN",
-            "lemma": "คน",
-            "depparse": "obj",
-            "head": 4,
-            "start": 36,
-            "end": 38,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "มี",
-        "text": "ให้ กรุงเทพมหานคร มี สถานะ",
-        "tokens": [
-          {
-            "id": 2,
-            "text": "ให้",
-            "pos": "SCONJ",
-            "lemma": "ให้",
-            "depparse": "mark",
-            "head": 4,
-            "start": 5,
-            "end": 8,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "กรุงเทพมหานคร",
-            "pos": "PROPN",
-            "lemma": "กรุงเทพมหานคร",
-            "depparse": "nsubj",
-            "head": 4,
-            "start": 8,
-            "end": 21,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "มี",
-            "pos": "VERB",
-            "lemma": "มี",
-            "depparse": "ccomp",
-            "head": 1,
-            "start": 21,
-            "end": 23,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "สถานะ",
-            "pos": "NOUN",
-            "lemma": "สถานะ",
-            "depparse": "obj",
-            "head": 4,
-            "start": 23,
-            "end": 28,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "ส่งผล",
-        "text": "ส่งผล มี",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "ส่งผล",
-            "pos": "VERB",
-            "lemma": "ส่งผล",
-            "depparse": "root",
-            "head": 0,
-            "start": 0,
-            "end": 5,
-            "lang": "th"
-          },
-          {
-            "id": 4,
-            "text": "มี",
-            "pos": "VERB",
-            "lemma": "มี",
-            "depparse": "ccomp",
-            "head": 1,
-            "start": 21,
-            "end": 23,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "มหานคร",
-        "text": "เป็น มหานคร เอก",
-        "tokens": [
-          {
-            "id": 6,
-            "text": "เป็น",
-            "pos": "AUX",
-            "lemma": "เป็น",
-            "depparse": "cop",
-            "head": 7,
-            "start": 28,
-            "end": 32,
-            "lang": "th"
-          },
-          {
-            "id": 7,
-            "text": "มหานคร",
-            "pos": "NOUN",
-            "lemma": "มหานคร",
-            "depparse": "acl",
-            "head": 5,
-            "start": 32,
-            "end": 38,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "เอก",
-            "pos": "NOUN",
-            "lemma": "เอก",
-            "depparse": "conj",
-            "head": 7,
-            "start": 41,
-            "end": 44,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "สถานะ",
-        "text": "สถานะ มหานคร",
-        "tokens": [
-          {
-            "id": 5,
-            "text": "สถานะ",
-            "pos": "NOUN",
-            "lemma": "สถานะ",
-            "depparse": "obj",
-            "head": 4,
-            "start": 23,
-            "end": 28,
-            "lang": "th"
-          },
-          {
-            "id": 7,
-            "text": "มหานคร",
-            "pos": "NOUN",
-            "lemma": "มหานคร",
-            "depparse": "acl",
-            "head": 5,
-            "start": 32,
-            "end": 38,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "เอก",
-        "text": "และ เอก นคร",
-        "tokens": [
-          {
-            "id": 8,
-            "text": "และ",
-            "pos": "CCONJ",
-            "lemma": "และ",
-            "depparse": "cc",
-            "head": 9,
-            "start": 38,
-            "end": 41,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "เอก",
-            "pos": "NOUN",
-            "lemma": "เอก",
-            "depparse": "conj",
-            "head": 7,
-            "start": 41,
-            "end": 44,
-            "lang": "th"
-          },
-          {
-            "id": 10,
-            "text": "นคร",
-            "pos": "NOUN",
-            "lemma": "นคร",
-            "depparse": "nmod",
-            "head": 9,
-            "start": 44,
-            "end": 47,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "หมายถึง",
-        "text": "ซึ่ง หมายถึง เมือง",
-        "tokens": [
-          {
-            "id": 1,
-            "text": "ซึ่ง",
-            "pos": "SCONJ",
-            "lemma": "ซึ่ง",
-            "depparse": "mark",
-            "head": 2,
-            "start": 0,
-            "end": 4,
-            "lang": "th"
-          },
-          {
-            "id": 2,
-            "text": "หมายถึง",
-            "pos": "VERB",
-            "lemma": "หมายถึง",
-            "depparse": "root",
-            "head": 0,
-            "start": 4,
-            "end": 11,
-            "lang": "th"
-          },
-          {
-            "id": 3,
-            "text": "เมือง",
-            "pos": "NOUN",
-            "lemma": "เมือง",
-            "depparse": "obj",
-            "head": 2,
-            "start": 11,
-            "end": 16,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "มีอิทธิพล",
-        "text": "ที่ มีอิทธิพล โดดเด่น เมือง",
-        "tokens": [
-          {
-            "id": 4,
-            "text": "ที่",
-            "pos": "PRON",
-            "lemma": "ที่",
-            "depparse": "nsubj",
-            "head": 5,
-            "start": 16,
-            "end": 19,
-            "lang": "th",
-            "type": "ORDINAL_MARK"
-          },
-          {
-            "id": 5,
-            "text": "มีอิทธิพล",
-            "pos": "VERB",
-            "lemma": "มีอิทธิพล",
-            "depparse": "acl",
-            "head": 3,
-            "start": 19,
-            "end": 28,
-            "lang": "th"
-          },
-          {
-            "id": 6,
-            "text": "โดดเด่น",
-            "pos": "ADV",
-            "lemma": "โดดเด่น",
-            "depparse": "advmod",
-            "head": 5,
-            "start": 28,
-            "end": 35,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "เมือง",
-            "pos": "NOUN",
-            "lemma": "เมือง",
-            "depparse": "obl",
-            "head": 5,
-            "start": 49,
-            "end": 54,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "เมือง",
-        "text": "เมือง มีอิทธิพล",
-        "tokens": [
-          {
-            "id": 3,
-            "text": "เมือง",
-            "pos": "NOUN",
-            "lemma": "เมือง",
-            "depparse": "obj",
-            "head": 2,
-            "start": 11,
-            "end": 16,
-            "lang": "th"
-          },
-          {
-            "id": 5,
-            "text": "มีอิทธิพล",
-            "pos": "VERB",
-            "lemma": "มีอิทธิพล",
-            "depparse": "acl",
-            "head": 3,
-            "start": 19,
-            "end": 28,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "โดดเด่น",
-        "text": "โดดเด่น อย่างยิ่ง",
-        "tokens": [
-          {
-            "id": 6,
-            "text": "โดดเด่น",
-            "pos": "ADV",
-            "lemma": "โดดเด่น",
-            "depparse": "advmod",
-            "head": 5,
-            "start": 28,
-            "end": 35,
-            "lang": "th"
-          },
-          {
-            "id": 7,
-            "text": "อย่างยิ่ง",
-            "pos": "ADV",
-            "lemma": "อย่างยิ่ง",
-            "depparse": "advmod",
-            "head": 6,
-            "start": 35,
-            "end": 44,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "เมือง",
-        "text": "เหนือ เมือง อื่น ในประเทศ",
-        "tokens": [
-          {
-            "id": 8,
-            "text": "เหนือ",
-            "pos": "ADP",
-            "lemma": "เหนือ",
-            "depparse": "case",
-            "head": 9,
-            "start": 44,
-            "end": 49,
-            "lang": "th"
-          },
-          {
-            "id": 9,
-            "text": "เมือง",
-            "pos": "NOUN",
-            "lemma": "เมือง",
-            "depparse": "obl",
-            "head": 5,
-            "start": 49,
-            "end": 54,
-            "lang": "th"
-          },
-          {
-            "id": 10,
-            "text": "อื่น",
-            "pos": "DET",
-            "lemma": "อื่น",
-            "depparse": "det",
-            "head": 9,
-            "start": 54,
-            "end": 58,
-            "lang": "th"
-          },
-          {
-            "id": 12,
-            "text": "ในประเทศ",
-            "pos": "NOUN",
-            "lemma": "ในประเทศ",
-            "depparse": "nmod",
-            "head": 9,
-            "start": 61,
-            "end": 69,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "อื่น",
-        "text": "อื่น ๆ",
-        "tokens": [
-          {
-            "id": 10,
-            "text": "อื่น",
-            "pos": "DET",
-            "lemma": "อื่น",
-            "depparse": "det",
-            "head": 9,
-            "start": 54,
-            "end": 58,
-            "lang": "th"
-          },
-          {
-            "id": 11,
-            "text": "ๆ",
-            "pos": "PUNCT",
-            "lemma": "ๆ",
-            "depparse": "punct",
-            "head": 10,
-            "start": 59,
-            "end": 60,
-            "lang": "th"
-          }
-        ]
-      },
-      {
-        "head": "ในประเทศ",
-        "text": "ในประเทศ เดียวกัน",
-        "tokens": [
-          {
-            "id": 12,
-            "text": "ในประเทศ",
-            "pos": "NOUN",
-            "lemma": "ในประเทศ",
-            "depparse": "nmod",
-            "head": 9,
-            "start": 61,
-            "end": 69,
-            "lang": "th"
-          },
-          {
-            "id": 13,
-            "text": "เดียวกัน",
-            "pos": "DET",
-            "lemma": "เดียวกัน",
-            "depparse": "det",
-            "head": 12,
-            "start": 69,
-            "end": 77,
-            "lang": "th"
-          }
-        ]
-      }
-    ]
+      "word": "กรุงเทพมหานคร",
+      "count": 240,
+      "depparse": [
+        {
+          "depparse": "nsubj",
+          "count": 73
+        },
+        {
+          "depparse": "nmod",
+          "count": 119
+        },
+        {
+          "depparse": "obj",
+          "count": 7
+        },
+        {
+          "depparse": "compound",
+          "count": 2
+        },
+        {
+          "depparse": "obl",
+          "count": 30
+        },
+        {
+          "depparse": "advcl",
+          "count": 2
+        },
+        {
+          "depparse": "flat",
+          "count": 1
+        },
+        {
+          "depparse": "root",
+          "count": 4
+        },
+        {
+          "depparse": "conj",
+          "count": 2
+        }
+      ],
+      "patterns": [
+        {
+          "pattern_id": {
+            "$oid": "68d981bed480622865477a81"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bed480622865477ae5"
+          },
+          "count": 4
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bfd480622865477c3f"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bfd480622865477d59"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bfd480622865477e15"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c0d480622865477ecd"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c0d480622865477f1e"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bfd480622865477bb5"
+          },
+          "count": 6
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bed480622865477b0a"
+          },
+          "count": 12
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c0d480622865477fdb"
+          },
+          "count": 4
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bed480622865477b3f"
+          },
+          "count": 6
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c2d4806228654783c8"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c2d480622865478436"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c3d480622865478586"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c4d480622865478652"
+          },
+          "count": 9
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c5d480622865478990"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c1d480622865478180"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981cbd48062286547974e"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981cbd480622865479755"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981ccd480622865479897"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981cdd480622865479a39"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981cdd480622865479a4b"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981cdd480622865479ab2"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981cdd480622865479b95"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981ced480622865479c11"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c4d4806228654786a5"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981ced480622865479c33"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c4d480622865478745"
+          },
+          "count": 3
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981d1d48062286547a207"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981d1d48062286547a21c"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c8d4806228654790f0"
+          },
+          "count": 8
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981d4d48062286547a6bf"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981d5d48062286547a8d3"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981d5d48062286547a995"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981d9d48062286547b089"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981dad48062286547b1db"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981dad48062286547b206"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981dbd48062286547b2b0"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c5d480622865478a1e"
+          },
+          "count": 21
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981dcd48062286547b485"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981dfd48062286547ba51"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e0d48062286547bbd8"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e1d48062286547bd3e"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c3d480622865478533"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e1d48062286547be0a"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e1d48062286547be11"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e2d48062286547be64"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e2d48062286547bfd7"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bed480622865477aca"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c1d48062286547816a"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e4d48062286547c2a2"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e4d48062286547c2ea"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e4d48062286547c2f1"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e6d48062286547c608"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e7d48062286547c70c"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e9d48062286547cafe"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e9d48062286547cb8d"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981ead48062286547cc3b"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981ebd48062286547cf0f"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c7d480622865478d08"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bfd480622865477d0c"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f0d48062286547d726"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f0d48062286547d793"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c3d480622865478522"
+          },
+          "count": 5
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f1d48062286547d845"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c0d480622865477e82"
+          },
+          "count": 3
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f2d48062286547d992"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c0d480622865477ebc"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f2d48062286547da92"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f2d48062286547dacb"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f4d48062286547dda3"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f5d48062286547df51"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f6d48062286547e055"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f8d48062286547e3e1"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f8d48062286547e425"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f8d48062286547e433"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f8d48062286547e4ad"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981cbd4806228654797f2"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f9d48062286547e697"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c7d480622865478de7"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981fbd48062286547ea00"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981fcd48062286547eb02"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981fdd48062286547eccc"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981fdd48062286547ed95"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981fed48062286547ee38"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981fed48062286547eeab"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981fed48062286547ef47"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981ffd48062286547f064"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98200d48062286547f275"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981dbd48062286547b324"
+          },
+          "count": 3
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98204d48062286547f842"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98204d48062286547f8bb"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98206d48062286547fb12"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c1d4806228654781aa"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9820fd4806228654808e1"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98210d480622865480b4e"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98211d480622865480c37"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98218d480622865481502"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c5d4806228654789fa"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bed480622865477b5b"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98219d4806228654815fd"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981d8d48062286547aeaf"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98222d4806228654823a8"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c2d4806228654782d6"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981eed48062286547d3b3"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981dbd48062286547b354"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9822cd480622865483296"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98233d480622865483cd0"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981e6d48062286547c550"
+          },
+          "count": 2
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98234d480622865483fa0"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98234d480622865483fb9"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bed480622865477adb"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98237d48062286548451e"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9823cd480622865484c33"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9823ed480622865484eff"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9823ed480622865484f28"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98244d480622865485769"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98244d480622865485827"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98245d480622865485911"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98246d480622865485ba5"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9824bd480622865486211"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9824cd480622865486333"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9824cd480622865486394"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98253d480622865486c69"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98253d480622865486c7d"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c5d480622865478a02"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981bfd480622865477c85"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98270d4806228654894ce"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9826fd48062286548927e"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98297d48062286548cc2e"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98297d48062286548cd17"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98233d480622865483db0"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98299d48062286548d008"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d982b7d48062286548f8e6"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d982b7d48062286548f902"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98203d48062286547f686"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98303d480622865495acc"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981eed48062286547d312"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981ddd48062286547b71d"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c8d480622865478eec"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c3d480622865478529"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c1d48062286547818a"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9827ed48062286548a922"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981f0d48062286547d670"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98367d48062286549cd2b"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9837ad48062286549e177"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9831bd480622865497941"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d983c1d4806228654a2618"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d983c4d4806228654a2913"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c1d4806228654780d4"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d983ced4806228654a335d"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d981c1d480622865478171"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98419d4806228654a7e0c"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d9866fd4806228654c4a0c"
+          },
+          "count": 1
+        },
+        {
+          "pattern_id": {
+            "$oid": "68d98674d4806228654c4d5b"
+          },
+          "count": 1
+        }
+      ],
+      "pos": [
+        {
+          "pos": "PROPN",
+          "count": 231
+        },
+        {
+          "pos": "NOUN",
+          "count": 9
+        }
+      ]
+    }
   }
-}
+]
