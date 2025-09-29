@@ -8,3 +8,9 @@ stanza
 scipy
 numpy
 gensim
+sentence-transformers
+tqdm
+pandas
+faiss-cpu # faiss-gpu-cu12  For CUDA 12, use faiss-gpu-cu11 for CUDA 11, or faiss-cpu for CPU only
+datasets
+accelerate>=0.26.0
