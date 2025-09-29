@@ -9,6 +9,7 @@ from pymongo import UpdateOne
 
 # External NLP libs
 import stanza
+import torch
 
 try:
     from pythainlp.tokenize import word_tokenize
@@ -103,7 +104,7 @@ def _ensure_stanza(
         return stanza.Pipeline(
             lang=lang,
             processors=p,
-            use_gpu=False,
+            use_gpu=bool(torch.cuda.is_available()),
             tokenize_pretokenized=tokenize_pretokenized,
             verbose=False,
         )
