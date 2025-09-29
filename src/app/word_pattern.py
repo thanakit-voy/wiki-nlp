@@ -72,14 +72,18 @@ def update_word_pattern_for_doc(words_col: Collection, patterns_col: Collection,
             if not word:
                 continue
             dep = _deprel(tok)
-            key = f"{word} | {pos} | {dep}"
 
             pattern = build_pattern_for_tokens(toks, idx)
+            pattern_tokens = [p for p in pattern.split(" ") if p]
 
             # A) Upsert global pattern and increment its global count; get pattern _id
             res_pat = patterns_col.update_one(
                 {"pattern": pattern},
-                {"$setOnInsert": {"pattern": pattern}, "$inc": {"count": 1}},
+                {
+                    "$setOnInsert": {"pattern": pattern},
+                    "$set": {"tokens": pattern_tokens, "length": len(pattern_tokens)},
+                    "$inc": {"count": 1},
+                },
                 upsert=True,
             )
             if res_pat.upserted_id is not None:
@@ -93,26 +97,54 @@ def update_word_pattern_for_doc(words_col: Collection, patterns_col: Collection,
 
             # B) Ensure word document exists and increment total usage count
             res_upsert = words_col.update_one(
-                {"key": key},
+                {"word": word},
                 {
-                    "$setOnInsert": {"word": word, "pos": pos, "depparse": dep, "patterns": []},
+                    "$setOnInsert": {"word": word, "pos": [], "depparse": [], "patterns": []},
                     "$inc": {"count": 1},
                 },
                 upsert=True,
             )
 
-            # C) Try to increment per-word pattern counter using pattern_id
+            # C) Increment per-word POS counter
+            res_pos_inc = words_col.update_one(
+                {"word": word, "pos.pos": pos},
+                {"$inc": {"pos.$.count": 1}},
+                upsert=False,
+            )
+            res_pos_push = None
+            if res_pos_inc.matched_count == 0:
+                res_pos_push = words_col.update_one(
+                    {"word": word},
+                    {"$push": {"pos": {"pos": pos, "count": 1}}},
+                    upsert=False,
+                )
+
+            # D) Increment per-word depparse counter
+            res_dep_inc = words_col.update_one(
+                {"word": word, "depparse.depparse": dep},
+                {"$inc": {"depparse.$.count": 1}},
+                upsert=False,
+            )
+            res_dep_push = None
+            if res_dep_inc.matched_count == 0:
+                res_dep_push = words_col.update_one(
+                    {"word": word},
+                    {"$push": {"depparse": {"depparse": dep, "count": 1}}},
+                    upsert=False,
+                )
+
+            # E) Try to increment per-word pattern counter using pattern_id
             res_inc = words_col.update_one(
-                {"key": key, "patterns.pattern_id": pattern_id},
+                {"word": word, "patterns.pattern_id": pattern_id},
                 {"$inc": {"patterns.$.count": 1}},
                 upsert=False,
             )
 
-            # D) If pattern isn't present yet, push it
+            # F) If pattern isn't present yet, push it
             res_push = None
             if res_inc.matched_count == 0:
                 res_push = words_col.update_one(
-                    {"key": key},
+                    {"word": word},
                     {"$push": {"patterns": {"pattern_id": pattern_id, "count": 1}}},
                     upsert=False,
                 )
@@ -120,6 +152,10 @@ def update_word_pattern_for_doc(words_col: Collection, patterns_col: Collection,
             updated += (
                 (res_upsert.modified_count or 0)
                 + (1 if res_upsert.upserted_id else 0)
+                + (res_pos_inc.modified_count or 0)
+                + ((res_pos_push.modified_count or 0) if res_pos_push else 0)
+                + (res_dep_inc.modified_count or 0)
+                + ((res_dep_push.modified_count or 0) if res_dep_push else 0)
                 + (res_inc.modified_count or 0)
                 + ((res_push.modified_count or 0) if res_push else 0)
             )
